@@ -1,0 +1,30 @@
+[2025-11-17T12:57:25.817+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-11-17T12:57:25.898+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: etl_label_studio.extract_bronze_label_studio manual__2025-11-17T12:57:24.771146+00:00 [queued]>
+[2025-11-17T12:57:25.908+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: etl_label_studio.extract_bronze_label_studio manual__2025-11-17T12:57:24.771146+00:00 [queued]>
+[2025-11-17T12:57:25.909+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2025-11-17T12:57:25.922+0000] {taskinstance.py:2330} INFO - Executing <Task(BashOperator): extract_bronze_label_studio> on 2025-11-17 12:57:24.771146+00:00
+[2025-11-17T12:57:25.954+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:62 DeprecationWarning: This process (pid=4666) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-11-17T12:57:25.947+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'etl_label_studio', 'extract_bronze_label_studio', 'manual__2025-11-17T12:57:24.771146+00:00', '--job-id', '413', '--raw', '--subdir', 'DAGS_FOLDER/pipeline_label_studio.py', '--cfg-path', '/tmp/tmphr3_6z5u']
+[2025-11-17T12:57:25.961+0000] {standard_task_runner.py:64} INFO - Started process 4667 to run task
+[2025-11-17T12:57:25.961+0000] {standard_task_runner.py:91} INFO - Job 413: Subtask extract_bronze_label_studio
+[2025-11-17T12:57:26.088+0000] {task_command.py:426} INFO - Running <TaskInstance: etl_label_studio.extract_bronze_label_studio manual__2025-11-17T12:57:24.771146+00:00 [running]> on host 61cf348b7d62
+[2025-11-17T12:57:26.232+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='rayane' AIRFLOW_CTX_DAG_ID='etl_label_studio' AIRFLOW_CTX_TASK_ID='extract_bronze_label_studio' AIRFLOW_CTX_EXECUTION_DATE='2025-11-17T12:57:24.771146+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-11-17T12:57:24.771146+00:00'
+[2025-11-17T12:57:26.233+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-11-17T12:57:26.270+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-11-17T12:57:26.271+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'python /opt/***/apps/01-bronze/extract_api_label_studio_strava.py']
+[2025-11-17T12:57:26.281+0000] {subprocess.py:86} INFO - Output:
+[2025-11-17T12:57:30.296+0000] {subprocess.py:93} INFO - /opt/***/apps/01-bronze/extract_api_label_studio_strava.py:74: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+[2025-11-17T12:57:30.298+0000] {subprocess.py:93} INFO -   now = datetime.utcnow()
+[2025-11-17T12:57:30.304+0000] {subprocess.py:93} INFO - Usando o arquivo de variaveis em: /opt/***/apps/.env
+[2025-11-17T12:57:30.305+0000] {subprocess.py:93} INFO - PAT (começo): eyJhbGciOi ...
+[2025-11-17T12:57:30.305+0000] {subprocess.py:93} INFO - ACCESS TOKEN (começo): eyJhbGciOiJIUzI1NiIs ...
+[2025-11-17T12:57:30.306+0000] {subprocess.py:93} INFO - Tasks retornadas no export: 490
+[2025-11-17T12:57:30.306+0000] {subprocess.py:93} INFO - Tasks COM anotação: 6
+[2025-11-17T12:57:30.307+0000] {subprocess.py:93} INFO - ✔ Upload concluído: project_id=1/dt_process=2025/11/17/project_1_tasks_export_20251117T125730.json
+[2025-11-17T12:57:30.307+0000] {subprocess.py:93} INFO - ✅ Processo finalizado com sucesso ✅
+[2025-11-17T12:57:30.339+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2025-11-17T12:57:30.341+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-11-17T12:57:30.406+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=etl_label_studio, task_id=extract_bronze_label_studio, run_id=manual__2025-11-17T12:57:24.771146+00:00, execution_date=20251117T125724, start_date=20251117T125725, end_date=20251117T125730
+[2025-11-17T12:57:30.465+0000] {local_task_job_runner.py:243} INFO - Task exited with return code 0
+[2025-11-17T12:57:30.505+0000] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-11-17T12:57:30.507+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

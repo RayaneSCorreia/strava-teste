@@ -1,0 +1,72 @@
+<View style="padding: 20px">
+
+  <Header value="📌 Dados da Atividade"/>
+  <View style="margin-bottom: 15px">
+    <Header value="Nome: $name"/>
+    <Header value="Tipo: $sport_type"/>
+    <Header value="Distância: $distance metros"/>
+    <Header value="Tempo: $moving_time segundos"/>
+    <Header value="Velocidade média: $average_speed m/s"/>
+    <Header value="Manual (API): $manual"/>
+    <Header value="Privada (API): $private"/>
+    <Header value="Data: $start_date_local"/>
+
+    <!-- 🆕 Campos adicionados -->
+    <Header value="⚙ Dispositivo externo (gear_id): $gear_id"/>
+    <Header value="⚡ Watts do dispositivo (device_watts): $device_watts"/>
+    <Header value="🏷 Flag Strava (from_accepted_tag): $from_accepted_tag"/>
+  </View>
+
+  <!-- 1) Origem -->
+  <Header value="1️⃣ Origem da atividade"/>
+  <Choices name="origem_atividade" toName="info" choice="single" required="true">
+    <Choice value="Manual"/>
+    <Choice value="Strava App"/>
+    <Choice value="Dispositivo externo"/>
+  </Choices>
+
+  <View style="margin: 15px 0"></View>
+
+  <!-- 2) Privada -->
+  <Header value="2️⃣ A atividade é privada?"/>
+  <Choices name="privacidade" toName="info" choice="single" required="true">
+    <Choice value="Pública"/>
+    <Choice value="Privada"/>
+  </Choices>
+
+  <View style="margin: 15px 0"></View>
+
+  <!-- 3) Inconsistência -->
+  <Header value="3️⃣ A atividade é inconsistente?"/>
+  <Choices name="inconsistencia" toName="info" choice="single" required="true">
+    <Choice value="Consistente"/>
+    <Choice value="Inconsistente"/>
+  </Choices>
+
+  <View style="margin: 15px 0"></View>
+
+  <!-- 4) Intensidade -->
+  <Header value="4️⃣ Como foi o treino?"/>
+  <Choices name="intensidade" toName="info" choice="single" required="true">
+    <Choice value="Leve"/>
+    <Choice value="Moderado"/>
+    <Choice value="Cansativo"/>
+  </Choices>
+
+  <View style="margin: 15px 0"></View>
+
+  <!-- 5) Erros -->
+  <Header value="5️⃣ O que está errado na atividade?"/>
+  <Labels name="erros" toName="info">
+    <Label value="Sem GPS"/>
+    <Label value="Sem batimento"/>
+    <Label value="Velocidade incoerente"/>
+    <Label value="Tempo inconsistente"/>
+    <Label value="Distância inconsistente"/>
+    <Label value="Polyline vazia"/>
+  </Labels>
+
+  <View style="margin: 20px 0"></View>
+
+  <Text name="info" value="$name"/>
+</View>

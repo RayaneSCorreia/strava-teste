@@ -1,0 +1,40 @@
+FROM apache/airflow:2.9.3
+
+# ---------------------------------------------------------------
+# 1) ROOT — instalar Java e ferramentas básicas
+# ---------------------------------------------------------------
+USER root
+
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends \
+        openjdk-17-jre-headless \
+        procps \
+        curl \
+    && apt-get clean && rm -rf /var/lib/apt/lists/*
+
+# ---------------------------------------------------------------
+# 2) Baixar os JARs necessários
+#    - hadoop-aws 3.3.4         → S3A / MinIO
+#    - aws-java-sdk-bundle      → Drivers AWS para S3A
+#    - postgresql-42.7.4.jar    → Driver JDBC para Postgres
+# ---------------------------------------------------------------
+RUN mkdir -p /opt/spark-jars && \
+    curl -L -o /opt/spark-jars/hadoop-aws-3.3.4.jar \
+         https://repo1.maven.org/maven2/org/apache/hadoop/hadoop-aws/3.3.4/hadoop-aws-3.3.4.jar && \
+    curl -L -o /opt/spark-jars/aws-java-sdk-bundle-1.12.262.jar \
+         https://repo1.maven.org/maven2/com/amazonaws/aws-java-sdk-bundle/1.12.262/aws-java-sdk-bundle-1.12.262.jar && \
+    curl -L -o /opt/spark-jars/postgresql-42.7.4.jar \
+         https://repo1.maven.org/maven2/org/postgresql/postgresql/42.7.4/postgresql-42.7.4.jar
+
+# ---------------------------------------------------------------
+# 3) Copiar o requirements.txt para instalar dependências Python
+#    (inclui pyspark + delta-spark)
+# ---------------------------------------------------------------
+COPY requirements.txt /requirements.txt
+
+# ---------------------------------------------------------------
+# 4) Mudar para o usuário airflow e instalar libs Python
+# ---------------------------------------------------------------
+USER airflow
+
+RUN pip install --no-cache-dir -r /requirements.txt

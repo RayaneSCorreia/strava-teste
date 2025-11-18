@@ -1,0 +1,43 @@
+[2025-11-17T19:38:50.172+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-11-17T19:38:50.204+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: etl_strava_activities.extract_bronze_activities manual__2025-11-17T19:38:48.919657+00:00 [queued]>
+[2025-11-17T19:38:50.210+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: etl_strava_activities.extract_bronze_activities manual__2025-11-17T19:38:48.919657+00:00 [queued]>
+[2025-11-17T19:38:50.210+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2025-11-17T19:38:50.220+0000] {taskinstance.py:2330} INFO - Executing <Task(BashOperator): extract_bronze_activities> on 2025-11-17 19:38:48.919657+00:00
+[2025-11-17T19:38:50.228+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:62 DeprecationWarning: This process (pid=7404) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-11-17T19:38:50.229+0000] {standard_task_runner.py:64} INFO - Started process 7405 to run task
+[2025-11-17T19:38:50.228+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'etl_strava_activities', 'extract_bronze_activities', 'manual__2025-11-17T19:38:48.919657+00:00', '--job-id', '484', '--raw', '--subdir', 'DAGS_FOLDER/pipeline_strava_activities.py', '--cfg-path', '/tmp/tmp4kxi0r6q']
+[2025-11-17T19:38:50.231+0000] {standard_task_runner.py:91} INFO - Job 484: Subtask extract_bronze_activities
+[2025-11-17T19:38:50.279+0000] {task_command.py:426} INFO - Running <TaskInstance: etl_strava_activities.extract_bronze_activities manual__2025-11-17T19:38:48.919657+00:00 [running]> on host 5c1ce3099579
+[2025-11-17T19:38:50.351+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='rayane' AIRFLOW_CTX_DAG_ID='etl_strava_activities' AIRFLOW_CTX_TASK_ID='extract_bronze_activities' AIRFLOW_CTX_EXECUTION_DATE='2025-11-17T19:38:48.919657+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-11-17T19:38:48.919657+00:00'
+[2025-11-17T19:38:50.351+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-11-17T19:38:50.365+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-11-17T19:38:50.366+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'python /opt/***/apps/01-bronze/extract_api_strava_user_activities.py']
+[2025-11-17T19:38:50.372+0000] {subprocess.py:86} INFO - Output:
+[2025-11-17T19:38:51.845+0000] {subprocess.py:93} INFO - Usando o arquivo de variaveis em: /opt/***/apps/.env
+[2025-11-17T19:38:51.846+0000] {subprocess.py:93} INFO - None
+[2025-11-17T19:38:51.846+0000] {subprocess.py:93} INFO - Traceback (most recent call last):
+[2025-11-17T19:38:51.846+0000] {subprocess.py:93} INFO -   File "/opt/***/apps/01-bronze/extract_api_strava_user_activities.py", line 52, in <module>
+[2025-11-17T19:38:51.846+0000] {subprocess.py:93} INFO -     if time.localtime(time.time()) >= time.localtime(int(os.getenv("EXPIRES_AT"))):
+[2025-11-17T19:38:51.847+0000] {subprocess.py:93} INFO -                                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2025-11-17T19:38:51.847+0000] {subprocess.py:93} INFO - TypeError: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'
+[2025-11-17T19:38:51.933+0000] {subprocess.py:97} INFO - Command exited with return code 1
+[2025-11-17T19:38:51.934+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-11-17T19:38:51.950+0000] {taskinstance.py:2905} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 401, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/bash.py", line 243, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2025-11-17T19:38:51.954+0000] {taskinstance.py:1206} INFO - Marking task as UP_FOR_RETRY. dag_id=etl_strava_activities, task_id=extract_bronze_activities, run_id=manual__2025-11-17T19:38:48.919657+00:00, execution_date=20251117T193848, start_date=20251117T193850, end_date=20251117T193851
+[2025-11-17T19:38:51.967+0000] {standard_task_runner.py:110} ERROR - Failed to execute job 484 for task extract_bronze_activities (Bash command failed. The command returned a non-zero exit code 1.; 7405)
+[2025-11-17T19:38:51.987+0000] {local_task_job_runner.py:243} INFO - Task exited with return code 1
+[2025-11-17T19:38:52.010+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-11-17T19:38:52.012+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

@@ -1,0 +1,111 @@
+[2025-11-17T19:56:23.082+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-11-17T19:56:23.118+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: etl_strava_activities.extract_silver_activities manual__2025-11-17T19:56:04.406428+00:00 [queued]>
+[2025-11-17T19:56:23.130+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: etl_strava_activities.extract_silver_activities manual__2025-11-17T19:56:04.406428+00:00 [queued]>
+[2025-11-17T19:56:23.130+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2025-11-17T19:56:23.140+0000] {taskinstance.py:2330} INFO - Executing <Task(BashOperator): extract_silver_activities> on 2025-11-17 19:56:04.406428+00:00
+[2025-11-17T19:56:23.147+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'etl_strava_activities', 'extract_silver_activities', 'manual__2025-11-17T19:56:04.406428+00:00', '--job-id', '510', '--raw', '--subdir', 'DAGS_FOLDER/pipeline_strava_activities.py', '--cfg-path', '/tmp/tmpisrqt28r']
+[2025-11-17T19:56:23.149+0000] {standard_task_runner.py:91} INFO - Job 510: Subtask extract_silver_activities
+[2025-11-17T19:56:23.149+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:62 DeprecationWarning: This process (pid=628) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-11-17T19:56:23.151+0000] {standard_task_runner.py:64} INFO - Started process 629 to run task
+[2025-11-17T19:56:23.250+0000] {task_command.py:426} INFO - Running <TaskInstance: etl_strava_activities.extract_silver_activities manual__2025-11-17T19:56:04.406428+00:00 [running]> on host 958eca229fdb
+[2025-11-17T19:56:23.410+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='rayane' AIRFLOW_CTX_DAG_ID='etl_strava_activities' AIRFLOW_CTX_TASK_ID='extract_silver_activities' AIRFLOW_CTX_EXECUTION_DATE='2025-11-17T19:56:04.406428+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-11-17T19:56:04.406428+00:00'
+[2025-11-17T19:56:23.411+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-11-17T19:56:23.439+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-11-17T19:56:23.441+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'python /opt/***/apps/02-silver/extract-bronze-to-silver-strava-activities.py']
+[2025-11-17T19:56:23.451+0000] {subprocess.py:86} INFO - Output:
+[2025-11-17T19:56:26.616+0000] {subprocess.py:93} INFO - Usando o arquivo de variaveis em: /opt/***/apps/.env
+[2025-11-17T19:56:26.621+0000] {subprocess.py:93} INFO - silver-strava-user-activities-parquet
+[2025-11-17T19:56:26.623+0000] {subprocess.py:93} INFO - Esvaziando bucket sulver para full load
+[2025-11-17T19:56:26.623+0000] {subprocess.py:93} INFO - 🗑️ Removido: 2021/07/atividades_2021-07.parquet
+[2025-11-17T19:56:26.625+0000] {subprocess.py:93} INFO - 🗑️ Removido: 2021/10/atividades_2021-10.parquet
+[2025-11-17T19:56:26.625+0000] {subprocess.py:93} INFO - 🗑️ Removido: 2021/11/atividades_2021-11.parquet
+[2025-11-17T19:56:26.629+0000] {subprocess.py:93} INFO - 🗑️ Removido: 2022/04/atividades_2022-04.parquet
+[2025-11-17T19:56:26.632+0000] {subprocess.py:93} INFO - 🗑️ Removido: 2022/05/atividades_2022-05.parquet
+[2025-11-17T19:56:26.634+0000] {subprocess.py:93} INFO - 🗑️ Removido: 2022/06/atividades_2022-06.parquet
+[2025-11-17T19:56:26.635+0000] {subprocess.py:93} INFO - 🗑️ Removido: 2022/07/atividades_2022-07.parquet
+[2025-11-17T19:56:26.636+0000] {subprocess.py:93} INFO - 🗑️ Removido: 2022/08/atividades_2022-08.parquet
+[2025-11-17T19:56:26.637+0000] {subprocess.py:93} INFO - 🗑️ Removido: 2022/10/atividades_2022-10.parquet
+[2025-11-17T19:56:26.638+0000] {subprocess.py:93} INFO - 🗑️ Removido: 2022/11/atividades_2022-11.parquet
+[2025-11-17T19:56:26.639+0000] {subprocess.py:93} INFO - 🗑️ Removido: 2023/01/atividades_2023-01.parquet
+[2025-11-17T19:56:26.641+0000] {subprocess.py:93} INFO - 🗑️ Removido: 2023/02/atividades_2023-02.parquet
+[2025-11-17T19:56:26.644+0000] {subprocess.py:93} INFO - 🗑️ Removido: 2023/03/atividades_2023-03.parquet
+[2025-11-17T19:56:26.645+0000] {subprocess.py:93} INFO - 🗑️ Removido: 2023/04/atividades_2023-04.parquet
+[2025-11-17T19:56:26.647+0000] {subprocess.py:93} INFO - 🗑️ Removido: 2023/05/atividades_2023-05.parquet
+[2025-11-17T19:56:26.648+0000] {subprocess.py:93} INFO - 🗑️ Removido: 2023/06/atividades_2023-06.parquet
+[2025-11-17T19:56:26.659+0000] {subprocess.py:93} INFO - 🗑️ Removido: 2023/07/atividades_2023-07.parquet
+[2025-11-17T19:56:26.662+0000] {subprocess.py:93} INFO - 🗑️ Removido: 2023/08/atividades_2023-08.parquet
+[2025-11-17T19:56:26.671+0000] {subprocess.py:93} INFO - 🗑️ Removido: 2023/09/atividades_2023-09.parquet
+[2025-11-17T19:56:26.673+0000] {subprocess.py:93} INFO - 🗑️ Removido: 2023/10/atividades_2023-10.parquet
+[2025-11-17T19:56:26.677+0000] {subprocess.py:93} INFO - 🗑️ Removido: 2024/02/atividades_2024-02.parquet
+[2025-11-17T19:56:26.679+0000] {subprocess.py:93} INFO - 🗑️ Removido: 2024/03/atividades_2024-03.parquet
+[2025-11-17T19:56:26.680+0000] {subprocess.py:93} INFO - 🗑️ Removido: 2024/04/atividades_2024-04.parquet
+[2025-11-17T19:56:26.684+0000] {subprocess.py:93} INFO - 🗑️ Removido: 2024/05/atividades_2024-05.parquet
+[2025-11-17T19:56:26.688+0000] {subprocess.py:93} INFO - 🗑️ Removido: 2024/06/atividades_2024-06.parquet
+[2025-11-17T19:56:26.690+0000] {subprocess.py:93} INFO - 🗑️ Removido: 2024/07/atividades_2024-07.parquet
+[2025-11-17T19:56:26.691+0000] {subprocess.py:93} INFO - 🗑️ Removido: 2024/08/atividades_2024-08.parquet
+[2025-11-17T19:56:26.692+0000] {subprocess.py:93} INFO - 🗑️ Removido: 2024/09/atividades_2024-09.parquet
+[2025-11-17T19:56:26.694+0000] {subprocess.py:93} INFO - 🗑️ Removido: 2024/10/atividades_2024-10.parquet
+[2025-11-17T19:56:26.702+0000] {subprocess.py:93} INFO - 🗑️ Removido: 2024/11/atividades_2024-11.parquet
+[2025-11-17T19:56:26.706+0000] {subprocess.py:93} INFO - 🗑️ Removido: 2024/12/atividades_2024-12.parquet
+[2025-11-17T19:56:26.711+0000] {subprocess.py:93} INFO - 🗑️ Removido: 2025/01/atividades_2025-01.parquet
+[2025-11-17T19:56:26.714+0000] {subprocess.py:93} INFO - 🗑️ Removido: 2025/02/atividades_2025-02.parquet
+[2025-11-17T19:56:26.717+0000] {subprocess.py:93} INFO - 🗑️ Removido: 2025/03/atividades_2025-03.parquet
+[2025-11-17T19:56:26.720+0000] {subprocess.py:93} INFO - 🗑️ Removido: 2025/04/atividades_2025-04.parquet
+[2025-11-17T19:56:26.726+0000] {subprocess.py:93} INFO - 🗑️ Removido: 2025/05/atividades_2025-05.parquet
+[2025-11-17T19:56:26.727+0000] {subprocess.py:93} INFO - 🗑️ Removido: 2025/06/atividades_2025-06.parquet
+[2025-11-17T19:56:26.728+0000] {subprocess.py:93} INFO - 🗑️ Removido: 2025/07/atividades_2025-07.parquet
+[2025-11-17T19:56:26.730+0000] {subprocess.py:93} INFO - 🗑️ Removido: 2025/08/atividades_2025-08.parquet
+[2025-11-17T19:56:26.732+0000] {subprocess.py:93} INFO - 🗑️ Removido: 2025/09/atividades_2025-09.parquet
+[2025-11-17T19:56:26.734+0000] {subprocess.py:93} INFO - 🗑️ Removido: 2025/10/atividades_2025-10.parquet
+[2025-11-17T19:56:26.738+0000] {subprocess.py:93} INFO - 🗑️ Removido: 2025/11/atividades_2025-11.parquet
+[2025-11-17T19:56:26.740+0000] {subprocess.py:93} INFO - ✅ Bucket esvaziado: silver-strava-user-activities-parquet
+[2025-11-17T19:56:26.742+0000] {subprocess.py:93} INFO - 🔁 Deduplicados: 4 removidos
+[2025-11-17T19:56:26.745+0000] {subprocess.py:93} INFO - 📦 Salvo na silver: silver-strava-user-activities-parquet/2021/07/atividades_2021-07.parquet
+[2025-11-17T19:56:26.749+0000] {subprocess.py:93} INFO - 📦 Salvo na silver: silver-strava-user-activities-parquet/2021/10/atividades_2021-10.parquet
+[2025-11-17T19:56:26.751+0000] {subprocess.py:93} INFO - 📦 Salvo na silver: silver-strava-user-activities-parquet/2021/11/atividades_2021-11.parquet
+[2025-11-17T19:56:26.753+0000] {subprocess.py:93} INFO - 📦 Salvo na silver: silver-strava-user-activities-parquet/2022/04/atividades_2022-04.parquet
+[2025-11-17T19:56:26.756+0000] {subprocess.py:93} INFO - 📦 Salvo na silver: silver-strava-user-activities-parquet/2022/05/atividades_2022-05.parquet
+[2025-11-17T19:56:26.757+0000] {subprocess.py:93} INFO - 📦 Salvo na silver: silver-strava-user-activities-parquet/2022/06/atividades_2022-06.parquet
+[2025-11-17T19:56:26.758+0000] {subprocess.py:93} INFO - 📦 Salvo na silver: silver-strava-user-activities-parquet/2022/07/atividades_2022-07.parquet
+[2025-11-17T19:56:26.759+0000] {subprocess.py:93} INFO - 📦 Salvo na silver: silver-strava-user-activities-parquet/2022/08/atividades_2022-08.parquet
+[2025-11-17T19:56:26.761+0000] {subprocess.py:93} INFO - 📦 Salvo na silver: silver-strava-user-activities-parquet/2022/10/atividades_2022-10.parquet
+[2025-11-17T19:56:26.762+0000] {subprocess.py:93} INFO - 📦 Salvo na silver: silver-strava-user-activities-parquet/2022/11/atividades_2022-11.parquet
+[2025-11-17T19:56:26.763+0000] {subprocess.py:93} INFO - 📦 Salvo na silver: silver-strava-user-activities-parquet/2023/01/atividades_2023-01.parquet
+[2025-11-17T19:56:26.765+0000] {subprocess.py:93} INFO - 📦 Salvo na silver: silver-strava-user-activities-parquet/2023/02/atividades_2023-02.parquet
+[2025-11-17T19:56:26.769+0000] {subprocess.py:93} INFO - 📦 Salvo na silver: silver-strava-user-activities-parquet/2023/03/atividades_2023-03.parquet
+[2025-11-17T19:56:26.770+0000] {subprocess.py:93} INFO - 📦 Salvo na silver: silver-strava-user-activities-parquet/2023/04/atividades_2023-04.parquet
+[2025-11-17T19:56:26.772+0000] {subprocess.py:93} INFO - 📦 Salvo na silver: silver-strava-user-activities-parquet/2023/05/atividades_2023-05.parquet
+[2025-11-17T19:56:26.774+0000] {subprocess.py:93} INFO - 📦 Salvo na silver: silver-strava-user-activities-parquet/2023/06/atividades_2023-06.parquet
+[2025-11-17T19:56:26.777+0000] {subprocess.py:93} INFO - 📦 Salvo na silver: silver-strava-user-activities-parquet/2023/07/atividades_2023-07.parquet
+[2025-11-17T19:56:26.792+0000] {subprocess.py:93} INFO - 📦 Salvo na silver: silver-strava-user-activities-parquet/2023/08/atividades_2023-08.parquet
+[2025-11-17T19:56:26.799+0000] {subprocess.py:93} INFO - 📦 Salvo na silver: silver-strava-user-activities-parquet/2023/09/atividades_2023-09.parquet
+[2025-11-17T19:56:26.812+0000] {subprocess.py:93} INFO - 📦 Salvo na silver: silver-strava-user-activities-parquet/2023/10/atividades_2023-10.parquet
+[2025-11-17T19:56:26.823+0000] {subprocess.py:93} INFO - 📦 Salvo na silver: silver-strava-user-activities-parquet/2024/02/atividades_2024-02.parquet
+[2025-11-17T19:56:26.828+0000] {subprocess.py:93} INFO - 📦 Salvo na silver: silver-strava-user-activities-parquet/2024/03/atividades_2024-03.parquet
+[2025-11-17T19:56:26.830+0000] {subprocess.py:93} INFO - 📦 Salvo na silver: silver-strava-user-activities-parquet/2024/04/atividades_2024-04.parquet
+[2025-11-17T19:56:26.834+0000] {subprocess.py:93} INFO - 📦 Salvo na silver: silver-strava-user-activities-parquet/2024/05/atividades_2024-05.parquet
+[2025-11-17T19:56:26.851+0000] {subprocess.py:93} INFO - 📦 Salvo na silver: silver-strava-user-activities-parquet/2024/06/atividades_2024-06.parquet
+[2025-11-17T19:56:26.858+0000] {subprocess.py:93} INFO - 📦 Salvo na silver: silver-strava-user-activities-parquet/2024/07/atividades_2024-07.parquet
+[2025-11-17T19:56:26.869+0000] {subprocess.py:93} INFO - 📦 Salvo na silver: silver-strava-user-activities-parquet/2024/08/atividades_2024-08.parquet
+[2025-11-17T19:56:26.872+0000] {subprocess.py:93} INFO - 📦 Salvo na silver: silver-strava-user-activities-parquet/2024/09/atividades_2024-09.parquet
+[2025-11-17T19:56:26.874+0000] {subprocess.py:93} INFO - 📦 Salvo na silver: silver-strava-user-activities-parquet/2024/10/atividades_2024-10.parquet
+[2025-11-17T19:56:26.877+0000] {subprocess.py:93} INFO - 📦 Salvo na silver: silver-strava-user-activities-parquet/2024/11/atividades_2024-11.parquet
+[2025-11-17T19:56:26.879+0000] {subprocess.py:93} INFO - 📦 Salvo na silver: silver-strava-user-activities-parquet/2024/12/atividades_2024-12.parquet
+[2025-11-17T19:56:26.881+0000] {subprocess.py:93} INFO - 📦 Salvo na silver: silver-strava-user-activities-parquet/2025/01/atividades_2025-01.parquet
+[2025-11-17T19:56:26.919+0000] {subprocess.py:93} INFO - 📦 Salvo na silver: silver-strava-user-activities-parquet/2025/02/atividades_2025-02.parquet
+[2025-11-17T19:56:26.929+0000] {subprocess.py:93} INFO - 📦 Salvo na silver: silver-strava-user-activities-parquet/2025/03/atividades_2025-03.parquet
+[2025-11-17T19:56:26.931+0000] {subprocess.py:93} INFO - 📦 Salvo na silver: silver-strava-user-activities-parquet/2025/04/atividades_2025-04.parquet
+[2025-11-17T19:56:26.931+0000] {subprocess.py:93} INFO - 📦 Salvo na silver: silver-strava-user-activities-parquet/2025/05/atividades_2025-05.parquet
+[2025-11-17T19:56:26.933+0000] {subprocess.py:93} INFO - 📦 Salvo na silver: silver-strava-user-activities-parquet/2025/06/atividades_2025-06.parquet
+[2025-11-17T19:56:26.937+0000] {subprocess.py:93} INFO - 📦 Salvo na silver: silver-strava-user-activities-parquet/2025/07/atividades_2025-07.parquet
+[2025-11-17T19:56:26.939+0000] {subprocess.py:93} INFO - 📦 Salvo na silver: silver-strava-user-activities-parquet/2025/08/atividades_2025-08.parquet
+[2025-11-17T19:56:26.941+0000] {subprocess.py:93} INFO - 📦 Salvo na silver: silver-strava-user-activities-parquet/2025/09/atividades_2025-09.parquet
+[2025-11-17T19:56:26.942+0000] {subprocess.py:93} INFO - 📦 Salvo na silver: silver-strava-user-activities-parquet/2025/10/atividades_2025-10.parquet
+[2025-11-17T19:56:26.942+0000] {subprocess.py:93} INFO - 📦 Salvo na silver: silver-strava-user-activities-parquet/2025/11/atividades_2025-11.parquet
+[2025-11-17T19:56:26.943+0000] {subprocess.py:93} INFO - ✅ Processo finalizado com sucesso ✅
+[2025-11-17T19:56:27.212+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2025-11-17T19:56:27.217+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-11-17T19:56:27.328+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=etl_strava_activities, task_id=extract_silver_activities, run_id=manual__2025-11-17T19:56:04.406428+00:00, execution_date=20251117T195604, start_date=20251117T195623, end_date=20251117T195627
+[2025-11-17T19:56:27.392+0000] {local_task_job_runner.py:243} INFO - Task exited with return code 0
+[2025-11-17T19:56:27.455+0000] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-11-17T19:56:27.457+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

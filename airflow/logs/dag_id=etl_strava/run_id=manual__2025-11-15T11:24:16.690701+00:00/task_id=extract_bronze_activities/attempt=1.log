@@ -1,0 +1,62 @@
+[2025-11-15T11:24:18.048+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-11-15T11:24:18.099+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: etl_strava.extract_bronze_activities manual__2025-11-15T11:24:16.690701+00:00 [queued]>
+[2025-11-15T11:24:18.106+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: etl_strava.extract_bronze_activities manual__2025-11-15T11:24:16.690701+00:00 [queued]>
+[2025-11-15T11:24:18.106+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2025-11-15T11:24:18.116+0000] {taskinstance.py:2330} INFO - Executing <Task(BashOperator): extract_bronze_activities> on 2025-11-15 11:24:16.690701+00:00
+[2025-11-15T11:24:18.131+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:62 DeprecationWarning: This process (pid=778) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-11-15T11:24:18.127+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'etl_strava', 'extract_bronze_activities', 'manual__2025-11-15T11:24:16.690701+00:00', '--job-id', '269', '--raw', '--subdir', 'DAGS_FOLDER/pipeline_strava.py', '--cfg-path', '/tmp/tmp3pq_9t16']
+[2025-11-15T11:24:18.132+0000] {standard_task_runner.py:64} INFO - Started process 783 to run task
+[2025-11-15T11:24:18.133+0000] {standard_task_runner.py:91} INFO - Job 269: Subtask extract_bronze_activities
+[2025-11-15T11:24:18.196+0000] {task_command.py:426} INFO - Running <TaskInstance: etl_strava.extract_bronze_activities manual__2025-11-15T11:24:16.690701+00:00 [running]> on host 2d2323d1fc61
+[2025-11-15T11:24:18.275+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='rayane' AIRFLOW_CTX_DAG_ID='etl_strava' AIRFLOW_CTX_TASK_ID='extract_bronze_activities' AIRFLOW_CTX_EXECUTION_DATE='2025-11-15T11:24:16.690701+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-11-15T11:24:16.690701+00:00'
+[2025-11-15T11:24:18.276+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-11-15T11:24:18.291+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-11-15T11:24:18.292+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'python /opt/***/apps/extract_api_strava_user_activities.py']
+[2025-11-15T11:24:18.298+0000] {subprocess.py:86} INFO - Output:
+[2025-11-15T11:24:27.673+0000] {subprocess.py:93} INFO - Usando o arquivo de variaveis em: /opt/***/apps/.env
+[2025-11-15T11:24:27.674+0000] {subprocess.py:93} INFO - 184573
+[2025-11-15T11:24:27.674+0000] {subprocess.py:93} INFO -  ⚠️  O Token atual expira em: 2025-11-15 16:44:19
+[2025-11-15T11:24:27.675+0000] {subprocess.py:93} INFO - ✅ Credenciais Autenticadas
+[2025-11-15T11:24:27.675+0000] {subprocess.py:93} INFO - PROCESSAMENTO INCREMENTAL A PARTIR DE 2025-10-15 18:54:14+00:00
+[2025-11-15T11:24:27.675+0000] {subprocess.py:93} INFO - 2025-10-15 18:54:14+00:00
+[2025-11-15T11:24:27.676+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-15T11:24:27.676+0000] {subprocess.py:93} INFO - Hash da Atividade 16240995397: fb92d00664ae8d48532bc28f478b12b8
+[2025-11-15T11:24:27.676+0000] {subprocess.py:93} INFO - Hash da Atividade 16245247749: 045ed449ca91881dc5955533c67c6401
+[2025-11-15T11:24:27.677+0000] {subprocess.py:93} INFO - Hash da Atividade 16255380841: 66eec870e6693095cd58bd321cde258f
+[2025-11-15T11:24:27.677+0000] {subprocess.py:93} INFO - Hash da Atividade 16256422683: 90b13a4f893d225994df2363aa723c97
+[2025-11-15T11:24:27.678+0000] {subprocess.py:93} INFO - Hash da Atividade 16261899662: 20072eadd4902902533876d6d24ad21d
+[2025-11-15T11:24:27.678+0000] {subprocess.py:93} INFO - Hash da Atividade 16280433395: 4425108e9f8028a1e2c67f5e10e8729e
+[2025-11-15T11:24:27.678+0000] {subprocess.py:93} INFO - Hash da Atividade 16286472379: 0da0357535b44c60a1a5f3ef7f114158
+[2025-11-15T11:24:27.679+0000] {subprocess.py:93} INFO - Hash da Atividade 16294015317: 6c1a7a267302a3f2299b00320e9f62f9
+[2025-11-15T11:24:27.679+0000] {subprocess.py:93} INFO - Hash da Atividade 16324471811: ee9c846922ffe0ed3d138163aa00fbee
+[2025-11-15T11:24:27.679+0000] {subprocess.py:93} INFO - Hash da Atividade 16324490276: 7840eb6a944d42c6829c024498f09304
+[2025-11-15T11:24:27.679+0000] {subprocess.py:93} INFO - Hash da Atividade 16336210303: b9e5b80a3a3417adc4ee1636348e5a05
+[2025-11-15T11:24:27.680+0000] {subprocess.py:93} INFO - Hash da Atividade 16342704862: 5aacfba4fe82397570ccdaad674d890e
+[2025-11-15T11:24:27.680+0000] {subprocess.py:93} INFO - Hash da Atividade 16347514691: 2fca0c1da77906c778ab10e3ee547030
+[2025-11-15T11:24:27.680+0000] {subprocess.py:93} INFO - Hash da Atividade 16357635052: e1565352f8120f90db73ba6911143643
+[2025-11-15T11:24:27.681+0000] {subprocess.py:93} INFO - Hash da Atividade 16357627858: 285e61801060d0745848409e99d5fa8f
+[2025-11-15T11:24:27.681+0000] {subprocess.py:93} INFO - Hash da Atividade 16357957964: 4e5eccd6d0c9420c7469e957f5edc096
+[2025-11-15T11:24:27.681+0000] {subprocess.py:93} INFO - Hash da Atividade 16369168393: 6038242c4e3b2c8bc39b53f56a63ee77
+[2025-11-15T11:24:27.681+0000] {subprocess.py:93} INFO - Hash da Atividade 16387251400: b4c8c641a85c0118794c9019658b2ab6
+[2025-11-15T11:24:27.681+0000] {subprocess.py:93} INFO - Hash da Atividade 16402288254: 49aaf53fb441e4f0109ff3a440fcfef7
+[2025-11-15T11:24:27.682+0000] {subprocess.py:93} INFO - Hash da Atividade 16402987648: 985487b0426df32221d24fe2b5dc6776
+[2025-11-15T11:24:27.682+0000] {subprocess.py:93} INFO - Hash da Atividade 16417892227: 4c4830ff90d6b3110e5a6518c78eb270
+[2025-11-15T11:24:27.682+0000] {subprocess.py:93} INFO - Hash da Atividade 16431525613: 8142e073489c18e1deff86c6d0913ad2
+[2025-11-15T11:24:27.683+0000] {subprocess.py:93} INFO - ⚠️ Novo evento de arquivo existente ⚠️
+[2025-11-15T11:24:27.683+0000] {subprocess.py:93} INFO - Arquivo 2025/11/2025-11-12-16431525613-2025-11-15.json, inserido
+[2025-11-15T11:24:27.683+0000] {subprocess.py:93} INFO - Hash da Atividade 16459317120: 015e4be59e31f1d36c4b82b3428e3039
+[2025-11-15T11:24:27.683+0000] {subprocess.py:93} INFO - 2025-11-14 18:54:15+00:00 2025-11-14 18:54:14+00:00 2025-11-14 18:54:14+00:00
+[2025-11-15T11:24:27.683+0000] {subprocess.py:93} INFO -  ⏩ Atualizando data para 2025-11-14 18:54:15+00:00 ⏩
+[2025-11-15T11:24:27.684+0000] {subprocess.py:93} INFO - 2025-11-14 18:54:15+00:00
+[2025-11-15T11:24:27.684+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-15T11:24:27.684+0000] {subprocess.py:93} INFO - Hash da Atividade 16459317120: 015e4be59e31f1d36c4b82b3428e3039
+[2025-11-15T11:24:27.684+0000] {subprocess.py:93} INFO -  Nenhuma nova atividade encontrada, finalizando extração ⏳
+[2025-11-15T11:24:27.684+0000] {subprocess.py:93} INFO -  📋 0 Atividades registradas, 0 atividades alteradas
+[2025-11-15T11:24:27.685+0000] {subprocess.py:93} INFO -  📋 2025-11-14 18:54:14+00:00 Ultima data registrada
+[2025-11-15T11:24:27.685+0000] {subprocess.py:93} INFO - ✅ Processo de extração finalizado ✅
+[2025-11-15T11:24:27.785+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2025-11-15T11:24:27.786+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-11-15T11:24:27.815+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=etl_strava, task_id=extract_bronze_activities, run_id=manual__2025-11-15T11:24:16.690701+00:00, execution_date=20251115T112416, start_date=20251115T112418, end_date=20251115T112427
+[2025-11-15T11:24:27.848+0000] {local_task_job_runner.py:243} INFO - Task exited with return code 0
+[2025-11-15T11:24:27.868+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-11-15T11:24:27.870+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

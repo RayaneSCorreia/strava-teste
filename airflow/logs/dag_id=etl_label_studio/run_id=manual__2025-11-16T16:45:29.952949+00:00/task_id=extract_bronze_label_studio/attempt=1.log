@@ -1,0 +1,84 @@
+[2025-11-16T16:45:31.325+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-11-16T16:45:31.364+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: etl_label_studio.extract_bronze_label_studio manual__2025-11-16T16:45:29.952949+00:00 [queued]>
+[2025-11-16T16:45:31.382+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: etl_label_studio.extract_bronze_label_studio manual__2025-11-16T16:45:29.952949+00:00 [queued]>
+[2025-11-16T16:45:31.382+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2025-11-16T16:45:31.411+0000] {taskinstance.py:2330} INFO - Executing <Task(BashOperator): extract_bronze_label_studio> on 2025-11-16 16:45:29.952949+00:00
+[2025-11-16T16:45:31.447+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:62 DeprecationWarning: This process (pid=5922) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-11-16T16:45:31.448+0000] {standard_task_runner.py:64} INFO - Started process 5923 to run task
+[2025-11-16T16:45:31.429+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'etl_label_studio', 'extract_bronze_label_studio', 'manual__2025-11-16T16:45:29.952949+00:00', '--job-id', '343', '--raw', '--subdir', 'DAGS_FOLDER/pipeline_label_studio.py', '--cfg-path', '/tmp/tmppt3zucv3']
+[2025-11-16T16:45:31.449+0000] {standard_task_runner.py:91} INFO - Job 343: Subtask extract_bronze_label_studio
+[2025-11-16T16:45:31.587+0000] {task_command.py:426} INFO - Running <TaskInstance: etl_label_studio.extract_bronze_label_studio manual__2025-11-16T16:45:29.952949+00:00 [running]> on host 5f5c6e0969f2
+[2025-11-16T16:45:31.705+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='rayane' AIRFLOW_CTX_DAG_ID='etl_label_studio' AIRFLOW_CTX_TASK_ID='extract_bronze_label_studio' AIRFLOW_CTX_EXECUTION_DATE='2025-11-16T16:45:29.952949+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-11-16T16:45:29.952949+00:00'
+[2025-11-16T16:45:31.707+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-11-16T16:45:31.718+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-11-16T16:45:31.719+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'python /opt/***/apps//01-bronze/extract_api_label_studio_strava.py']
+[2025-11-16T16:45:31.733+0000] {subprocess.py:86} INFO - Output:
+[2025-11-16T16:45:34.683+0000] {subprocess.py:93} INFO - /opt/***/apps//01-bronze/extract_api_label_studio_strava.py:76: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+[2025-11-16T16:45:34.686+0000] {subprocess.py:93} INFO -   now = datetime.utcnow()
+[2025-11-16T16:45:40.781+0000] {subprocess.py:93} INFO - Usando o arquivo de variaveis em: /opt/***/apps/.env
+[2025-11-16T16:45:40.787+0000] {subprocess.py:93} INFO - PAT (começo): eyJhbGciOi ...
+[2025-11-16T16:45:40.788+0000] {subprocess.py:93} INFO - ACCESS TOKEN (começo): eyJhbGciOiJIUzI1NiIs ...
+[2025-11-16T16:45:40.788+0000] {subprocess.py:93} INFO - Tasks retornadas no export: 490
+[2025-11-16T16:45:40.790+0000] {subprocess.py:93} INFO - Tasks COM anotação: 6
+[2025-11-16T16:45:40.791+0000] {subprocess.py:93} INFO - urllib3.exceptions.ResponseError: too many 500 error responses
+[2025-11-16T16:45:40.792+0000] {subprocess.py:93} INFO - 
+[2025-11-16T16:45:40.793+0000] {subprocess.py:93} INFO - The above exception was the direct cause of the following exception:
+[2025-11-16T16:45:40.794+0000] {subprocess.py:93} INFO - 
+[2025-11-16T16:45:40.794+0000] {subprocess.py:93} INFO - Traceback (most recent call last):
+[2025-11-16T16:45:40.795+0000] {subprocess.py:93} INFO -   File "/opt/***/apps//01-bronze/extract_api_label_studio_strava.py", line 84, in <module>
+[2025-11-16T16:45:40.797+0000] {subprocess.py:93} INFO -     minio_client.put_object(
+[2025-11-16T16:45:40.800+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/minio/api.py", line 2009, in put_object
+[2025-11-16T16:45:40.801+0000] {subprocess.py:93} INFO -     raise exc
+[2025-11-16T16:45:40.802+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/minio/api.py", line 1955, in put_object
+[2025-11-16T16:45:40.803+0000] {subprocess.py:93} INFO -     return self._put_object(
+[2025-11-16T16:45:40.805+0000] {subprocess.py:93} INFO -            ^^^^^^^^^^^^^^^^^
+[2025-11-16T16:45:40.807+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/minio/api.py", line 1784, in _put_object
+[2025-11-16T16:45:40.807+0000] {subprocess.py:93} INFO -     response = self._execute(
+[2025-11-16T16:45:40.808+0000] {subprocess.py:93} INFO -                ^^^^^^^^^^^^^^
+[2025-11-16T16:45:40.809+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/minio/api.py", line 444, in _execute
+[2025-11-16T16:45:40.809+0000] {subprocess.py:93} INFO -     return self._url_open(
+[2025-11-16T16:45:40.810+0000] {subprocess.py:93} INFO -            ^^^^^^^^^^^^^^^
+[2025-11-16T16:45:40.810+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/minio/api.py", line 306, in _url_open
+[2025-11-16T16:45:40.811+0000] {subprocess.py:93} INFO -     response = self._http.urlopen(
+[2025-11-16T16:45:40.812+0000] {subprocess.py:93} INFO -                ^^^^^^^^^^^^^^^^^^^
+[2025-11-16T16:45:40.812+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/urllib3/poolmanager.py", line 443, in urlopen
+[2025-11-16T16:45:40.813+0000] {subprocess.py:93} INFO -     response = conn.urlopen(method, u.request_uri, **kw)
+[2025-11-16T16:45:40.813+0000] {subprocess.py:93} INFO -                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2025-11-16T16:45:40.813+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/urllib3/connectionpool.py", line 946, in urlopen
+[2025-11-16T16:45:40.814+0000] {subprocess.py:93} INFO -     return self.urlopen(
+[2025-11-16T16:45:40.814+0000] {subprocess.py:93} INFO -            ^^^^^^^^^^^^^
+[2025-11-16T16:45:40.815+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/urllib3/connectionpool.py", line 946, in urlopen
+[2025-11-16T16:45:40.815+0000] {subprocess.py:93} INFO -     return self.urlopen(
+[2025-11-16T16:45:40.816+0000] {subprocess.py:93} INFO -            ^^^^^^^^^^^^^
+[2025-11-16T16:45:40.816+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/urllib3/connectionpool.py", line 946, in urlopen
+[2025-11-16T16:45:40.817+0000] {subprocess.py:93} INFO -     return self.urlopen(
+[2025-11-16T16:45:40.817+0000] {subprocess.py:93} INFO -            ^^^^^^^^^^^^^
+[2025-11-16T16:45:40.817+0000] {subprocess.py:93} INFO -   [Previous line repeated 2 more times]
+[2025-11-16T16:45:40.818+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/urllib3/connectionpool.py", line 936, in urlopen
+[2025-11-16T16:45:40.819+0000] {subprocess.py:93} INFO -     retries = retries.increment(method, url, response=response, _pool=self)
+[2025-11-16T16:45:40.820+0000] {subprocess.py:93} INFO -               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2025-11-16T16:45:40.821+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/urllib3/util/retry.py", line 515, in increment
+[2025-11-16T16:45:40.821+0000] {subprocess.py:93} INFO -     raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+[2025-11-16T16:45:40.822+0000] {subprocess.py:93} INFO -     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2025-11-16T16:45:40.822+0000] {subprocess.py:93} INFO - urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='minio', port=9000): Max retries exceeded with url: /bronze-api-label-studio-json/project_id%3D1/dt_process%3D2025/11/16/project_1_tasks_export_20251116T164534.json (Caused by ResponseError('too many 500 error responses'))
+[2025-11-16T16:45:40.948+0000] {subprocess.py:97} INFO - Command exited with return code 1
+[2025-11-16T16:45:40.952+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-11-16T16:45:41.103+0000] {taskinstance.py:2905} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 401, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/bash.py", line 243, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2025-11-16T16:45:41.134+0000] {taskinstance.py:1206} INFO - Marking task as UP_FOR_RETRY. dag_id=etl_label_studio, task_id=extract_bronze_label_studio, run_id=manual__2025-11-16T16:45:29.952949+00:00, execution_date=20251116T164529, start_date=20251116T164531, end_date=20251116T164541
+[2025-11-16T16:45:41.163+0000] {standard_task_runner.py:110} ERROR - Failed to execute job 343 for task extract_bronze_label_studio (Bash command failed. The command returned a non-zero exit code 1.; 5923)
+[2025-11-16T16:45:41.220+0000] {local_task_job_runner.py:243} INFO - Task exited with return code 1
+[2025-11-16T16:45:41.253+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-11-16T16:45:41.256+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

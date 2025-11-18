@@ -1,0 +1,44 @@
+[2025-11-17T19:34:28.077+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-11-17T19:34:28.114+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: etl_strava_activities.extract_gold_fact_activities manual__2025-11-17T19:29:02.284814+00:00 [queued]>
+[2025-11-17T19:34:28.120+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: etl_strava_activities.extract_gold_fact_activities manual__2025-11-17T19:29:02.284814+00:00 [queued]>
+[2025-11-17T19:34:28.120+0000] {taskinstance.py:2306} INFO - Starting attempt 2 of 2
+[2025-11-17T19:34:28.131+0000] {taskinstance.py:2330} INFO - Executing <Task(BashOperator): extract_gold_fact_activities> on 2025-11-17 19:29:02.284814+00:00
+[2025-11-17T19:34:28.137+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'etl_strava_activities', 'extract_gold_fact_activities', 'manual__2025-11-17T19:29:02.284814+00:00', '--job-id', '477', '--raw', '--subdir', 'DAGS_FOLDER/pipeline_strava_activities.py', '--cfg-path', '/tmp/tmpbhys6w2f']
+[2025-11-17T19:34:28.139+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:62 DeprecationWarning: This process (pid=7183) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-11-17T19:34:28.140+0000] {standard_task_runner.py:91} INFO - Job 477: Subtask extract_gold_fact_activities
+[2025-11-17T19:34:28.140+0000] {standard_task_runner.py:64} INFO - Started process 7184 to run task
+[2025-11-17T19:34:28.179+0000] {task_command.py:426} INFO - Running <TaskInstance: etl_strava_activities.extract_gold_fact_activities manual__2025-11-17T19:29:02.284814+00:00 [running]> on host 5c1ce3099579
+[2025-11-17T19:34:28.259+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='rayane' AIRFLOW_CTX_DAG_ID='etl_strava_activities' AIRFLOW_CTX_TASK_ID='extract_gold_fact_activities' AIRFLOW_CTX_EXECUTION_DATE='2025-11-17T19:29:02.284814+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-11-17T19:29:02.284814+00:00'
+[2025-11-17T19:34:28.260+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-11-17T19:34:28.278+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-11-17T19:34:28.279+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'python /opt/***/apps/03-gold/fact_user_activities_strava.py']
+[2025-11-17T19:34:28.286+0000] {subprocess.py:86} INFO - Output:
+[2025-11-17T19:34:28.788+0000] {subprocess.py:93} INFO - Usando o arquivo de variaveis em: /opt/***/apps/.env
+[2025-11-17T19:34:28.788+0000] {subprocess.py:93} INFO - Traceback (most recent call last):
+[2025-11-17T19:34:28.788+0000] {subprocess.py:93} INFO -   File "/opt/***/apps/03-gold/fact_user_activities_strava.py", line 4, in <module>
+[2025-11-17T19:34:28.788+0000] {subprocess.py:93} INFO -     from config_spark import get_spark
+[2025-11-17T19:34:28.788+0000] {subprocess.py:93} INFO -   File "/opt/***/apps/03-gold/config_spark.py", line 34, in <module>
+[2025-11-17T19:34:28.789+0000] {subprocess.py:93} INFO -     hadoop_conf = spark.sparkContext._jsc.hadoopConfiguration()
+[2025-11-17T19:34:28.789+0000] {subprocess.py:93} INFO -                   ^^^^^
+[2025-11-17T19:34:28.789+0000] {subprocess.py:93} INFO - NameError: name 'spark' is not defined
+[2025-11-17T19:34:28.818+0000] {subprocess.py:97} INFO - Command exited with return code 1
+[2025-11-17T19:34:28.819+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-11-17T19:34:28.829+0000] {taskinstance.py:2905} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 401, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/bash.py", line 243, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2025-11-17T19:34:28.833+0000] {taskinstance.py:1206} INFO - Marking task as FAILED. dag_id=etl_strava_activities, task_id=extract_gold_fact_activities, run_id=manual__2025-11-17T19:29:02.284814+00:00, execution_date=20251117T192902, start_date=20251117T193428, end_date=20251117T193428
+[2025-11-17T19:34:28.842+0000] {standard_task_runner.py:110} ERROR - Failed to execute job 477 for task extract_gold_fact_activities (Bash command failed. The command returned a non-zero exit code 1.; 7184)
+[2025-11-17T19:34:28.851+0000] {local_task_job_runner.py:243} INFO - Task exited with return code 1
+[2025-11-17T19:34:28.870+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-11-17T19:34:28.873+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

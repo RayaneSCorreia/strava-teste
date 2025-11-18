@@ -1,0 +1,70 @@
+[2025-11-18T17:57:09.899+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-11-18T17:57:09.980+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: etl_strava_activities.extract_bronze_activities manual__2025-11-18T17:57:08.103317+00:00 [queued]>
+[2025-11-18T17:57:09.987+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: etl_strava_activities.extract_bronze_activities manual__2025-11-18T17:57:08.103317+00:00 [queued]>
+[2025-11-18T17:57:09.988+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2025-11-18T17:57:10.002+0000] {taskinstance.py:2330} INFO - Executing <Task(BashOperator): extract_bronze_activities> on 2025-11-18 17:57:08.103317+00:00
+[2025-11-18T17:57:10.010+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'etl_strava_activities', 'extract_bronze_activities', 'manual__2025-11-18T17:57:08.103317+00:00', '--job-id', '543', '--raw', '--subdir', 'DAGS_FOLDER/pipeline_strava_activities.py', '--cfg-path', '/tmp/tmp68n4hims']
+[2025-11-18T17:57:10.014+0000] {standard_task_runner.py:91} INFO - Job 543: Subtask extract_bronze_activities
+[2025-11-18T17:57:10.014+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:62 DeprecationWarning: This process (pid=5067) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-11-18T17:57:10.015+0000] {standard_task_runner.py:64} INFO - Started process 5068 to run task
+[2025-11-18T17:57:10.091+0000] {task_command.py:426} INFO - Running <TaskInstance: etl_strava_activities.extract_bronze_activities manual__2025-11-18T17:57:08.103317+00:00 [running]> on host f2d31a793684
+[2025-11-18T17:57:10.227+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='rayane' AIRFLOW_CTX_DAG_ID='etl_strava_activities' AIRFLOW_CTX_TASK_ID='extract_bronze_activities' AIRFLOW_CTX_EXECUTION_DATE='2025-11-18T17:57:08.103317+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-11-18T17:57:08.103317+00:00'
+[2025-11-18T17:57:10.228+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-11-18T17:57:10.266+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-11-18T17:57:10.268+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'python /opt/***/apps/01-bronze/extract_api_strava_user_activities.py']
+[2025-11-18T17:57:10.282+0000] {subprocess.py:86} INFO - Output:
+[2025-11-18T17:57:29.563+0000] {subprocess.py:93} INFO - Usando o arquivo de variaveis em: /opt/***/apps/.env
+[2025-11-18T17:57:29.568+0000] {subprocess.py:93} INFO - 184573
+[2025-11-18T17:57:29.568+0000] {subprocess.py:93} INFO -  ⏳ Token expirado, atualizando... ⏳
+[2025-11-18T17:57:29.569+0000] {subprocess.py:93} INFO -  ⚠️  O novo token expira em: 2025-11-18 23:57:12
+[2025-11-18T17:57:29.570+0000] {subprocess.py:93} INFO - Usando o arquivo de variaveis em: /opt/***/apps/.env
+[2025-11-18T17:57:29.570+0000] {subprocess.py:93} INFO - ✅ Credenciais Autenticadas
+[2025-11-18T17:57:29.571+0000] {subprocess.py:93} INFO - PROCESSAMENTO INCREMENTAL A PARTIR DE 2025-10-17 17:24:22+00:00
+[2025-11-18T17:57:29.571+0000] {subprocess.py:93} INFO - 2025-10-17 17:24:22+00:00
+[2025-11-18T17:57:29.571+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-18T17:57:29.572+0000] {subprocess.py:93} INFO - Última data atualizada para: 2025-10-24 08:42:03+00:00
+[2025-11-18T17:57:29.572+0000] {subprocess.py:93} INFO - Última data atualizada para: 2025-10-24 18:11:01+00:00
+[2025-11-18T17:57:29.573+0000] {subprocess.py:93} INFO - Última data atualizada para: 2025-10-25 17:34:52+00:00
+[2025-11-18T17:57:29.573+0000] {subprocess.py:93} INFO - Última data atualizada para: 2025-10-25 18:57:56+00:00
+[2025-11-18T17:57:29.573+0000] {subprocess.py:93} INFO - Última data atualizada para: 2025-10-26 08:34:25+00:00
+[2025-11-18T17:57:29.574+0000] {subprocess.py:93} INFO - Última data atualizada para: 2025-10-28 08:10:29+00:00
+[2025-11-18T17:57:29.574+0000] {subprocess.py:93} INFO - Última data atualizada para: 2025-10-28 18:12:46+00:00
+[2025-11-18T17:57:29.574+0000] {subprocess.py:93} INFO - Última data atualizada para: 2025-10-29 13:05:57+00:00
+[2025-11-18T17:57:29.575+0000] {subprocess.py:93} INFO - Última data atualizada para: 2025-11-01 14:37:44+00:00
+[2025-11-18T17:57:29.575+0000] {subprocess.py:93} INFO - Última data atualizada para: 2025-11-01 15:03:36+00:00
+[2025-11-18T17:57:29.575+0000] {subprocess.py:93} INFO - Última data atualizada para: 2025-11-02 16:55:04+00:00
+[2025-11-18T17:57:29.575+0000] {subprocess.py:93} INFO - Última data atualizada para: 2025-11-03 12:29:57+00:00
+[2025-11-18T17:57:29.575+0000] {subprocess.py:93} INFO - Última data atualizada para: 2025-11-03 18:24:22+00:00
+[2025-11-18T17:57:29.576+0000] {subprocess.py:93} INFO - Última data atualizada para: 2025-11-04 19:14:15+00:00
+[2025-11-18T17:57:29.576+0000] {subprocess.py:93} INFO - Última data atualizada para: 2025-11-04 19:26:56+00:00
+[2025-11-18T17:57:29.576+0000] {subprocess.py:93} INFO - Última data atualizada para: 2025-11-04 20:27:10+00:00
+[2025-11-18T17:57:29.577+0000] {subprocess.py:93} INFO - Última data atualizada para: 2025-11-05 20:26:51+00:00
+[2025-11-18T17:57:29.577+0000] {subprocess.py:93} INFO - Última data atualizada para: 2025-11-07 17:01:32+00:00
+[2025-11-18T17:57:29.577+0000] {subprocess.py:93} INFO - Última data atualizada para: 2025-11-09 07:09:50+00:00
+[2025-11-18T17:57:29.577+0000] {subprocess.py:93} INFO - Última data atualizada para: 2025-11-09 07:52:12+00:00
+[2025-11-18T17:57:29.578+0000] {subprocess.py:93} INFO - Última data atualizada para: 2025-11-10 17:01:34+00:00
+[2025-11-18T17:57:29.578+0000] {subprocess.py:93} INFO - ⚠️ Novo evento de arquivo existente ⚠️
+[2025-11-18T17:57:29.578+0000] {subprocess.py:93} INFO - Arquivo 2025/11/2025-11-12-16431525613-2025-11-18.json, inserido
+[2025-11-18T17:57:29.578+0000] {subprocess.py:93} INFO - Última data atualizada para: 2025-11-12 00:17:19+00:00
+[2025-11-18T17:57:29.578+0000] {subprocess.py:93} INFO - ⚠️ Novo evento de arquivo existente ⚠️
+[2025-11-18T17:57:29.579+0000] {subprocess.py:93} INFO - Arquivo 2025/11/2025-11-14-16459317120-2025-11-18.json, inserido
+[2025-11-18T17:57:29.579+0000] {subprocess.py:93} INFO - Última data atualizada para: 2025-11-14 18:54:14+00:00
+[2025-11-18T17:57:29.579+0000] {subprocess.py:93} INFO - Última data atualizada para: 2025-11-15 10:48:50+00:00
+[2025-11-18T17:57:29.579+0000] {subprocess.py:93} INFO - ⚠️ Novo evento de arquivo existente ⚠️
+[2025-11-18T17:57:29.580+0000] {subprocess.py:93} INFO - Última data atualizada para: 2025-11-16 17:24:22+00:00
+[2025-11-18T17:57:29.580+0000] {subprocess.py:93} INFO - Inserindo atividade 16495770714: hash 22db0fcd32b7cd045c71594bc3e9b768 - data 2025-11-17 19:39:47+00:00
+[2025-11-18T17:57:29.580+0000] {subprocess.py:93} INFO - 2025-11-17 19:39:48+00:00 2025-11-17 19:39:47+00:00 2025-11-17 19:39:47+00:00
+[2025-11-18T17:57:29.580+0000] {subprocess.py:93} INFO -  ⏩ Atualizando data para 2025-11-17 19:39:48+00:00 ⏩
+[2025-11-18T17:57:29.580+0000] {subprocess.py:93} INFO - 2025-11-17 19:39:48+00:00
+[2025-11-18T17:57:29.581+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-18T17:57:29.581+0000] {subprocess.py:93} INFO - Última data atualizada para: 2025-11-17 19:39:47+00:00
+[2025-11-18T17:57:29.581+0000] {subprocess.py:93} INFO -  Nenhuma nova atividade encontrada, finalizando extração ⏳
+[2025-11-18T17:57:29.581+0000] {subprocess.py:93} INFO -  📋 1 Atividades registradas, 1 atividades alteradas
+[2025-11-18T17:57:29.582+0000] {subprocess.py:93} INFO -  📋 2025-11-17 19:39:47+00:00 Ultima data registrada
+[2025-11-18T17:57:29.582+0000] {subprocess.py:93} INFO - ✅ Processo de extração finalizado ✅
+[2025-11-18T17:57:29.720+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2025-11-18T17:57:29.722+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-11-18T17:57:29.766+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=etl_strava_activities, task_id=extract_bronze_activities, run_id=manual__2025-11-18T17:57:08.103317+00:00, execution_date=20251118T175708, start_date=20251118T175709, end_date=20251118T175729
+[2025-11-18T17:57:29.827+0000] {local_task_job_runner.py:243} INFO - Task exited with return code 0
+[2025-11-18T17:57:29.895+0000] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-11-18T17:57:29.898+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

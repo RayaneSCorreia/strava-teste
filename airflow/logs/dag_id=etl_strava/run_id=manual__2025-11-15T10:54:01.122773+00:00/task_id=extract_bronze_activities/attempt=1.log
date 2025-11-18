@@ -1,0 +1,24 @@
+[2025-11-15T10:54:01.956+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-11-15T10:54:01.989+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: etl_strava.extract_bronze_activities manual__2025-11-15T10:54:01.122773+00:00 [queued]>
+[2025-11-15T10:54:01.995+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: etl_strava.extract_bronze_activities manual__2025-11-15T10:54:01.122773+00:00 [queued]>
+[2025-11-15T10:54:01.995+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2025-11-15T10:54:02.004+0000] {taskinstance.py:2330} INFO - Executing <Task(BashOperator): extract_bronze_activities> on 2025-11-15 10:54:01.122773+00:00
+[2025-11-15T10:54:02.010+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'etl_strava', 'extract_bronze_activities', 'manual__2025-11-15T10:54:01.122773+00:00', '--job-id', '261', '--raw', '--subdir', 'DAGS_FOLDER/pipeline_strava.py', '--cfg-path', '/tmp/tmp9wzezli3']
+[2025-11-15T10:54:02.012+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:62 DeprecationWarning: This process (pid=436) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-11-15T10:54:02.012+0000] {standard_task_runner.py:91} INFO - Job 261: Subtask extract_bronze_activities
+[2025-11-15T10:54:02.012+0000] {standard_task_runner.py:64} INFO - Started process 437 to run task
+[2025-11-15T10:54:02.055+0000] {task_command.py:426} INFO - Running <TaskInstance: etl_strava.extract_bronze_activities manual__2025-11-15T10:54:01.122773+00:00 [running]> on host 2d2323d1fc61
+[2025-11-15T10:54:02.124+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='rayane' AIRFLOW_CTX_DAG_ID='etl_strava' AIRFLOW_CTX_TASK_ID='extract_bronze_activities' AIRFLOW_CTX_EXECUTION_DATE='2025-11-15T10:54:01.122773+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-11-15T10:54:01.122773+00:00'
+[2025-11-15T10:54:02.124+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-11-15T10:54:02.136+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-11-15T10:54:02.137+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'python /opt/***/apps/extract_api_strava_user_activities.py']
+[2025-11-15T10:54:02.143+0000] {subprocess.py:86} INFO - Output:
+[2025-11-15T11:15:48.155+0000] {local_task_job_runner.py:313} WARNING - State of this instance has been externally set to failed. Terminating instance.
+[2025-11-15T11:15:48.157+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
+[2025-11-15T11:15:48.160+0000] {process_utils.py:132} INFO - Sending 15 to group 437. PIDs of all processes in the group: [439, 437]
+[2025-11-15T11:15:48.160+0000] {process_utils.py:87} INFO - Sending the signal 15 to group 437
+[2025-11-15T11:15:48.162+0000] {taskinstance.py:2611} ERROR - Received SIGTERM. Terminating subprocesses.
+[2025-11-15T11:15:48.164+0000] {subprocess.py:104} INFO - Sending SIGTERM signal to process group
+[2025-11-15T11:15:48.167+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-11-15T11:15:48.222+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=439, status='terminated', started='10:54:01') (439) terminated with exit code None
+[2025-11-15T11:15:48.223+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=437, status='terminated', exitcode=0, started='10:54:01') (437) terminated with exit code 0

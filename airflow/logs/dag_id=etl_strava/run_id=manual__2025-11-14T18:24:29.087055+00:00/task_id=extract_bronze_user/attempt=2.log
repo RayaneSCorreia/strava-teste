@@ -1,0 +1,53 @@
+[2025-11-14T19:05:16.409+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-11-14T19:05:16.439+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: etl_strava.extract_bronze_user manual__2025-11-14T18:24:29.087055+00:00 [queued]>
+[2025-11-14T19:05:16.444+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: etl_strava.extract_bronze_user manual__2025-11-14T18:24:29.087055+00:00 [queued]>
+[2025-11-14T19:05:16.445+0000] {taskinstance.py:2306} INFO - Starting attempt 2 of 3
+[2025-11-14T19:05:16.452+0000] {taskinstance.py:2330} INFO - Executing <Task(BashOperator): extract_bronze_user> on 2025-11-14 18:24:29.087055+00:00
+[2025-11-14T19:05:16.458+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'etl_strava', 'extract_bronze_user', 'manual__2025-11-14T18:24:29.087055+00:00', '--job-id', '187', '--raw', '--subdir', 'DAGS_FOLDER/pipeline_strava.py', '--cfg-path', '/tmp/tmpt3digzp4']
+[2025-11-14T19:05:16.460+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:62 DeprecationWarning: This process (pid=387) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-11-14T19:05:16.460+0000] {standard_task_runner.py:91} INFO - Job 187: Subtask extract_bronze_user
+[2025-11-14T19:05:16.460+0000] {standard_task_runner.py:64} INFO - Started process 388 to run task
+[2025-11-14T19:05:16.498+0000] {task_command.py:426} INFO - Running <TaskInstance: etl_strava.extract_bronze_user manual__2025-11-14T18:24:29.087055+00:00 [running]> on host 1192556566e9
+[2025-11-14T19:05:16.569+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='rayane' AIRFLOW_CTX_DAG_ID='etl_strava' AIRFLOW_CTX_TASK_ID='extract_bronze_user' AIRFLOW_CTX_EXECUTION_DATE='2025-11-14T18:24:29.087055+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-11-14T18:24:29.087055+00:00'
+[2025-11-14T19:05:16.570+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-11-14T19:05:16.586+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-11-14T19:05:16.588+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'python  /opt/***/apps/extract_api_strava_user.py']
+[2025-11-14T19:05:16.596+0000] {subprocess.py:86} INFO - Output:
+[2025-11-14T19:14:59.560+0000] {subprocess.py:93} INFO -  ⚠️   O Token atual expira em: 2025-11-14 23:49:56
+[2025-11-14T19:14:59.565+0000] {subprocess.py:93} INFO - ✅ Credenciaiss Autenticadas
+[2025-11-14T19:14:59.565+0000] {subprocess.py:93} INFO - Traceback (most recent call last):
+[2025-11-14T19:14:59.566+0000] {subprocess.py:93} INFO -   File "/opt/***/apps/extract_api_strava_user.py", line 74, in <module>
+[2025-11-14T19:14:59.566+0000] {subprocess.py:93} INFO -     athlete = client.get_athlete()
+[2025-11-14T19:14:59.568+0000] {subprocess.py:93} INFO -               ^^^^^^^^^^^^^^^^^^^^
+[2025-11-14T19:14:59.569+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/stravalib/client.py", line 414, in get_athlete
+[2025-11-14T19:14:59.570+0000] {subprocess.py:93} INFO -     raw = self.protocol.get("/athlete")
+[2025-11-14T19:14:59.571+0000] {subprocess.py:93} INFO -           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2025-11-14T19:14:59.572+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/stravalib/protocol.py", line 588, in get
+[2025-11-14T19:14:59.573+0000] {subprocess.py:93} INFO -     return self._request(
+[2025-11-14T19:14:59.574+0000] {subprocess.py:93} INFO -            ^^^^^^^^^^^^^^
+[2025-11-14T19:14:59.574+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/stravalib/protocol.py", line 225, in _request
+[2025-11-14T19:14:59.576+0000] {subprocess.py:93} INFO -     self._handle_protocol_error(raw)
+[2025-11-14T19:14:59.578+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/stravalib/protocol.py", line 528, in _handle_protocol_error
+[2025-11-14T19:14:59.579+0000] {subprocess.py:93} INFO -     raise exc.Fault(msg, response=response)
+[2025-11-14T19:14:59.581+0000] {subprocess.py:93} INFO - stravalib.exc.Fault: 429 Client Error: Too Many Requests [Rate Limit Exceeded: [{'resource': 'Application', 'field': 'read rate limit', 'code': 'exceeded'}]]
+[2025-11-14T19:14:59.845+0000] {subprocess.py:97} INFO - Command exited with return code 1
+[2025-11-14T19:14:59.847+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-11-14T19:14:59.869+0000] {taskinstance.py:2905} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 401, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/bash.py", line 243, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2025-11-14T19:14:59.875+0000] {taskinstance.py:1206} INFO - Marking task as UP_FOR_RETRY. dag_id=etl_strava, task_id=extract_bronze_user, run_id=manual__2025-11-14T18:24:29.087055+00:00, execution_date=20251114T182429, start_date=20251114T190516, end_date=20251114T191459
+[2025-11-14T19:14:59.893+0000] {standard_task_runner.py:110} ERROR - Failed to execute job 187 for task extract_bronze_user (Bash command failed. The command returned a non-zero exit code 1.; 388)
+[2025-11-14T19:14:59.909+0000] {local_task_job_runner.py:243} INFO - Task exited with return code 1
+[2025-11-14T19:14:59.930+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-11-14T19:14:59.931+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

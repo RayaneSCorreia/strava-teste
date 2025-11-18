@@ -1,0 +1,39 @@
+[2025-11-17T12:57:30.776+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-11-17T12:57:30.817+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: etl_label_studio.extract_silver_label_studio manual__2025-11-17T12:57:24.771146+00:00 [queued]>
+[2025-11-17T12:57:30.829+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: etl_label_studio.extract_silver_label_studio manual__2025-11-17T12:57:24.771146+00:00 [queued]>
+[2025-11-17T12:57:30.830+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2025-11-17T12:57:30.862+0000] {taskinstance.py:2330} INFO - Executing <Task(BashOperator): extract_silver_label_studio> on 2025-11-17 12:57:24.771146+00:00
+[2025-11-17T12:57:30.888+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:62 DeprecationWarning: This process (pid=4669) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-11-17T12:57:30.881+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'etl_label_studio', 'extract_silver_label_studio', 'manual__2025-11-17T12:57:24.771146+00:00', '--job-id', '414', '--raw', '--subdir', 'DAGS_FOLDER/pipeline_label_studio.py', '--cfg-path', '/tmp/tmpym2t88_6']
+[2025-11-17T12:57:30.889+0000] {standard_task_runner.py:64} INFO - Started process 4670 to run task
+[2025-11-17T12:57:30.889+0000] {standard_task_runner.py:91} INFO - Job 414: Subtask extract_silver_label_studio
+[2025-11-17T12:57:30.963+0000] {task_command.py:426} INFO - Running <TaskInstance: etl_label_studio.extract_silver_label_studio manual__2025-11-17T12:57:24.771146+00:00 [running]> on host 61cf348b7d62
+[2025-11-17T12:57:31.057+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='rayane' AIRFLOW_CTX_DAG_ID='etl_label_studio' AIRFLOW_CTX_TASK_ID='extract_silver_label_studio' AIRFLOW_CTX_EXECUTION_DATE='2025-11-17T12:57:24.771146+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-11-17T12:57:24.771146+00:00'
+[2025-11-17T12:57:31.058+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-11-17T12:57:31.079+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-11-17T12:57:31.081+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'python /opt/***/apps/02-silver/extract-bronze-to-silver-strava-label_studio.py']
+[2025-11-17T12:57:31.097+0000] {subprocess.py:86} INFO - Output:
+[2025-11-17T12:57:33.949+0000] {subprocess.py:93} INFO - Usando o arquivo de variaveis em: /opt/***/apps/.env
+[2025-11-17T12:57:33.955+0000] {subprocess.py:93} INFO - Bucket Silver Label Studio: silver-label-studio-parquet
+[2025-11-17T12:57:33.956+0000] {subprocess.py:93} INFO - Esvaziando bucket sulver para full load
+[2025-11-17T12:57:33.957+0000] {subprocess.py:93} INFO - 🗑️ Removido: 2024/07/labelstudio_anotacoes_2024-07.parquet
+[2025-11-17T12:57:33.957+0000] {subprocess.py:93} INFO - 🗑️ Removido: 2024/10/labelstudio_anotacoes_2024-10.parquet
+[2025-11-17T12:57:33.958+0000] {subprocess.py:93} INFO - 🗑️ Removido: 2024/11/labelstudio_anotacoes_2024-11.parquet
+[2025-11-17T12:57:33.958+0000] {subprocess.py:93} INFO - 🗑️ Removido: 2025/03/labelstudio_anotacoes_2025-03.parquet
+[2025-11-17T12:57:33.959+0000] {subprocess.py:93} INFO - 🗑️ Removido: 2025/07/labelstudio_anotacoes_2025-07.parquet
+[2025-11-17T12:57:33.959+0000] {subprocess.py:93} INFO - ✅ Bucket esvaziado: silver-label-studio-parquet
+[2025-11-17T12:57:33.960+0000] {subprocess.py:93} INFO - ⚠️ Conteúdo ainda string após json.loads em project_id=1/dt_process=2025/11/15/project_1_export_20251115T202608.json
+[2025-11-17T12:57:33.960+0000] {subprocess.py:93} INFO - ⚠️ Conteúdo ainda string após json.loads em project_id=1/dt_process=2025/11/15/project_1_export_20251115T205531.json
+[2025-11-17T12:57:33.960+0000] {subprocess.py:93} INFO - 🔁 Deduplicados: 60 registros de anotação removidos
+[2025-11-17T12:57:33.960+0000] {subprocess.py:93} INFO - 📦 Salvo na silver Label Studio: silver-label-studio-parquet/2024/07/labelstudio_anotacoes_2024-07.parquet
+[2025-11-17T12:57:33.961+0000] {subprocess.py:93} INFO - 📦 Salvo na silver Label Studio: silver-label-studio-parquet/2024/10/labelstudio_anotacoes_2024-10.parquet
+[2025-11-17T12:57:33.961+0000] {subprocess.py:93} INFO - 📦 Salvo na silver Label Studio: silver-label-studio-parquet/2024/11/labelstudio_anotacoes_2024-11.parquet
+[2025-11-17T12:57:33.962+0000] {subprocess.py:93} INFO - 📦 Salvo na silver Label Studio: silver-label-studio-parquet/2025/03/labelstudio_anotacoes_2025-03.parquet
+[2025-11-17T12:57:33.962+0000] {subprocess.py:93} INFO - 📦 Salvo na silver Label Studio: silver-label-studio-parquet/2025/07/labelstudio_anotacoes_2025-07.parquet
+[2025-11-17T12:57:33.962+0000] {subprocess.py:93} INFO - ✅ Processo Label Studio → Silver finalizado com sucesso ✅
+[2025-11-17T12:57:34.079+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2025-11-17T12:57:34.083+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-11-17T12:57:34.156+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=etl_label_studio, task_id=extract_silver_label_studio, run_id=manual__2025-11-17T12:57:24.771146+00:00, execution_date=20251117T125724, start_date=20251117T125730, end_date=20251117T125734
+[2025-11-17T12:57:34.209+0000] {local_task_job_runner.py:243} INFO - Task exited with return code 0
+[2025-11-17T12:57:34.246+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-11-17T12:57:34.248+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

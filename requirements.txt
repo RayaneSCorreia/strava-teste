@@ -1,0 +1,13 @@
+
+pandas==2.1.4
+stravalib==2.4
+python-dotenv==1.1.0
+requests==2.32.3
+boto3==1.40.71
+minio==7.2.18
+apache-airflow==2.9.3
+apache-airflow-providers-postgres==5.7.0
+pyspark==3.5.1
+delta-spark==3.2.0
+numpy==1.26.4
+pydantic==2.7.1

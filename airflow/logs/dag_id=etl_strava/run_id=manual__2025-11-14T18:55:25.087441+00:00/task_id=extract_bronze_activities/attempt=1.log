@@ -1,0 +1,981 @@
+[2025-11-14T18:55:25.700+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-11-14T18:55:25.751+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: etl_strava.extract_bronze_activities manual__2025-11-14T18:55:25.087441+00:00 [queued]>
+[2025-11-14T18:55:25.757+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: etl_strava.extract_bronze_activities manual__2025-11-14T18:55:25.087441+00:00 [queued]>
+[2025-11-14T18:55:25.758+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2025-11-14T18:55:25.777+0000] {taskinstance.py:2330} INFO - Executing <Task(BashOperator): extract_bronze_activities> on 2025-11-14 18:55:25.087441+00:00
+[2025-11-14T18:55:25.791+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:62 DeprecationWarning: This process (pid=554) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-11-14T18:55:25.785+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'etl_strava', 'extract_bronze_activities', 'manual__2025-11-14T18:55:25.087441+00:00', '--job-id', '154', '--raw', '--subdir', 'DAGS_FOLDER/pipeline_strava.py', '--cfg-path', '/tmp/tmp3l7d6k4o']
+[2025-11-14T18:55:25.792+0000] {standard_task_runner.py:91} INFO - Job 154: Subtask extract_bronze_activities
+[2025-11-14T18:55:25.792+0000] {standard_task_runner.py:64} INFO - Started process 556 to run task
+[2025-11-14T18:55:25.887+0000] {task_command.py:426} INFO - Running <TaskInstance: etl_strava.extract_bronze_activities manual__2025-11-14T18:55:25.087441+00:00 [running]> on host 2d2323d1fc61
+[2025-11-14T18:55:25.979+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='rayane' AIRFLOW_CTX_DAG_ID='etl_strava' AIRFLOW_CTX_TASK_ID='extract_bronze_activities' AIRFLOW_CTX_EXECUTION_DATE='2025-11-14T18:55:25.087441+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-11-14T18:55:25.087441+00:00'
+[2025-11-14T18:55:25.980+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-11-14T18:55:25.998+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-11-14T18:55:25.999+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'python /opt/***/apps/extract_api_strava_user_activities.py']
+[2025-11-14T18:55:26.011+0000] {subprocess.py:86} INFO - Output:
+[2025-11-14T18:55:45.084+0000] {subprocess.py:93} INFO - Usando o arquivo de variaveis em: /opt/***/apps/.env
+[2025-11-14T18:55:45.087+0000] {subprocess.py:93} INFO - 184573
+[2025-11-14T18:55:45.088+0000] {subprocess.py:93} INFO -  ⚠️  O Token atual expira em: 2025-11-14 23:49:56
+[2025-11-14T18:55:45.088+0000] {subprocess.py:93} INFO - ✅ Credenciais Autenticadas
+[2025-11-14T18:55:45.089+0000] {subprocess.py:93} INFO - PROCESSAMENTO INCREMENTAL A PARTIR DE 2025-10-13 00:17:19+00:00
+[2025-11-14T18:55:45.089+0000] {subprocess.py:93} INFO - 2025-10-13 00:17:19+00:00
+[2025-11-14T18:55:45.089+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-14T18:55:45.090+0000] {subprocess.py:93} INFO - Hash da Atividade 16240995397: fb92d00664ae8d48532bc28f478b12b8
+[2025-11-14T18:55:45.090+0000] {subprocess.py:93} INFO - Hash da Atividade 16245247749: 045ed449ca91881dc5955533c67c6401
+[2025-11-14T18:55:45.090+0000] {subprocess.py:93} INFO - Hash da Atividade 16255380841: 66eec870e6693095cd58bd321cde258f
+[2025-11-14T18:55:45.091+0000] {subprocess.py:93} INFO - Hash da Atividade 16256422683: 90b13a4f893d225994df2363aa723c97
+[2025-11-14T18:55:45.091+0000] {subprocess.py:93} INFO - Hash da Atividade 16261899662: 20072eadd4902902533876d6d24ad21d
+[2025-11-14T18:55:45.091+0000] {subprocess.py:93} INFO - Hash da Atividade 16280433395: 4425108e9f8028a1e2c67f5e10e8729e
+[2025-11-14T18:55:45.091+0000] {subprocess.py:93} INFO - Hash da Atividade 16286472379: 0da0357535b44c60a1a5f3ef7f114158
+[2025-11-14T18:55:45.092+0000] {subprocess.py:93} INFO - Hash da Atividade 16294015317: 6c1a7a267302a3f2299b00320e9f62f9
+[2025-11-14T18:55:45.092+0000] {subprocess.py:93} INFO - Hash da Atividade 16324471811: ee9c846922ffe0ed3d138163aa00fbee
+[2025-11-14T18:55:45.092+0000] {subprocess.py:93} INFO - Hash da Atividade 16324490276: 7840eb6a944d42c6829c024498f09304
+[2025-11-14T18:55:45.092+0000] {subprocess.py:93} INFO - Hash da Atividade 16336210303: b9e5b80a3a3417adc4ee1636348e5a05
+[2025-11-14T18:55:45.093+0000] {subprocess.py:93} INFO - Hash da Atividade 16342704862: 5aacfba4fe82397570ccdaad674d890e
+[2025-11-14T18:55:45.093+0000] {subprocess.py:93} INFO - Hash da Atividade 16347514691: 2fca0c1da77906c778ab10e3ee547030
+[2025-11-14T18:55:45.093+0000] {subprocess.py:93} INFO - Hash da Atividade 16357635052: e1565352f8120f90db73ba6911143643
+[2025-11-14T18:55:45.093+0000] {subprocess.py:93} INFO - Hash da Atividade 16357627858: 285e61801060d0745848409e99d5fa8f
+[2025-11-14T18:55:45.093+0000] {subprocess.py:93} INFO - Hash da Atividade 16357957964: 4e5eccd6d0c9420c7469e957f5edc096
+[2025-11-14T18:55:45.093+0000] {subprocess.py:93} INFO - Hash da Atividade 16369168393: 6038242c4e3b2c8bc39b53f56a63ee77
+[2025-11-14T18:55:45.094+0000] {subprocess.py:93} INFO - Hash da Atividade 16387251400: b4c8c641a85c0118794c9019658b2ab6
+[2025-11-14T18:55:45.094+0000] {subprocess.py:93} INFO - Hash da Atividade 16402288254: 49aaf53fb441e4f0109ff3a440fcfef7
+[2025-11-14T18:55:45.095+0000] {subprocess.py:93} INFO - Hash da Atividade 16402987648: 985487b0426df32221d24fe2b5dc6776
+[2025-11-14T18:55:45.095+0000] {subprocess.py:93} INFO - Hash da Atividade 16417892227: 4c4830ff90d6b3110e5a6518c78eb270
+[2025-11-14T18:55:45.095+0000] {subprocess.py:93} INFO - Hash da Atividade 16431525613: 8142e073489c18e1deff86c6d0913ad2
+[2025-11-14T18:55:45.095+0000] {subprocess.py:93} INFO - ⚠️ Novo evento de arquivo existente ⚠️
+[2025-11-14T18:55:45.095+0000] {subprocess.py:93} INFO - ⚠️  Erro ao inserir nova atividade 16431525613: HTTPConnectionPool(host='minio', port=9000): Max retries exceeded with url: /bronze-api-strava-user-activities-json/2025/11/2025-11-12-16431525613-2025-11-14.json (Caused by ResponseError('too many 500 error responses'))
+[2025-11-14T18:55:45.096+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00 2025-11-12 00:17:19+00:00 2025-11-12 00:17:19+00:00
+[2025-11-14T18:55:45.096+0000] {subprocess.py:93} INFO -  ⏩ Atualizando data para 2025-11-12 00:17:20+00:00 ⏩
+[2025-11-14T18:55:45.096+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00
+[2025-11-14T18:55:45.096+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-14T18:55:45.096+0000] {subprocess.py:93} INFO -  Nenhuma nova atividade encontrada, finalizando extração ⏳
+[2025-11-14T18:55:45.097+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00 2025-11-12 00:17:19+00:00 2025-11-12 00:17:19+00:00
+[2025-11-14T18:55:45.097+0000] {subprocess.py:93} INFO -  ⏩ Atualizando data para 2025-11-12 00:17:20+00:00 ⏩
+[2025-11-14T18:55:45.098+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00
+[2025-11-14T18:55:45.098+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-14T18:55:45.098+0000] {subprocess.py:93} INFO -  Nenhuma nova atividade encontrada, finalizando extração ⏳
+[2025-11-14T18:55:45.098+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00 2025-11-12 00:17:19+00:00 2025-11-12 00:17:19+00:00
+[2025-11-14T18:55:45.098+0000] {subprocess.py:93} INFO -  ⏩ Atualizando data para 2025-11-12 00:17:20+00:00 ⏩
+[2025-11-14T18:55:45.099+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00
+[2025-11-14T18:55:45.099+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-14T18:55:45.099+0000] {subprocess.py:93} INFO -  Nenhuma nova atividade encontrada, finalizando extração ⏳
+[2025-11-14T18:55:45.099+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00 2025-11-12 00:17:19+00:00 2025-11-12 00:17:19+00:00
+[2025-11-14T18:55:45.100+0000] {subprocess.py:93} INFO -  ⏩ Atualizando data para 2025-11-12 00:17:20+00:00 ⏩
+[2025-11-14T18:55:45.100+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00
+[2025-11-14T18:55:45.100+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-14T18:55:45.100+0000] {subprocess.py:93} INFO -  Nenhuma nova atividade encontrada, finalizando extração ⏳
+[2025-11-14T18:55:45.100+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00 2025-11-12 00:17:19+00:00 2025-11-12 00:17:19+00:00
+[2025-11-14T18:55:45.101+0000] {subprocess.py:93} INFO -  ⏩ Atualizando data para 2025-11-12 00:17:20+00:00 ⏩
+[2025-11-14T18:55:45.101+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00
+[2025-11-14T18:55:45.101+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-14T18:55:45.101+0000] {subprocess.py:93} INFO -  Nenhuma nova atividade encontrada, finalizando extração ⏳
+[2025-11-14T18:55:45.102+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00 2025-11-12 00:17:19+00:00 2025-11-12 00:17:19+00:00
+[2025-11-14T18:55:45.102+0000] {subprocess.py:93} INFO -  ⏩ Atualizando data para 2025-11-12 00:17:20+00:00 ⏩
+[2025-11-14T18:55:45.102+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00
+[2025-11-14T18:55:45.102+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-14T18:55:45.102+0000] {subprocess.py:93} INFO -  Nenhuma nova atividade encontrada, finalizando extração ⏳
+[2025-11-14T18:55:45.102+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00 2025-11-12 00:17:19+00:00 2025-11-12 00:17:19+00:00
+[2025-11-14T18:55:45.102+0000] {subprocess.py:93} INFO -  ⏩ Atualizando data para 2025-11-12 00:17:20+00:00 ⏩
+[2025-11-14T18:55:45.103+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00
+[2025-11-14T18:55:45.103+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-14T18:55:45.103+0000] {subprocess.py:93} INFO -  Nenhuma nova atividade encontrada, finalizando extração ⏳
+[2025-11-14T18:55:45.103+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00 2025-11-12 00:17:19+00:00 2025-11-12 00:17:19+00:00
+[2025-11-14T18:55:45.103+0000] {subprocess.py:93} INFO -  ⏩ Atualizando data para 2025-11-12 00:17:20+00:00 ⏩
+[2025-11-14T18:55:45.104+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00
+[2025-11-14T18:55:45.104+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-14T18:55:45.104+0000] {subprocess.py:93} INFO -  Nenhuma nova atividade encontrada, finalizando extração ⏳
+[2025-11-14T18:55:45.104+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00 2025-11-12 00:17:19+00:00 2025-11-12 00:17:19+00:00
+[2025-11-14T18:55:45.104+0000] {subprocess.py:93} INFO -  ⏩ Atualizando data para 2025-11-12 00:17:20+00:00 ⏩
+[2025-11-14T18:55:45.104+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00
+[2025-11-14T18:55:45.105+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-14T18:55:45.105+0000] {subprocess.py:93} INFO -  Nenhuma nova atividade encontrada, finalizando extração ⏳
+[2025-11-14T18:55:45.105+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00 2025-11-12 00:17:19+00:00 2025-11-12 00:17:19+00:00
+[2025-11-14T18:55:45.105+0000] {subprocess.py:93} INFO -  ⏩ Atualizando data para 2025-11-12 00:17:20+00:00 ⏩
+[2025-11-14T18:55:45.105+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00
+[2025-11-14T18:55:45.105+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-14T18:55:45.106+0000] {subprocess.py:93} INFO -  Nenhuma nova atividade encontrada, finalizando extração ⏳
+[2025-11-14T18:55:45.106+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00 2025-11-12 00:17:19+00:00 2025-11-12 00:17:19+00:00
+[2025-11-14T18:55:45.106+0000] {subprocess.py:93} INFO -  ⏩ Atualizando data para 2025-11-12 00:17:20+00:00 ⏩
+[2025-11-14T18:55:45.106+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00
+[2025-11-14T18:55:45.106+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-14T18:55:45.106+0000] {subprocess.py:93} INFO -  Nenhuma nova atividade encontrada, finalizando extração ⏳
+[2025-11-14T18:55:45.107+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00 2025-11-12 00:17:19+00:00 2025-11-12 00:17:19+00:00
+[2025-11-14T18:55:45.107+0000] {subprocess.py:93} INFO -  ⏩ Atualizando data para 2025-11-12 00:17:20+00:00 ⏩
+[2025-11-14T18:55:45.108+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00
+[2025-11-14T18:55:45.108+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-14T18:55:45.108+0000] {subprocess.py:93} INFO -  Nenhuma nova atividade encontrada, finalizando extração ⏳
+[2025-11-14T18:55:45.108+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00 2025-11-12 00:17:19+00:00 2025-11-12 00:17:19+00:00
+[2025-11-14T18:55:45.108+0000] {subprocess.py:93} INFO -  ⏩ Atualizando data para 2025-11-12 00:17:20+00:00 ⏩
+[2025-11-14T18:55:45.108+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00
+[2025-11-14T18:55:45.108+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-14T18:55:45.109+0000] {subprocess.py:93} INFO -  Nenhuma nova atividade encontrada, finalizando extração ⏳
+[2025-11-14T18:55:45.109+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00 2025-11-12 00:17:19+00:00 2025-11-12 00:17:19+00:00
+[2025-11-14T18:55:45.109+0000] {subprocess.py:93} INFO -  ⏩ Atualizando data para 2025-11-12 00:17:20+00:00 ⏩
+[2025-11-14T18:55:45.109+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00
+[2025-11-14T18:55:45.109+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-14T18:55:45.109+0000] {subprocess.py:93} INFO -  Nenhuma nova atividade encontrada, finalizando extração ⏳
+[2025-11-14T18:55:45.109+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00 2025-11-12 00:17:19+00:00 2025-11-12 00:17:19+00:00
+[2025-11-14T18:55:45.109+0000] {subprocess.py:93} INFO -  ⏩ Atualizando data para 2025-11-12 00:17:20+00:00 ⏩
+[2025-11-14T18:55:45.110+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00
+[2025-11-14T18:55:45.110+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-14T18:55:45.110+0000] {subprocess.py:93} INFO -  Nenhuma nova atividade encontrada, finalizando extração ⏳
+[2025-11-14T18:55:45.110+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00 2025-11-12 00:17:19+00:00 2025-11-12 00:17:19+00:00
+[2025-11-14T18:55:45.110+0000] {subprocess.py:93} INFO -  ⏩ Atualizando data para 2025-11-12 00:17:20+00:00 ⏩
+[2025-11-14T18:55:45.110+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00
+[2025-11-14T18:55:45.110+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-14T18:55:45.110+0000] {subprocess.py:93} INFO -  Nenhuma nova atividade encontrada, finalizando extração ⏳
+[2025-11-14T18:55:45.110+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00 2025-11-12 00:17:19+00:00 2025-11-12 00:17:19+00:00
+[2025-11-14T18:55:45.111+0000] {subprocess.py:93} INFO -  ⏩ Atualizando data para 2025-11-12 00:17:20+00:00 ⏩
+[2025-11-14T18:55:45.111+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00
+[2025-11-14T18:55:45.111+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-14T18:55:45.111+0000] {subprocess.py:93} INFO -  Nenhuma nova atividade encontrada, finalizando extração ⏳
+[2025-11-14T18:55:45.111+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00 2025-11-12 00:17:19+00:00 2025-11-12 00:17:19+00:00
+[2025-11-14T18:55:45.111+0000] {subprocess.py:93} INFO -  ⏩ Atualizando data para 2025-11-12 00:17:20+00:00 ⏩
+[2025-11-14T18:55:45.111+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00
+[2025-11-14T18:55:45.111+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-14T18:55:45.111+0000] {subprocess.py:93} INFO -  Nenhuma nova atividade encontrada, finalizando extração ⏳
+[2025-11-14T18:55:45.111+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00 2025-11-12 00:17:19+00:00 2025-11-12 00:17:19+00:00
+[2025-11-14T18:55:45.111+0000] {subprocess.py:93} INFO -  ⏩ Atualizando data para 2025-11-12 00:17:20+00:00 ⏩
+[2025-11-14T18:55:45.112+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00
+[2025-11-14T18:55:45.112+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-14T18:55:45.112+0000] {subprocess.py:93} INFO -  Nenhuma nova atividade encontrada, finalizando extração ⏳
+[2025-11-14T18:55:45.112+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00 2025-11-12 00:17:19+00:00 2025-11-12 00:17:19+00:00
+[2025-11-14T18:55:45.112+0000] {subprocess.py:93} INFO -  ⏩ Atualizando data para 2025-11-12 00:17:20+00:00 ⏩
+[2025-11-14T18:55:45.112+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00
+[2025-11-14T18:55:45.112+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-14T18:55:45.112+0000] {subprocess.py:93} INFO -  Nenhuma nova atividade encontrada, finalizando extração ⏳
+[2025-11-14T18:55:45.112+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00 2025-11-12 00:17:19+00:00 2025-11-12 00:17:19+00:00
+[2025-11-14T18:55:45.112+0000] {subprocess.py:93} INFO -  ⏩ Atualizando data para 2025-11-12 00:17:20+00:00 ⏩
+[2025-11-14T18:55:45.112+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00
+[2025-11-14T18:55:45.113+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-14T18:55:45.113+0000] {subprocess.py:93} INFO -  Nenhuma nova atividade encontrada, finalizando extração ⏳
+[2025-11-14T18:55:45.113+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00 2025-11-12 00:17:19+00:00 2025-11-12 00:17:19+00:00
+[2025-11-14T18:55:45.113+0000] {subprocess.py:93} INFO -  ⏩ Atualizando data para 2025-11-12 00:17:20+00:00 ⏩
+[2025-11-14T18:55:45.113+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00
+[2025-11-14T18:55:45.113+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-14T18:55:45.113+0000] {subprocess.py:93} INFO -  Nenhuma nova atividade encontrada, finalizando extração ⏳
+[2025-11-14T18:55:45.113+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00 2025-11-12 00:17:19+00:00 2025-11-12 00:17:19+00:00
+[2025-11-14T18:55:45.113+0000] {subprocess.py:93} INFO -  ⏩ Atualizando data para 2025-11-12 00:17:20+00:00 ⏩
+[2025-11-14T18:55:45.113+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00
+[2025-11-14T18:55:45.113+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-14T18:55:45.114+0000] {subprocess.py:93} INFO -  Nenhuma nova atividade encontrada, finalizando extração ⏳
+[2025-11-14T18:55:45.114+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00 2025-11-12 00:17:19+00:00 2025-11-12 00:17:19+00:00
+[2025-11-14T18:55:45.114+0000] {subprocess.py:93} INFO -  ⏩ Atualizando data para 2025-11-12 00:17:20+00:00 ⏩
+[2025-11-14T18:55:45.114+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00
+[2025-11-14T18:55:45.114+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-14T18:55:59.240+0000] {subprocess.py:93} INFO -  Nenhuma nova atividade encontrada, finalizando extração ⏳
+[2025-11-14T18:55:59.244+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00 2025-11-12 00:17:19+00:00 2025-11-12 00:17:19+00:00
+[2025-11-14T18:55:59.244+0000] {subprocess.py:93} INFO -  ⏩ Atualizando data para 2025-11-12 00:17:20+00:00 ⏩
+[2025-11-14T18:55:59.245+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00
+[2025-11-14T18:55:59.245+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-14T18:55:59.245+0000] {subprocess.py:93} INFO -  Nenhuma nova atividade encontrada, finalizando extração ⏳
+[2025-11-14T18:55:59.245+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00 2025-11-12 00:17:19+00:00 2025-11-12 00:17:19+00:00
+[2025-11-14T18:55:59.245+0000] {subprocess.py:93} INFO -  ⏩ Atualizando data para 2025-11-12 00:17:20+00:00 ⏩
+[2025-11-14T18:55:59.246+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00
+[2025-11-14T18:55:59.246+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-14T18:55:59.246+0000] {subprocess.py:93} INFO -  Nenhuma nova atividade encontrada, finalizando extração ⏳
+[2025-11-14T18:55:59.246+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00 2025-11-12 00:17:19+00:00 2025-11-12 00:17:19+00:00
+[2025-11-14T18:55:59.247+0000] {subprocess.py:93} INFO -  ⏩ Atualizando data para 2025-11-12 00:17:20+00:00 ⏩
+[2025-11-14T18:55:59.247+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00
+[2025-11-14T18:55:59.247+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-14T18:55:59.247+0000] {subprocess.py:93} INFO -  Nenhuma nova atividade encontrada, finalizando extração ⏳
+[2025-11-14T18:55:59.248+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00 2025-11-12 00:17:19+00:00 2025-11-12 00:17:19+00:00
+[2025-11-14T18:55:59.248+0000] {subprocess.py:93} INFO -  ⏩ Atualizando data para 2025-11-12 00:17:20+00:00 ⏩
+[2025-11-14T18:55:59.248+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00
+[2025-11-14T18:55:59.248+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-14T18:55:59.248+0000] {subprocess.py:93} INFO -  Nenhuma nova atividade encontrada, finalizando extração ⏳
+[2025-11-14T18:55:59.249+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00 2025-11-12 00:17:19+00:00 2025-11-12 00:17:19+00:00
+[2025-11-14T18:55:59.249+0000] {subprocess.py:93} INFO -  ⏩ Atualizando data para 2025-11-12 00:17:20+00:00 ⏩
+[2025-11-14T18:55:59.249+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00
+[2025-11-14T18:55:59.249+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-14T18:55:59.249+0000] {subprocess.py:93} INFO -  Nenhuma nova atividade encontrada, finalizando extração ⏳
+[2025-11-14T18:55:59.250+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00 2025-11-12 00:17:19+00:00 2025-11-12 00:17:19+00:00
+[2025-11-14T18:55:59.250+0000] {subprocess.py:93} INFO -  ⏩ Atualizando data para 2025-11-12 00:17:20+00:00 ⏩
+[2025-11-14T18:55:59.250+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00
+[2025-11-14T18:55:59.250+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-14T18:55:59.250+0000] {subprocess.py:93} INFO -  Nenhuma nova atividade encontrada, finalizando extração ⏳
+[2025-11-14T18:55:59.251+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00 2025-11-12 00:17:19+00:00 2025-11-12 00:17:19+00:00
+[2025-11-14T18:55:59.251+0000] {subprocess.py:93} INFO -  ⏩ Atualizando data para 2025-11-12 00:17:20+00:00 ⏩
+[2025-11-14T18:55:59.251+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00
+[2025-11-14T18:55:59.251+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-14T18:55:59.251+0000] {subprocess.py:93} INFO -  Nenhuma nova atividade encontrada, finalizando extração ⏳
+[2025-11-14T18:55:59.251+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00 2025-11-12 00:17:19+00:00 2025-11-12 00:17:19+00:00
+[2025-11-14T18:55:59.252+0000] {subprocess.py:93} INFO -  ⏩ Atualizando data para 2025-11-12 00:17:20+00:00 ⏩
+[2025-11-14T18:55:59.252+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00
+[2025-11-14T18:55:59.252+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-14T18:55:59.252+0000] {subprocess.py:93} INFO -  Nenhuma nova atividade encontrada, finalizando extração ⏳
+[2025-11-14T18:55:59.252+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00 2025-11-12 00:17:19+00:00 2025-11-12 00:17:19+00:00
+[2025-11-14T18:55:59.253+0000] {subprocess.py:93} INFO -  ⏩ Atualizando data para 2025-11-12 00:17:20+00:00 ⏩
+[2025-11-14T18:55:59.253+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00
+[2025-11-14T18:55:59.253+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-14T18:55:59.253+0000] {subprocess.py:93} INFO -  Nenhuma nova atividade encontrada, finalizando extração ⏳
+[2025-11-14T18:55:59.253+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00 2025-11-12 00:17:19+00:00 2025-11-12 00:17:19+00:00
+[2025-11-14T18:55:59.253+0000] {subprocess.py:93} INFO -  ⏩ Atualizando data para 2025-11-12 00:17:20+00:00 ⏩
+[2025-11-14T18:55:59.254+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00
+[2025-11-14T18:55:59.254+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-14T18:55:59.254+0000] {subprocess.py:93} INFO -  Nenhuma nova atividade encontrada, finalizando extração ⏳
+[2025-11-14T18:55:59.254+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00 2025-11-12 00:17:19+00:00 2025-11-12 00:17:19+00:00
+[2025-11-14T18:55:59.254+0000] {subprocess.py:93} INFO -  ⏩ Atualizando data para 2025-11-12 00:17:20+00:00 ⏩
+[2025-11-14T18:55:59.254+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00
+[2025-11-14T18:55:59.255+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-14T18:55:59.255+0000] {subprocess.py:93} INFO -  Nenhuma nova atividade encontrada, finalizando extração ⏳
+[2025-11-14T18:55:59.255+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00 2025-11-12 00:17:19+00:00 2025-11-12 00:17:19+00:00
+[2025-11-14T18:55:59.255+0000] {subprocess.py:93} INFO -  ⏩ Atualizando data para 2025-11-12 00:17:20+00:00 ⏩
+[2025-11-14T18:55:59.255+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00
+[2025-11-14T18:55:59.256+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-14T18:55:59.256+0000] {subprocess.py:93} INFO -  Nenhuma nova atividade encontrada, finalizando extração ⏳
+[2025-11-14T18:55:59.256+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00 2025-11-12 00:17:19+00:00 2025-11-12 00:17:19+00:00
+[2025-11-14T18:55:59.256+0000] {subprocess.py:93} INFO -  ⏩ Atualizando data para 2025-11-12 00:17:20+00:00 ⏩
+[2025-11-14T18:55:59.256+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00
+[2025-11-14T18:55:59.256+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-14T18:55:59.257+0000] {subprocess.py:93} INFO -  Nenhuma nova atividade encontrada, finalizando extração ⏳
+[2025-11-14T18:55:59.257+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00 2025-11-12 00:17:19+00:00 2025-11-12 00:17:19+00:00
+[2025-11-14T18:55:59.257+0000] {subprocess.py:93} INFO -  ⏩ Atualizando data para 2025-11-12 00:17:20+00:00 ⏩
+[2025-11-14T18:55:59.257+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00
+[2025-11-14T18:55:59.257+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-14T18:55:59.257+0000] {subprocess.py:93} INFO -  Nenhuma nova atividade encontrada, finalizando extração ⏳
+[2025-11-14T18:55:59.257+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00 2025-11-12 00:17:19+00:00 2025-11-12 00:17:19+00:00
+[2025-11-14T18:55:59.257+0000] {subprocess.py:93} INFO -  ⏩ Atualizando data para 2025-11-12 00:17:20+00:00 ⏩
+[2025-11-14T18:55:59.258+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00
+[2025-11-14T18:55:59.258+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-14T18:55:59.258+0000] {subprocess.py:93} INFO -  Nenhuma nova atividade encontrada, finalizando extração ⏳
+[2025-11-14T18:55:59.258+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00 2025-11-12 00:17:19+00:00 2025-11-12 00:17:19+00:00
+[2025-11-14T18:55:59.258+0000] {subprocess.py:93} INFO -  ⏩ Atualizando data para 2025-11-12 00:17:20+00:00 ⏩
+[2025-11-14T18:55:59.258+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00
+[2025-11-14T18:55:59.259+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-14T18:55:59.259+0000] {subprocess.py:93} INFO -  Nenhuma nova atividade encontrada, finalizando extração ⏳
+[2025-11-14T18:55:59.259+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00 2025-11-12 00:17:19+00:00 2025-11-12 00:17:19+00:00
+[2025-11-14T18:55:59.260+0000] {subprocess.py:93} INFO -  ⏩ Atualizando data para 2025-11-12 00:17:20+00:00 ⏩
+[2025-11-14T18:55:59.260+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00
+[2025-11-14T18:55:59.260+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-14T18:55:59.260+0000] {subprocess.py:93} INFO -  Nenhuma nova atividade encontrada, finalizando extração ⏳
+[2025-11-14T18:55:59.260+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00 2025-11-12 00:17:19+00:00 2025-11-12 00:17:19+00:00
+[2025-11-14T18:55:59.261+0000] {subprocess.py:93} INFO -  ⏩ Atualizando data para 2025-11-12 00:17:20+00:00 ⏩
+[2025-11-14T18:55:59.261+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00
+[2025-11-14T18:55:59.261+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-14T18:55:59.261+0000] {subprocess.py:93} INFO -  Nenhuma nova atividade encontrada, finalizando extração ⏳
+[2025-11-14T18:55:59.261+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00 2025-11-12 00:17:19+00:00 2025-11-12 00:17:19+00:00
+[2025-11-14T18:55:59.262+0000] {subprocess.py:93} INFO -  ⏩ Atualizando data para 2025-11-12 00:17:20+00:00 ⏩
+[2025-11-14T18:55:59.262+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00
+[2025-11-14T18:55:59.262+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-14T18:55:59.262+0000] {subprocess.py:93} INFO -  Nenhuma nova atividade encontrada, finalizando extração ⏳
+[2025-11-14T18:55:59.262+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00 2025-11-12 00:17:19+00:00 2025-11-12 00:17:19+00:00
+[2025-11-14T18:55:59.262+0000] {subprocess.py:93} INFO -  ⏩ Atualizando data para 2025-11-12 00:17:20+00:00 ⏩
+[2025-11-14T18:55:59.263+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00
+[2025-11-14T18:55:59.263+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-14T18:55:59.263+0000] {subprocess.py:93} INFO -  Nenhuma nova atividade encontrada, finalizando extração ⏳
+[2025-11-14T18:55:59.263+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00 2025-11-12 00:17:19+00:00 2025-11-12 00:17:19+00:00
+[2025-11-14T18:55:59.263+0000] {subprocess.py:93} INFO -  ⏩ Atualizando data para 2025-11-12 00:17:20+00:00 ⏩
+[2025-11-14T18:55:59.263+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00
+[2025-11-14T18:55:59.264+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-14T18:55:59.264+0000] {subprocess.py:93} INFO -  Nenhuma nova atividade encontrada, finalizando extração ⏳
+[2025-11-14T18:55:59.264+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00 2025-11-12 00:17:19+00:00 2025-11-12 00:17:19+00:00
+[2025-11-14T18:55:59.264+0000] {subprocess.py:93} INFO -  ⏩ Atualizando data para 2025-11-12 00:17:20+00:00 ⏩
+[2025-11-14T18:55:59.264+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00
+[2025-11-14T18:55:59.264+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-14T18:55:59.264+0000] {subprocess.py:93} INFO -  Nenhuma nova atividade encontrada, finalizando extração ⏳
+[2025-11-14T18:55:59.265+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00 2025-11-12 00:17:19+00:00 2025-11-12 00:17:19+00:00
+[2025-11-14T18:55:59.265+0000] {subprocess.py:93} INFO -  ⏩ Atualizando data para 2025-11-12 00:17:20+00:00 ⏩
+[2025-11-14T18:55:59.265+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00
+[2025-11-14T18:55:59.265+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-14T18:55:59.265+0000] {subprocess.py:93} INFO -  Nenhuma nova atividade encontrada, finalizando extração ⏳
+[2025-11-14T18:55:59.265+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00 2025-11-12 00:17:19+00:00 2025-11-12 00:17:19+00:00
+[2025-11-14T18:55:59.266+0000] {subprocess.py:93} INFO -  ⏩ Atualizando data para 2025-11-12 00:17:20+00:00 ⏩
+[2025-11-14T18:55:59.266+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00
+[2025-11-14T18:55:59.266+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-14T18:55:59.266+0000] {subprocess.py:93} INFO -  Nenhuma nova atividade encontrada, finalizando extração ⏳
+[2025-11-14T18:55:59.266+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00 2025-11-12 00:17:19+00:00 2025-11-12 00:17:19+00:00
+[2025-11-14T18:55:59.266+0000] {subprocess.py:93} INFO -  ⏩ Atualizando data para 2025-11-12 00:17:20+00:00 ⏩
+[2025-11-14T18:55:59.266+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00
+[2025-11-14T18:55:59.267+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-14T18:55:59.267+0000] {subprocess.py:93} INFO -  Nenhuma nova atividade encontrada, finalizando extração ⏳
+[2025-11-14T18:55:59.267+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00 2025-11-12 00:17:19+00:00 2025-11-12 00:17:19+00:00
+[2025-11-14T18:55:59.267+0000] {subprocess.py:93} INFO -  ⏩ Atualizando data para 2025-11-12 00:17:20+00:00 ⏩
+[2025-11-14T18:55:59.267+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00
+[2025-11-14T18:55:59.267+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-14T18:55:59.267+0000] {subprocess.py:93} INFO -  Nenhuma nova atividade encontrada, finalizando extração ⏳
+[2025-11-14T18:55:59.268+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00 2025-11-12 00:17:19+00:00 2025-11-12 00:17:19+00:00
+[2025-11-14T18:55:59.268+0000] {subprocess.py:93} INFO -  ⏩ Atualizando data para 2025-11-12 00:17:20+00:00 ⏩
+[2025-11-14T18:55:59.268+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00
+[2025-11-14T18:55:59.268+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-14T18:55:59.268+0000] {subprocess.py:93} INFO -  Nenhuma nova atividade encontrada, finalizando extração ⏳
+[2025-11-14T18:55:59.268+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00 2025-11-12 00:17:19+00:00 2025-11-12 00:17:19+00:00
+[2025-11-14T18:55:59.268+0000] {subprocess.py:93} INFO -  ⏩ Atualizando data para 2025-11-12 00:17:20+00:00 ⏩
+[2025-11-14T18:55:59.269+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00
+[2025-11-14T18:55:59.269+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-14T18:55:59.269+0000] {subprocess.py:93} INFO -  Nenhuma nova atividade encontrada, finalizando extração ⏳
+[2025-11-14T18:55:59.269+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00 2025-11-12 00:17:19+00:00 2025-11-12 00:17:19+00:00
+[2025-11-14T18:55:59.269+0000] {subprocess.py:93} INFO -  ⏩ Atualizando data para 2025-11-12 00:17:20+00:00 ⏩
+[2025-11-14T18:55:59.269+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00
+[2025-11-14T18:55:59.269+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-14T18:55:59.269+0000] {subprocess.py:93} INFO -  Nenhuma nova atividade encontrada, finalizando extração ⏳
+[2025-11-14T18:55:59.270+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00 2025-11-12 00:17:19+00:00 2025-11-12 00:17:19+00:00
+[2025-11-14T18:55:59.270+0000] {subprocess.py:93} INFO -  ⏩ Atualizando data para 2025-11-12 00:17:20+00:00 ⏩
+[2025-11-14T18:55:59.270+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00
+[2025-11-14T18:55:59.270+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-14T18:55:59.270+0000] {subprocess.py:93} INFO -  Nenhuma nova atividade encontrada, finalizando extração ⏳
+[2025-11-14T18:55:59.270+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00 2025-11-12 00:17:19+00:00 2025-11-12 00:17:19+00:00
+[2025-11-14T18:55:59.270+0000] {subprocess.py:93} INFO -  ⏩ Atualizando data para 2025-11-12 00:17:20+00:00 ⏩
+[2025-11-14T18:55:59.271+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00
+[2025-11-14T18:55:59.271+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-14T18:55:59.271+0000] {subprocess.py:93} INFO -  Nenhuma nova atividade encontrada, finalizando extração ⏳
+[2025-11-14T18:56:16.132+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00 2025-11-12 00:17:19+00:00 2025-11-12 00:17:19+00:00
+[2025-11-14T18:56:16.133+0000] {subprocess.py:93} INFO -  ⏩ Atualizando data para 2025-11-12 00:17:20+00:00 ⏩
+[2025-11-14T18:56:16.133+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00
+[2025-11-14T18:56:16.133+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-14T18:56:16.134+0000] {subprocess.py:93} INFO -  Nenhuma nova atividade encontrada, finalizando extração ⏳
+[2025-11-14T18:56:16.134+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00 2025-11-12 00:17:19+00:00 2025-11-12 00:17:19+00:00
+[2025-11-14T18:56:16.134+0000] {subprocess.py:93} INFO -  ⏩ Atualizando data para 2025-11-12 00:17:20+00:00 ⏩
+[2025-11-14T18:56:16.134+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00
+[2025-11-14T18:56:16.135+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-14T18:56:16.135+0000] {subprocess.py:93} INFO -  Nenhuma nova atividade encontrada, finalizando extração ⏳
+[2025-11-14T18:56:16.135+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00 2025-11-12 00:17:19+00:00 2025-11-12 00:17:19+00:00
+[2025-11-14T18:56:16.135+0000] {subprocess.py:93} INFO -  ⏩ Atualizando data para 2025-11-12 00:17:20+00:00 ⏩
+[2025-11-14T18:56:16.135+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00
+[2025-11-14T18:56:16.135+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-14T18:56:16.135+0000] {subprocess.py:93} INFO -  Nenhuma nova atividade encontrada, finalizando extração ⏳
+[2025-11-14T18:56:16.135+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00 2025-11-12 00:17:19+00:00 2025-11-12 00:17:19+00:00
+[2025-11-14T18:56:16.136+0000] {subprocess.py:93} INFO -  ⏩ Atualizando data para 2025-11-12 00:17:20+00:00 ⏩
+[2025-11-14T18:56:16.136+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00
+[2025-11-14T18:56:16.136+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-14T18:56:16.136+0000] {subprocess.py:93} INFO -  Nenhuma nova atividade encontrada, finalizando extração ⏳
+[2025-11-14T18:56:16.136+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00 2025-11-12 00:17:19+00:00 2025-11-12 00:17:19+00:00
+[2025-11-14T18:56:16.137+0000] {subprocess.py:93} INFO -  ⏩ Atualizando data para 2025-11-12 00:17:20+00:00 ⏩
+[2025-11-14T18:56:16.137+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00
+[2025-11-14T18:56:16.137+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-14T18:56:16.137+0000] {subprocess.py:93} INFO -  Nenhuma nova atividade encontrada, finalizando extração ⏳
+[2025-11-14T18:56:16.137+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00 2025-11-12 00:17:19+00:00 2025-11-12 00:17:19+00:00
+[2025-11-14T18:56:16.137+0000] {subprocess.py:93} INFO -  ⏩ Atualizando data para 2025-11-12 00:17:20+00:00 ⏩
+[2025-11-14T18:56:16.137+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00
+[2025-11-14T18:56:16.137+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-14T18:56:16.137+0000] {subprocess.py:93} INFO -  Nenhuma nova atividade encontrada, finalizando extração ⏳
+[2025-11-14T18:56:16.137+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00 2025-11-12 00:17:19+00:00 2025-11-12 00:17:19+00:00
+[2025-11-14T18:56:16.138+0000] {subprocess.py:93} INFO -  ⏩ Atualizando data para 2025-11-12 00:17:20+00:00 ⏩
+[2025-11-14T18:56:16.138+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00
+[2025-11-14T18:56:16.138+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-14T18:56:16.138+0000] {subprocess.py:93} INFO -  Nenhuma nova atividade encontrada, finalizando extração ⏳
+[2025-11-14T18:56:16.138+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00 2025-11-12 00:17:19+00:00 2025-11-12 00:17:19+00:00
+[2025-11-14T18:56:16.138+0000] {subprocess.py:93} INFO -  ⏩ Atualizando data para 2025-11-12 00:17:20+00:00 ⏩
+[2025-11-14T18:56:16.138+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00
+[2025-11-14T18:56:16.138+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-14T18:56:16.138+0000] {subprocess.py:93} INFO -  Nenhuma nova atividade encontrada, finalizando extração ⏳
+[2025-11-14T18:56:16.139+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00 2025-11-12 00:17:19+00:00 2025-11-12 00:17:19+00:00
+[2025-11-14T18:56:16.139+0000] {subprocess.py:93} INFO -  ⏩ Atualizando data para 2025-11-12 00:17:20+00:00 ⏩
+[2025-11-14T18:56:16.139+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00
+[2025-11-14T18:56:16.139+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-14T18:56:16.139+0000] {subprocess.py:93} INFO -  Nenhuma nova atividade encontrada, finalizando extração ⏳
+[2025-11-14T18:56:16.139+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00 2025-11-12 00:17:19+00:00 2025-11-12 00:17:19+00:00
+[2025-11-14T18:56:16.139+0000] {subprocess.py:93} INFO -  ⏩ Atualizando data para 2025-11-12 00:17:20+00:00 ⏩
+[2025-11-14T18:56:16.139+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00
+[2025-11-14T18:56:16.139+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-14T18:56:16.140+0000] {subprocess.py:93} INFO -  Nenhuma nova atividade encontrada, finalizando extração ⏳
+[2025-11-14T18:56:16.140+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00 2025-11-12 00:17:19+00:00 2025-11-12 00:17:19+00:00
+[2025-11-14T18:56:16.140+0000] {subprocess.py:93} INFO -  ⏩ Atualizando data para 2025-11-12 00:17:20+00:00 ⏩
+[2025-11-14T18:56:16.140+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00
+[2025-11-14T18:56:16.140+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-14T18:56:16.140+0000] {subprocess.py:93} INFO -  Nenhuma nova atividade encontrada, finalizando extração ⏳
+[2025-11-14T18:56:16.140+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00 2025-11-12 00:17:19+00:00 2025-11-12 00:17:19+00:00
+[2025-11-14T18:56:16.140+0000] {subprocess.py:93} INFO -  ⏩ Atualizando data para 2025-11-12 00:17:20+00:00 ⏩
+[2025-11-14T18:56:16.141+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00
+[2025-11-14T18:56:16.141+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-14T18:56:16.141+0000] {subprocess.py:93} INFO -  Nenhuma nova atividade encontrada, finalizando extração ⏳
+[2025-11-14T18:56:16.141+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00 2025-11-12 00:17:19+00:00 2025-11-12 00:17:19+00:00
+[2025-11-14T18:56:16.141+0000] {subprocess.py:93} INFO -  ⏩ Atualizando data para 2025-11-12 00:17:20+00:00 ⏩
+[2025-11-14T18:56:16.141+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00
+[2025-11-14T18:56:16.141+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-14T18:56:16.141+0000] {subprocess.py:93} INFO -  Nenhuma nova atividade encontrada, finalizando extração ⏳
+[2025-11-14T18:56:16.141+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00 2025-11-12 00:17:19+00:00 2025-11-12 00:17:19+00:00
+[2025-11-14T18:56:16.141+0000] {subprocess.py:93} INFO -  ⏩ Atualizando data para 2025-11-12 00:17:20+00:00 ⏩
+[2025-11-14T18:56:16.142+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00
+[2025-11-14T18:56:16.142+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-14T18:56:16.142+0000] {subprocess.py:93} INFO -  Nenhuma nova atividade encontrada, finalizando extração ⏳
+[2025-11-14T18:56:16.142+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00 2025-11-12 00:17:19+00:00 2025-11-12 00:17:19+00:00
+[2025-11-14T18:56:16.142+0000] {subprocess.py:93} INFO -  ⏩ Atualizando data para 2025-11-12 00:17:20+00:00 ⏩
+[2025-11-14T18:56:16.142+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00
+[2025-11-14T18:56:16.142+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-14T18:56:16.142+0000] {subprocess.py:93} INFO -  Nenhuma nova atividade encontrada, finalizando extração ⏳
+[2025-11-14T18:56:16.142+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00 2025-11-12 00:17:19+00:00 2025-11-12 00:17:19+00:00
+[2025-11-14T18:56:16.142+0000] {subprocess.py:93} INFO -  ⏩ Atualizando data para 2025-11-12 00:17:20+00:00 ⏩
+[2025-11-14T18:56:16.143+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00
+[2025-11-14T18:56:16.143+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-14T18:56:16.143+0000] {subprocess.py:93} INFO -  Nenhuma nova atividade encontrada, finalizando extração ⏳
+[2025-11-14T18:56:16.143+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00 2025-11-12 00:17:19+00:00 2025-11-12 00:17:19+00:00
+[2025-11-14T18:56:16.143+0000] {subprocess.py:93} INFO -  ⏩ Atualizando data para 2025-11-12 00:17:20+00:00 ⏩
+[2025-11-14T18:56:16.143+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00
+[2025-11-14T18:56:16.143+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-14T18:56:16.143+0000] {subprocess.py:93} INFO -  Nenhuma nova atividade encontrada, finalizando extração ⏳
+[2025-11-14T18:56:16.144+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00 2025-11-12 00:17:19+00:00 2025-11-12 00:17:19+00:00
+[2025-11-14T18:56:16.144+0000] {subprocess.py:93} INFO -  ⏩ Atualizando data para 2025-11-12 00:17:20+00:00 ⏩
+[2025-11-14T18:56:16.144+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00
+[2025-11-14T18:56:16.145+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-14T18:56:16.145+0000] {subprocess.py:93} INFO -  Nenhuma nova atividade encontrada, finalizando extração ⏳
+[2025-11-14T18:56:16.145+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00 2025-11-12 00:17:19+00:00 2025-11-12 00:17:19+00:00
+[2025-11-14T18:56:16.145+0000] {subprocess.py:93} INFO -  ⏩ Atualizando data para 2025-11-12 00:17:20+00:00 ⏩
+[2025-11-14T18:56:16.145+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00
+[2025-11-14T18:56:16.145+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-14T18:56:16.145+0000] {subprocess.py:93} INFO -  Nenhuma nova atividade encontrada, finalizando extração ⏳
+[2025-11-14T18:56:16.145+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00 2025-11-12 00:17:19+00:00 2025-11-12 00:17:19+00:00
+[2025-11-14T18:56:16.146+0000] {subprocess.py:93} INFO -  ⏩ Atualizando data para 2025-11-12 00:17:20+00:00 ⏩
+[2025-11-14T18:56:16.146+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00
+[2025-11-14T18:56:16.146+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-14T18:56:16.146+0000] {subprocess.py:93} INFO -  Nenhuma nova atividade encontrada, finalizando extração ⏳
+[2025-11-14T18:56:16.146+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00 2025-11-12 00:17:19+00:00 2025-11-12 00:17:19+00:00
+[2025-11-14T18:56:16.146+0000] {subprocess.py:93} INFO -  ⏩ Atualizando data para 2025-11-12 00:17:20+00:00 ⏩
+[2025-11-14T18:56:16.146+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00
+[2025-11-14T18:56:16.146+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-14T18:56:16.146+0000] {subprocess.py:93} INFO -  Nenhuma nova atividade encontrada, finalizando extração ⏳
+[2025-11-14T18:56:16.147+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00 2025-11-12 00:17:19+00:00 2025-11-12 00:17:19+00:00
+[2025-11-14T18:56:16.147+0000] {subprocess.py:93} INFO -  ⏩ Atualizando data para 2025-11-12 00:17:20+00:00 ⏩
+[2025-11-14T18:56:16.147+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00
+[2025-11-14T18:56:16.147+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-14T18:56:16.147+0000] {subprocess.py:93} INFO -  Nenhuma nova atividade encontrada, finalizando extração ⏳
+[2025-11-14T18:56:16.147+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00 2025-11-12 00:17:19+00:00 2025-11-12 00:17:19+00:00
+[2025-11-14T18:56:16.147+0000] {subprocess.py:93} INFO -  ⏩ Atualizando data para 2025-11-12 00:17:20+00:00 ⏩
+[2025-11-14T18:56:16.147+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00
+[2025-11-14T18:56:16.147+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-14T18:56:16.147+0000] {subprocess.py:93} INFO -  Nenhuma nova atividade encontrada, finalizando extração ⏳
+[2025-11-14T18:56:16.147+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00 2025-11-12 00:17:19+00:00 2025-11-12 00:17:19+00:00
+[2025-11-14T18:56:16.148+0000] {subprocess.py:93} INFO -  ⏩ Atualizando data para 2025-11-12 00:17:20+00:00 ⏩
+[2025-11-14T18:56:16.148+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00
+[2025-11-14T18:56:16.148+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-14T18:56:16.148+0000] {subprocess.py:93} INFO -  Nenhuma nova atividade encontrada, finalizando extração ⏳
+[2025-11-14T18:56:16.148+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00 2025-11-12 00:17:19+00:00 2025-11-12 00:17:19+00:00
+[2025-11-14T18:56:16.148+0000] {subprocess.py:93} INFO -  ⏩ Atualizando data para 2025-11-12 00:17:20+00:00 ⏩
+[2025-11-14T18:56:16.148+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00
+[2025-11-14T18:56:16.148+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-14T18:56:16.148+0000] {subprocess.py:93} INFO -  Nenhuma nova atividade encontrada, finalizando extração ⏳
+[2025-11-14T18:56:16.149+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00 2025-11-12 00:17:19+00:00 2025-11-12 00:17:19+00:00
+[2025-11-14T18:56:16.149+0000] {subprocess.py:93} INFO -  ⏩ Atualizando data para 2025-11-12 00:17:20+00:00 ⏩
+[2025-11-14T18:56:16.149+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00
+[2025-11-14T18:56:16.149+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-14T18:56:16.149+0000] {subprocess.py:93} INFO -  Nenhuma nova atividade encontrada, finalizando extração ⏳
+[2025-11-14T18:56:16.149+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00 2025-11-12 00:17:19+00:00 2025-11-12 00:17:19+00:00
+[2025-11-14T18:56:16.149+0000] {subprocess.py:93} INFO -  ⏩ Atualizando data para 2025-11-12 00:17:20+00:00 ⏩
+[2025-11-14T18:56:16.149+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00
+[2025-11-14T18:56:16.149+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-14T18:56:16.149+0000] {subprocess.py:93} INFO -  Nenhuma nova atividade encontrada, finalizando extração ⏳
+[2025-11-14T18:56:16.149+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00 2025-11-12 00:17:19+00:00 2025-11-12 00:17:19+00:00
+[2025-11-14T18:56:16.150+0000] {subprocess.py:93} INFO -  ⏩ Atualizando data para 2025-11-12 00:17:20+00:00 ⏩
+[2025-11-14T18:56:16.150+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00
+[2025-11-14T18:56:16.150+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-14T18:56:16.150+0000] {subprocess.py:93} INFO -  Nenhuma nova atividade encontrada, finalizando extração ⏳
+[2025-11-14T18:56:16.150+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00 2025-11-12 00:17:19+00:00 2025-11-12 00:17:19+00:00
+[2025-11-14T18:56:16.150+0000] {subprocess.py:93} INFO -  ⏩ Atualizando data para 2025-11-12 00:17:20+00:00 ⏩
+[2025-11-14T18:56:16.150+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00
+[2025-11-14T18:56:16.150+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-14T18:56:16.150+0000] {subprocess.py:93} INFO -  Nenhuma nova atividade encontrada, finalizando extração ⏳
+[2025-11-14T18:56:16.150+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00 2025-11-12 00:17:19+00:00 2025-11-12 00:17:19+00:00
+[2025-11-14T18:56:16.150+0000] {subprocess.py:93} INFO -  ⏩ Atualizando data para 2025-11-12 00:17:20+00:00 ⏩
+[2025-11-14T18:56:16.150+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00
+[2025-11-14T18:56:16.151+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-14T18:56:16.151+0000] {subprocess.py:93} INFO -  Nenhuma nova atividade encontrada, finalizando extração ⏳
+[2025-11-14T18:56:16.151+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00 2025-11-12 00:17:19+00:00 2025-11-12 00:17:19+00:00
+[2025-11-14T18:56:16.151+0000] {subprocess.py:93} INFO -  ⏩ Atualizando data para 2025-11-12 00:17:20+00:00 ⏩
+[2025-11-14T18:56:16.151+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00
+[2025-11-14T18:56:16.151+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-14T18:56:16.151+0000] {subprocess.py:93} INFO -  Nenhuma nova atividade encontrada, finalizando extração ⏳
+[2025-11-14T18:56:16.151+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00 2025-11-12 00:17:19+00:00 2025-11-12 00:17:19+00:00
+[2025-11-14T18:56:16.151+0000] {subprocess.py:93} INFO -  ⏩ Atualizando data para 2025-11-12 00:17:20+00:00 ⏩
+[2025-11-14T18:56:16.151+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00
+[2025-11-14T19:00:08.601+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-14T19:00:08.606+0000] {subprocess.py:93} INFO -  Nenhuma nova atividade encontrada, finalizando extração ⏳
+[2025-11-14T19:00:08.606+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00 2025-11-12 00:17:19+00:00 2025-11-12 00:17:19+00:00
+[2025-11-14T19:00:08.606+0000] {subprocess.py:93} INFO -  ⏩ Atualizando data para 2025-11-12 00:17:20+00:00 ⏩
+[2025-11-14T19:00:08.607+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00
+[2025-11-14T19:00:08.607+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-14T19:00:08.607+0000] {subprocess.py:93} INFO -  Nenhuma nova atividade encontrada, finalizando extração ⏳
+[2025-11-14T19:00:08.607+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00 2025-11-12 00:17:19+00:00 2025-11-12 00:17:19+00:00
+[2025-11-14T19:00:08.607+0000] {subprocess.py:93} INFO -  ⏩ Atualizando data para 2025-11-12 00:17:20+00:00 ⏩
+[2025-11-14T19:00:08.608+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00
+[2025-11-14T19:00:08.608+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-14T19:00:08.608+0000] {subprocess.py:93} INFO -  Nenhuma nova atividade encontrada, finalizando extração ⏳
+[2025-11-14T19:00:08.608+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00 2025-11-12 00:17:19+00:00 2025-11-12 00:17:19+00:00
+[2025-11-14T19:00:08.608+0000] {subprocess.py:93} INFO -  ⏩ Atualizando data para 2025-11-12 00:17:20+00:00 ⏩
+[2025-11-14T19:00:08.608+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00
+[2025-11-14T19:00:08.609+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-14T19:00:08.609+0000] {subprocess.py:93} INFO -  Nenhuma nova atividade encontrada, finalizando extração ⏳
+[2025-11-14T19:00:08.609+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00 2025-11-12 00:17:19+00:00 2025-11-12 00:17:19+00:00
+[2025-11-14T19:00:08.609+0000] {subprocess.py:93} INFO -  ⏩ Atualizando data para 2025-11-12 00:17:20+00:00 ⏩
+[2025-11-14T19:00:08.610+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00
+[2025-11-14T19:00:08.610+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-14T19:00:08.610+0000] {subprocess.py:93} INFO -  Nenhuma nova atividade encontrada, finalizando extração ⏳
+[2025-11-14T19:00:08.610+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00 2025-11-12 00:17:19+00:00 2025-11-12 00:17:19+00:00
+[2025-11-14T19:00:08.611+0000] {subprocess.py:93} INFO -  ⏩ Atualizando data para 2025-11-12 00:17:20+00:00 ⏩
+[2025-11-14T19:00:08.611+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00
+[2025-11-14T19:00:08.611+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-14T19:00:08.611+0000] {subprocess.py:93} INFO -  Nenhuma nova atividade encontrada, finalizando extração ⏳
+[2025-11-14T19:00:08.611+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00 2025-11-12 00:17:19+00:00 2025-11-12 00:17:19+00:00
+[2025-11-14T19:00:08.612+0000] {subprocess.py:93} INFO -  ⏩ Atualizando data para 2025-11-12 00:17:20+00:00 ⏩
+[2025-11-14T19:00:08.612+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00
+[2025-11-14T19:00:08.612+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-14T19:00:08.612+0000] {subprocess.py:93} INFO -  Nenhuma nova atividade encontrada, finalizando extração ⏳
+[2025-11-14T19:00:08.612+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00 2025-11-12 00:17:19+00:00 2025-11-12 00:17:19+00:00
+[2025-11-14T19:00:08.612+0000] {subprocess.py:93} INFO -  ⏩ Atualizando data para 2025-11-12 00:17:20+00:00 ⏩
+[2025-11-14T19:00:08.613+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00
+[2025-11-14T19:00:08.613+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-14T19:00:08.613+0000] {subprocess.py:93} INFO -  Nenhuma nova atividade encontrada, finalizando extração ⏳
+[2025-11-14T19:00:08.613+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00 2025-11-12 00:17:19+00:00 2025-11-12 00:17:19+00:00
+[2025-11-14T19:00:08.613+0000] {subprocess.py:93} INFO -  ⏩ Atualizando data para 2025-11-12 00:17:20+00:00 ⏩
+[2025-11-14T19:00:08.614+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00
+[2025-11-14T19:00:08.614+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-14T19:00:08.614+0000] {subprocess.py:93} INFO -  Nenhuma nova atividade encontrada, finalizando extração ⏳
+[2025-11-14T19:00:08.614+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00 2025-11-12 00:17:19+00:00 2025-11-12 00:17:19+00:00
+[2025-11-14T19:00:08.614+0000] {subprocess.py:93} INFO -  ⏩ Atualizando data para 2025-11-12 00:17:20+00:00 ⏩
+[2025-11-14T19:00:08.614+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00
+[2025-11-14T19:00:08.614+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-14T19:00:08.614+0000] {subprocess.py:93} INFO -  Nenhuma nova atividade encontrada, finalizando extração ⏳
+[2025-11-14T19:00:08.615+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00 2025-11-12 00:17:19+00:00 2025-11-12 00:17:19+00:00
+[2025-11-14T19:00:08.615+0000] {subprocess.py:93} INFO -  ⏩ Atualizando data para 2025-11-12 00:17:20+00:00 ⏩
+[2025-11-14T19:00:08.615+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00
+[2025-11-14T19:00:08.615+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-14T19:00:08.615+0000] {subprocess.py:93} INFO -  Nenhuma nova atividade encontrada, finalizando extração ⏳
+[2025-11-14T19:00:08.615+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00 2025-11-12 00:17:19+00:00 2025-11-12 00:17:19+00:00
+[2025-11-14T19:00:08.615+0000] {subprocess.py:93} INFO -  ⏩ Atualizando data para 2025-11-12 00:17:20+00:00 ⏩
+[2025-11-14T19:00:08.616+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00
+[2025-11-14T19:00:08.616+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-14T19:00:08.616+0000] {subprocess.py:93} INFO -  Nenhuma nova atividade encontrada, finalizando extração ⏳
+[2025-11-14T19:00:08.616+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00 2025-11-12 00:17:19+00:00 2025-11-12 00:17:19+00:00
+[2025-11-14T19:00:08.616+0000] {subprocess.py:93} INFO -  ⏩ Atualizando data para 2025-11-12 00:17:20+00:00 ⏩
+[2025-11-14T19:00:08.616+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00
+[2025-11-14T19:00:08.616+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-14T19:00:08.616+0000] {subprocess.py:93} INFO -  Nenhuma nova atividade encontrada, finalizando extração ⏳
+[2025-11-14T19:00:08.617+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00 2025-11-12 00:17:19+00:00 2025-11-12 00:17:19+00:00
+[2025-11-14T19:00:08.617+0000] {subprocess.py:93} INFO -  ⏩ Atualizando data para 2025-11-12 00:17:20+00:00 ⏩
+[2025-11-14T19:00:08.617+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00
+[2025-11-14T19:00:08.617+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-14T19:00:08.617+0000] {subprocess.py:93} INFO -  Nenhuma nova atividade encontrada, finalizando extração ⏳
+[2025-11-14T19:00:08.617+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00 2025-11-12 00:17:19+00:00 2025-11-12 00:17:19+00:00
+[2025-11-14T19:00:08.617+0000] {subprocess.py:93} INFO -  ⏩ Atualizando data para 2025-11-12 00:17:20+00:00 ⏩
+[2025-11-14T19:00:08.618+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00
+[2025-11-14T19:00:08.618+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-14T19:00:08.618+0000] {subprocess.py:93} INFO -  Nenhuma nova atividade encontrada, finalizando extração ⏳
+[2025-11-14T19:00:08.618+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00 2025-11-12 00:17:19+00:00 2025-11-12 00:17:19+00:00
+[2025-11-14T19:00:08.618+0000] {subprocess.py:93} INFO -  ⏩ Atualizando data para 2025-11-12 00:17:20+00:00 ⏩
+[2025-11-14T19:00:08.618+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00
+[2025-11-14T19:00:08.618+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-14T19:00:08.618+0000] {subprocess.py:93} INFO -  Nenhuma nova atividade encontrada, finalizando extração ⏳
+[2025-11-14T19:00:08.620+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00 2025-11-12 00:17:19+00:00 2025-11-12 00:17:19+00:00
+[2025-11-14T19:00:08.620+0000] {subprocess.py:93} INFO -  ⏩ Atualizando data para 2025-11-12 00:17:20+00:00 ⏩
+[2025-11-14T19:00:08.620+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00
+[2025-11-14T19:00:08.620+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-14T19:00:08.620+0000] {subprocess.py:93} INFO -  Nenhuma nova atividade encontrada, finalizando extração ⏳
+[2025-11-14T19:00:08.620+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00 2025-11-12 00:17:19+00:00 2025-11-12 00:17:19+00:00
+[2025-11-14T19:00:08.620+0000] {subprocess.py:93} INFO -  ⏩ Atualizando data para 2025-11-12 00:17:20+00:00 ⏩
+[2025-11-14T19:00:08.621+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00
+[2025-11-14T19:00:08.621+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-14T19:00:08.621+0000] {subprocess.py:93} INFO -  Nenhuma nova atividade encontrada, finalizando extração ⏳
+[2025-11-14T19:00:08.621+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00 2025-11-12 00:17:19+00:00 2025-11-12 00:17:19+00:00
+[2025-11-14T19:00:08.621+0000] {subprocess.py:93} INFO -  ⏩ Atualizando data para 2025-11-12 00:17:20+00:00 ⏩
+[2025-11-14T19:00:08.621+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00
+[2025-11-14T19:00:08.621+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-14T19:00:08.621+0000] {subprocess.py:93} INFO -  Nenhuma nova atividade encontrada, finalizando extração ⏳
+[2025-11-14T19:00:08.621+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00 2025-11-12 00:17:19+00:00 2025-11-12 00:17:19+00:00
+[2025-11-14T19:00:08.622+0000] {subprocess.py:93} INFO -  ⏩ Atualizando data para 2025-11-12 00:17:20+00:00 ⏩
+[2025-11-14T19:00:08.622+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00
+[2025-11-14T19:00:08.622+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-14T19:00:08.622+0000] {subprocess.py:93} INFO -  Nenhuma nova atividade encontrada, finalizando extração ⏳
+[2025-11-14T19:00:08.622+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00 2025-11-12 00:17:19+00:00 2025-11-12 00:17:19+00:00
+[2025-11-14T19:00:08.622+0000] {subprocess.py:93} INFO -  ⏩ Atualizando data para 2025-11-12 00:17:20+00:00 ⏩
+[2025-11-14T19:00:08.622+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00
+[2025-11-14T19:00:08.622+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-14T19:00:08.622+0000] {subprocess.py:93} INFO -  Nenhuma nova atividade encontrada, finalizando extração ⏳
+[2025-11-14T19:00:08.623+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00 2025-11-12 00:17:19+00:00 2025-11-12 00:17:19+00:00
+[2025-11-14T19:00:08.623+0000] {subprocess.py:93} INFO -  ⏩ Atualizando data para 2025-11-12 00:17:20+00:00 ⏩
+[2025-11-14T19:00:08.623+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00
+[2025-11-14T19:00:08.623+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-14T19:00:08.623+0000] {subprocess.py:93} INFO -  Nenhuma nova atividade encontrada, finalizando extração ⏳
+[2025-11-14T19:00:08.623+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00 2025-11-12 00:17:19+00:00 2025-11-12 00:17:19+00:00
+[2025-11-14T19:00:08.623+0000] {subprocess.py:93} INFO -  ⏩ Atualizando data para 2025-11-12 00:17:20+00:00 ⏩
+[2025-11-14T19:00:08.623+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00
+[2025-11-14T19:00:08.623+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-14T19:00:08.624+0000] {subprocess.py:93} INFO -  Nenhuma nova atividade encontrada, finalizando extração ⏳
+[2025-11-14T19:00:08.624+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00 2025-11-12 00:17:19+00:00 2025-11-12 00:17:19+00:00
+[2025-11-14T19:00:08.624+0000] {subprocess.py:93} INFO -  ⏩ Atualizando data para 2025-11-12 00:17:20+00:00 ⏩
+[2025-11-14T19:00:08.624+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00
+[2025-11-14T19:00:08.624+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-14T19:00:08.624+0000] {subprocess.py:93} INFO -  Nenhuma nova atividade encontrada, finalizando extração ⏳
+[2025-11-14T19:00:08.624+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00 2025-11-12 00:17:19+00:00 2025-11-12 00:17:19+00:00
+[2025-11-14T19:00:08.624+0000] {subprocess.py:93} INFO -  ⏩ Atualizando data para 2025-11-12 00:17:20+00:00 ⏩
+[2025-11-14T19:00:08.625+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00
+[2025-11-14T19:00:08.625+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-14T19:00:08.625+0000] {subprocess.py:93} INFO -  Nenhuma nova atividade encontrada, finalizando extração ⏳
+[2025-11-14T19:00:08.625+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00 2025-11-12 00:17:19+00:00 2025-11-12 00:17:19+00:00
+[2025-11-14T19:00:08.625+0000] {subprocess.py:93} INFO -  ⏩ Atualizando data para 2025-11-12 00:17:20+00:00 ⏩
+[2025-11-14T19:00:08.625+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00
+[2025-11-14T19:00:08.625+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-14T19:00:08.625+0000] {subprocess.py:93} INFO -  Nenhuma nova atividade encontrada, finalizando extração ⏳
+[2025-11-14T19:00:08.625+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00 2025-11-12 00:17:19+00:00 2025-11-12 00:17:19+00:00
+[2025-11-14T19:00:08.626+0000] {subprocess.py:93} INFO -  ⏩ Atualizando data para 2025-11-12 00:17:20+00:00 ⏩
+[2025-11-14T19:00:08.626+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00
+[2025-11-14T19:00:08.626+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-14T19:00:08.626+0000] {subprocess.py:93} INFO -  Nenhuma nova atividade encontrada, finalizando extração ⏳
+[2025-11-14T19:00:08.626+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00 2025-11-12 00:17:19+00:00 2025-11-12 00:17:19+00:00
+[2025-11-14T19:00:08.626+0000] {subprocess.py:93} INFO -  ⏩ Atualizando data para 2025-11-12 00:17:20+00:00 ⏩
+[2025-11-14T19:00:08.626+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00
+[2025-11-14T19:00:08.626+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-14T19:00:08.626+0000] {subprocess.py:93} INFO -  Nenhuma nova atividade encontrada, finalizando extração ⏳
+[2025-11-14T19:00:08.627+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00 2025-11-12 00:17:19+00:00 2025-11-12 00:17:19+00:00
+[2025-11-14T19:00:08.627+0000] {subprocess.py:93} INFO -  ⏩ Atualizando data para 2025-11-12 00:17:20+00:00 ⏩
+[2025-11-14T19:00:08.627+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00
+[2025-11-14T19:00:08.627+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-14T19:00:08.627+0000] {subprocess.py:93} INFO -  Nenhuma nova atividade encontrada, finalizando extração ⏳
+[2025-11-14T19:00:08.627+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00 2025-11-12 00:17:19+00:00 2025-11-12 00:17:19+00:00
+[2025-11-14T19:00:08.627+0000] {subprocess.py:93} INFO -  ⏩ Atualizando data para 2025-11-12 00:17:20+00:00 ⏩
+[2025-11-14T19:00:08.627+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00
+[2025-11-14T19:00:08.627+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-14T19:00:08.628+0000] {subprocess.py:93} INFO -  Nenhuma nova atividade encontrada, finalizando extração ⏳
+[2025-11-14T19:00:08.628+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00 2025-11-12 00:17:19+00:00 2025-11-12 00:17:19+00:00
+[2025-11-14T19:00:08.628+0000] {subprocess.py:93} INFO -  ⏩ Atualizando data para 2025-11-12 00:17:20+00:00 ⏩
+[2025-11-14T19:00:08.628+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00
+[2025-11-14T19:00:08.628+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-14T19:00:08.628+0000] {subprocess.py:93} INFO -  Nenhuma nova atividade encontrada, finalizando extração ⏳
+[2025-11-14T19:00:08.628+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00 2025-11-12 00:17:19+00:00 2025-11-12 00:17:19+00:00
+[2025-11-14T19:00:08.628+0000] {subprocess.py:93} INFO -  ⏩ Atualizando data para 2025-11-12 00:17:20+00:00 ⏩
+[2025-11-14T19:00:08.628+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00
+[2025-11-14T19:00:08.629+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-14T19:00:08.629+0000] {subprocess.py:93} INFO -  Nenhuma nova atividade encontrada, finalizando extração ⏳
+[2025-11-14T19:00:26.037+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00 2025-11-12 00:17:19+00:00 2025-11-12 00:17:19+00:00
+[2025-11-14T19:00:26.039+0000] {subprocess.py:93} INFO -  ⏩ Atualizando data para 2025-11-12 00:17:20+00:00 ⏩
+[2025-11-14T19:00:26.040+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00
+[2025-11-14T19:00:26.040+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-14T19:00:26.040+0000] {subprocess.py:93} INFO -  Nenhuma nova atividade encontrada, finalizando extração ⏳
+[2025-11-14T19:00:26.040+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00 2025-11-12 00:17:19+00:00 2025-11-12 00:17:19+00:00
+[2025-11-14T19:00:26.040+0000] {subprocess.py:93} INFO -  ⏩ Atualizando data para 2025-11-12 00:17:20+00:00 ⏩
+[2025-11-14T19:00:26.041+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00
+[2025-11-14T19:00:26.041+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-14T19:00:26.041+0000] {subprocess.py:93} INFO -  Nenhuma nova atividade encontrada, finalizando extração ⏳
+[2025-11-14T19:00:26.041+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00 2025-11-12 00:17:19+00:00 2025-11-12 00:17:19+00:00
+[2025-11-14T19:00:26.041+0000] {subprocess.py:93} INFO -  ⏩ Atualizando data para 2025-11-12 00:17:20+00:00 ⏩
+[2025-11-14T19:00:26.043+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00
+[2025-11-14T19:00:26.043+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-14T19:00:26.044+0000] {subprocess.py:93} INFO -  Nenhuma nova atividade encontrada, finalizando extração ⏳
+[2025-11-14T19:00:26.044+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00 2025-11-12 00:17:19+00:00 2025-11-12 00:17:19+00:00
+[2025-11-14T19:00:26.044+0000] {subprocess.py:93} INFO -  ⏩ Atualizando data para 2025-11-12 00:17:20+00:00 ⏩
+[2025-11-14T19:00:26.045+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00
+[2025-11-14T19:00:26.045+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-14T19:00:26.045+0000] {subprocess.py:93} INFO -  Nenhuma nova atividade encontrada, finalizando extração ⏳
+[2025-11-14T19:00:26.045+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00 2025-11-12 00:17:19+00:00 2025-11-12 00:17:19+00:00
+[2025-11-14T19:00:26.046+0000] {subprocess.py:93} INFO -  ⏩ Atualizando data para 2025-11-12 00:17:20+00:00 ⏩
+[2025-11-14T19:00:26.046+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00
+[2025-11-14T19:00:26.046+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-14T19:00:26.046+0000] {subprocess.py:93} INFO -  Nenhuma nova atividade encontrada, finalizando extração ⏳
+[2025-11-14T19:00:26.046+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00 2025-11-12 00:17:19+00:00 2025-11-12 00:17:19+00:00
+[2025-11-14T19:00:26.047+0000] {subprocess.py:93} INFO -  ⏩ Atualizando data para 2025-11-12 00:17:20+00:00 ⏩
+[2025-11-14T19:00:26.047+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00
+[2025-11-14T19:00:26.047+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-14T19:00:26.047+0000] {subprocess.py:93} INFO -  Nenhuma nova atividade encontrada, finalizando extração ⏳
+[2025-11-14T19:00:26.047+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00 2025-11-12 00:17:19+00:00 2025-11-12 00:17:19+00:00
+[2025-11-14T19:00:26.048+0000] {subprocess.py:93} INFO -  ⏩ Atualizando data para 2025-11-12 00:17:20+00:00 ⏩
+[2025-11-14T19:00:26.048+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00
+[2025-11-14T19:00:26.048+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-14T19:00:26.048+0000] {subprocess.py:93} INFO -  Nenhuma nova atividade encontrada, finalizando extração ⏳
+[2025-11-14T19:00:26.049+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00 2025-11-12 00:17:19+00:00 2025-11-12 00:17:19+00:00
+[2025-11-14T19:00:26.049+0000] {subprocess.py:93} INFO -  ⏩ Atualizando data para 2025-11-12 00:17:20+00:00 ⏩
+[2025-11-14T19:00:26.049+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00
+[2025-11-14T19:00:26.049+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-14T19:00:26.050+0000] {subprocess.py:93} INFO -  Nenhuma nova atividade encontrada, finalizando extração ⏳
+[2025-11-14T19:00:26.050+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00 2025-11-12 00:17:19+00:00 2025-11-12 00:17:19+00:00
+[2025-11-14T19:00:26.050+0000] {subprocess.py:93} INFO -  ⏩ Atualizando data para 2025-11-12 00:17:20+00:00 ⏩
+[2025-11-14T19:00:26.050+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00
+[2025-11-14T19:00:26.051+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-14T19:00:26.051+0000] {subprocess.py:93} INFO -  Nenhuma nova atividade encontrada, finalizando extração ⏳
+[2025-11-14T19:00:26.051+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00 2025-11-12 00:17:19+00:00 2025-11-12 00:17:19+00:00
+[2025-11-14T19:00:26.051+0000] {subprocess.py:93} INFO -  ⏩ Atualizando data para 2025-11-12 00:17:20+00:00 ⏩
+[2025-11-14T19:00:26.051+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00
+[2025-11-14T19:00:26.052+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-14T19:00:26.052+0000] {subprocess.py:93} INFO -  Nenhuma nova atividade encontrada, finalizando extração ⏳
+[2025-11-14T19:00:26.052+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00 2025-11-12 00:17:19+00:00 2025-11-12 00:17:19+00:00
+[2025-11-14T19:00:26.052+0000] {subprocess.py:93} INFO -  ⏩ Atualizando data para 2025-11-12 00:17:20+00:00 ⏩
+[2025-11-14T19:00:26.052+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00
+[2025-11-14T19:00:26.052+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-14T19:00:26.052+0000] {subprocess.py:93} INFO -  Nenhuma nova atividade encontrada, finalizando extração ⏳
+[2025-11-14T19:00:26.053+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00 2025-11-12 00:17:19+00:00 2025-11-12 00:17:19+00:00
+[2025-11-14T19:00:26.053+0000] {subprocess.py:93} INFO -  ⏩ Atualizando data para 2025-11-12 00:17:20+00:00 ⏩
+[2025-11-14T19:00:26.053+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00
+[2025-11-14T19:00:26.053+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-14T19:00:26.053+0000] {subprocess.py:93} INFO -  Nenhuma nova atividade encontrada, finalizando extração ⏳
+[2025-11-14T19:00:26.053+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00 2025-11-12 00:17:19+00:00 2025-11-12 00:17:19+00:00
+[2025-11-14T19:00:26.053+0000] {subprocess.py:93} INFO -  ⏩ Atualizando data para 2025-11-12 00:17:20+00:00 ⏩
+[2025-11-14T19:00:26.053+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00
+[2025-11-14T19:00:26.053+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-14T19:00:26.054+0000] {subprocess.py:93} INFO -  Nenhuma nova atividade encontrada, finalizando extração ⏳
+[2025-11-14T19:00:26.054+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00 2025-11-12 00:17:19+00:00 2025-11-12 00:17:19+00:00
+[2025-11-14T19:00:26.054+0000] {subprocess.py:93} INFO -  ⏩ Atualizando data para 2025-11-12 00:17:20+00:00 ⏩
+[2025-11-14T19:00:26.054+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00
+[2025-11-14T19:00:26.054+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-14T19:00:26.054+0000] {subprocess.py:93} INFO -  Nenhuma nova atividade encontrada, finalizando extração ⏳
+[2025-11-14T19:00:26.054+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00 2025-11-12 00:17:19+00:00 2025-11-12 00:17:19+00:00
+[2025-11-14T19:00:26.054+0000] {subprocess.py:93} INFO -  ⏩ Atualizando data para 2025-11-12 00:17:20+00:00 ⏩
+[2025-11-14T19:00:26.055+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00
+[2025-11-14T19:00:26.055+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-14T19:00:26.055+0000] {subprocess.py:93} INFO -  Nenhuma nova atividade encontrada, finalizando extração ⏳
+[2025-11-14T19:00:26.055+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00 2025-11-12 00:17:19+00:00 2025-11-12 00:17:19+00:00
+[2025-11-14T19:00:26.055+0000] {subprocess.py:93} INFO -  ⏩ Atualizando data para 2025-11-12 00:17:20+00:00 ⏩
+[2025-11-14T19:00:26.055+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00
+[2025-11-14T19:00:26.055+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-14T19:00:26.055+0000] {subprocess.py:93} INFO -  Nenhuma nova atividade encontrada, finalizando extração ⏳
+[2025-11-14T19:00:26.055+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00 2025-11-12 00:17:19+00:00 2025-11-12 00:17:19+00:00
+[2025-11-14T19:00:26.055+0000] {subprocess.py:93} INFO -  ⏩ Atualizando data para 2025-11-12 00:17:20+00:00 ⏩
+[2025-11-14T19:00:26.055+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00
+[2025-11-14T19:00:26.055+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-14T19:00:26.056+0000] {subprocess.py:93} INFO -  Nenhuma nova atividade encontrada, finalizando extração ⏳
+[2025-11-14T19:00:26.056+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00 2025-11-12 00:17:19+00:00 2025-11-12 00:17:19+00:00
+[2025-11-14T19:00:26.056+0000] {subprocess.py:93} INFO -  ⏩ Atualizando data para 2025-11-12 00:17:20+00:00 ⏩
+[2025-11-14T19:00:26.056+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00
+[2025-11-14T19:00:26.056+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-14T19:00:26.056+0000] {subprocess.py:93} INFO -  Nenhuma nova atividade encontrada, finalizando extração ⏳
+[2025-11-14T19:00:26.056+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00 2025-11-12 00:17:19+00:00 2025-11-12 00:17:19+00:00
+[2025-11-14T19:00:26.056+0000] {subprocess.py:93} INFO -  ⏩ Atualizando data para 2025-11-12 00:17:20+00:00 ⏩
+[2025-11-14T19:00:26.056+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00
+[2025-11-14T19:00:26.056+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-14T19:00:26.056+0000] {subprocess.py:93} INFO -  Nenhuma nova atividade encontrada, finalizando extração ⏳
+[2025-11-14T19:00:26.056+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00 2025-11-12 00:17:19+00:00 2025-11-12 00:17:19+00:00
+[2025-11-14T19:00:26.056+0000] {subprocess.py:93} INFO -  ⏩ Atualizando data para 2025-11-12 00:17:20+00:00 ⏩
+[2025-11-14T19:00:26.057+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00
+[2025-11-14T19:00:26.057+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-14T19:00:26.057+0000] {subprocess.py:93} INFO -  Nenhuma nova atividade encontrada, finalizando extração ⏳
+[2025-11-14T19:00:26.057+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00 2025-11-12 00:17:19+00:00 2025-11-12 00:17:19+00:00
+[2025-11-14T19:00:26.057+0000] {subprocess.py:93} INFO -  ⏩ Atualizando data para 2025-11-12 00:17:20+00:00 ⏩
+[2025-11-14T19:00:26.057+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00
+[2025-11-14T19:00:26.057+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-14T19:00:26.057+0000] {subprocess.py:93} INFO -  Nenhuma nova atividade encontrada, finalizando extração ⏳
+[2025-11-14T19:00:26.057+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00 2025-11-12 00:17:19+00:00 2025-11-12 00:17:19+00:00
+[2025-11-14T19:00:26.057+0000] {subprocess.py:93} INFO -  ⏩ Atualizando data para 2025-11-12 00:17:20+00:00 ⏩
+[2025-11-14T19:00:26.057+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00
+[2025-11-14T19:00:26.057+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-14T19:00:26.057+0000] {subprocess.py:93} INFO -  Nenhuma nova atividade encontrada, finalizando extração ⏳
+[2025-11-14T19:00:26.058+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00 2025-11-12 00:17:19+00:00 2025-11-12 00:17:19+00:00
+[2025-11-14T19:00:26.058+0000] {subprocess.py:93} INFO -  ⏩ Atualizando data para 2025-11-12 00:17:20+00:00 ⏩
+[2025-11-14T19:00:26.058+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00
+[2025-11-14T19:00:26.058+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-14T19:00:26.058+0000] {subprocess.py:93} INFO -  Nenhuma nova atividade encontrada, finalizando extração ⏳
+[2025-11-14T19:00:26.058+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00 2025-11-12 00:17:19+00:00 2025-11-12 00:17:19+00:00
+[2025-11-14T19:00:26.058+0000] {subprocess.py:93} INFO -  ⏩ Atualizando data para 2025-11-12 00:17:20+00:00 ⏩
+[2025-11-14T19:00:26.058+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00
+[2025-11-14T19:00:26.058+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-14T19:00:26.059+0000] {subprocess.py:93} INFO -  Nenhuma nova atividade encontrada, finalizando extração ⏳
+[2025-11-14T19:00:26.059+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00 2025-11-12 00:17:19+00:00 2025-11-12 00:17:19+00:00
+[2025-11-14T19:00:26.059+0000] {subprocess.py:93} INFO -  ⏩ Atualizando data para 2025-11-12 00:17:20+00:00 ⏩
+[2025-11-14T19:00:26.059+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00
+[2025-11-14T19:00:26.059+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-14T19:00:26.060+0000] {subprocess.py:93} INFO -  Nenhuma nova atividade encontrada, finalizando extração ⏳
+[2025-11-14T19:00:26.060+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00 2025-11-12 00:17:19+00:00 2025-11-12 00:17:19+00:00
+[2025-11-14T19:00:26.060+0000] {subprocess.py:93} INFO -  ⏩ Atualizando data para 2025-11-12 00:17:20+00:00 ⏩
+[2025-11-14T19:00:26.060+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00
+[2025-11-14T19:00:26.060+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-14T19:00:26.060+0000] {subprocess.py:93} INFO -  Nenhuma nova atividade encontrada, finalizando extração ⏳
+[2025-11-14T19:00:26.060+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00 2025-11-12 00:17:19+00:00 2025-11-12 00:17:19+00:00
+[2025-11-14T19:00:26.061+0000] {subprocess.py:93} INFO -  ⏩ Atualizando data para 2025-11-12 00:17:20+00:00 ⏩
+[2025-11-14T19:00:26.061+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00
+[2025-11-14T19:00:26.061+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-14T19:00:26.061+0000] {subprocess.py:93} INFO -  Nenhuma nova atividade encontrada, finalizando extração ⏳
+[2025-11-14T19:00:26.061+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00 2025-11-12 00:17:19+00:00 2025-11-12 00:17:19+00:00
+[2025-11-14T19:00:26.061+0000] {subprocess.py:93} INFO -  ⏩ Atualizando data para 2025-11-12 00:17:20+00:00 ⏩
+[2025-11-14T19:00:26.062+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00
+[2025-11-14T19:00:26.062+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-14T19:00:26.062+0000] {subprocess.py:93} INFO -  Nenhuma nova atividade encontrada, finalizando extração ⏳
+[2025-11-14T19:00:26.062+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00 2025-11-12 00:17:19+00:00 2025-11-12 00:17:19+00:00
+[2025-11-14T19:00:26.063+0000] {subprocess.py:93} INFO -  ⏩ Atualizando data para 2025-11-12 00:17:20+00:00 ⏩
+[2025-11-14T19:00:26.063+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00
+[2025-11-14T19:00:26.063+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-14T19:00:26.063+0000] {subprocess.py:93} INFO -  Nenhuma nova atividade encontrada, finalizando extração ⏳
+[2025-11-14T19:00:26.063+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00 2025-11-12 00:17:19+00:00 2025-11-12 00:17:19+00:00
+[2025-11-14T19:00:26.063+0000] {subprocess.py:93} INFO -  ⏩ Atualizando data para 2025-11-12 00:17:20+00:00 ⏩
+[2025-11-14T19:00:26.064+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00
+[2025-11-14T19:00:26.064+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-14T19:00:26.064+0000] {subprocess.py:93} INFO -  Nenhuma nova atividade encontrada, finalizando extração ⏳
+[2025-11-14T19:00:26.064+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00 2025-11-12 00:17:19+00:00 2025-11-12 00:17:19+00:00
+[2025-11-14T19:00:26.064+0000] {subprocess.py:93} INFO -  ⏩ Atualizando data para 2025-11-12 00:17:20+00:00 ⏩
+[2025-11-14T19:00:26.064+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00
+[2025-11-14T19:00:26.064+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-14T19:00:26.064+0000] {subprocess.py:93} INFO -  Nenhuma nova atividade encontrada, finalizando extração ⏳
+[2025-11-14T19:00:26.064+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00 2025-11-12 00:17:19+00:00 2025-11-12 00:17:19+00:00
+[2025-11-14T19:00:26.064+0000] {subprocess.py:93} INFO -  ⏩ Atualizando data para 2025-11-12 00:17:20+00:00 ⏩
+[2025-11-14T19:00:42.273+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00
+[2025-11-14T19:00:42.274+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-14T19:00:42.274+0000] {subprocess.py:93} INFO -  Nenhuma nova atividade encontrada, finalizando extração ⏳
+[2025-11-14T19:00:42.274+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00 2025-11-12 00:17:19+00:00 2025-11-12 00:17:19+00:00
+[2025-11-14T19:00:42.275+0000] {subprocess.py:93} INFO -  ⏩ Atualizando data para 2025-11-12 00:17:20+00:00 ⏩
+[2025-11-14T19:00:42.275+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00
+[2025-11-14T19:00:42.275+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-14T19:00:42.275+0000] {subprocess.py:93} INFO -  Nenhuma nova atividade encontrada, finalizando extração ⏳
+[2025-11-14T19:00:42.276+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00 2025-11-12 00:17:19+00:00 2025-11-12 00:17:19+00:00
+[2025-11-14T19:00:42.276+0000] {subprocess.py:93} INFO -  ⏩ Atualizando data para 2025-11-12 00:17:20+00:00 ⏩
+[2025-11-14T19:00:42.276+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00
+[2025-11-14T19:00:42.276+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-14T19:00:42.276+0000] {subprocess.py:93} INFO -  Nenhuma nova atividade encontrada, finalizando extração ⏳
+[2025-11-14T19:00:42.276+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00 2025-11-12 00:17:19+00:00 2025-11-12 00:17:19+00:00
+[2025-11-14T19:00:42.276+0000] {subprocess.py:93} INFO -  ⏩ Atualizando data para 2025-11-12 00:17:20+00:00 ⏩
+[2025-11-14T19:00:42.277+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00
+[2025-11-14T19:00:42.277+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-14T19:00:42.277+0000] {subprocess.py:93} INFO -  Nenhuma nova atividade encontrada, finalizando extração ⏳
+[2025-11-14T19:00:42.277+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00 2025-11-12 00:17:19+00:00 2025-11-12 00:17:19+00:00
+[2025-11-14T19:00:42.277+0000] {subprocess.py:93} INFO -  ⏩ Atualizando data para 2025-11-12 00:17:20+00:00 ⏩
+[2025-11-14T19:00:42.277+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00
+[2025-11-14T19:00:42.278+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-14T19:00:42.278+0000] {subprocess.py:93} INFO -  Nenhuma nova atividade encontrada, finalizando extração ⏳
+[2025-11-14T19:00:42.278+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00 2025-11-12 00:17:19+00:00 2025-11-12 00:17:19+00:00
+[2025-11-14T19:00:42.278+0000] {subprocess.py:93} INFO -  ⏩ Atualizando data para 2025-11-12 00:17:20+00:00 ⏩
+[2025-11-14T19:00:42.278+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00
+[2025-11-14T19:00:42.278+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-14T19:00:42.279+0000] {subprocess.py:93} INFO -  Nenhuma nova atividade encontrada, finalizando extração ⏳
+[2025-11-14T19:00:42.279+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00 2025-11-12 00:17:19+00:00 2025-11-12 00:17:19+00:00
+[2025-11-14T19:00:42.279+0000] {subprocess.py:93} INFO -  ⏩ Atualizando data para 2025-11-12 00:17:20+00:00 ⏩
+[2025-11-14T19:00:42.279+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00
+[2025-11-14T19:00:42.279+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-14T19:00:42.279+0000] {subprocess.py:93} INFO -  Nenhuma nova atividade encontrada, finalizando extração ⏳
+[2025-11-14T19:00:42.279+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00 2025-11-12 00:17:19+00:00 2025-11-12 00:17:19+00:00
+[2025-11-14T19:00:42.280+0000] {subprocess.py:93} INFO -  ⏩ Atualizando data para 2025-11-12 00:17:20+00:00 ⏩
+[2025-11-14T19:00:42.280+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00
+[2025-11-14T19:00:42.280+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-14T19:00:42.280+0000] {subprocess.py:93} INFO -  Nenhuma nova atividade encontrada, finalizando extração ⏳
+[2025-11-14T19:00:42.280+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00 2025-11-12 00:17:19+00:00 2025-11-12 00:17:19+00:00
+[2025-11-14T19:00:42.280+0000] {subprocess.py:93} INFO -  ⏩ Atualizando data para 2025-11-12 00:17:20+00:00 ⏩
+[2025-11-14T19:00:42.281+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00
+[2025-11-14T19:00:42.281+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-14T19:00:42.281+0000] {subprocess.py:93} INFO -  Nenhuma nova atividade encontrada, finalizando extração ⏳
+[2025-11-14T19:00:42.281+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00 2025-11-12 00:17:19+00:00 2025-11-12 00:17:19+00:00
+[2025-11-14T19:00:42.281+0000] {subprocess.py:93} INFO -  ⏩ Atualizando data para 2025-11-12 00:17:20+00:00 ⏩
+[2025-11-14T19:00:42.281+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00
+[2025-11-14T19:00:42.281+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-14T19:00:42.282+0000] {subprocess.py:93} INFO -  Nenhuma nova atividade encontrada, finalizando extração ⏳
+[2025-11-14T19:00:42.282+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00 2025-11-12 00:17:19+00:00 2025-11-12 00:17:19+00:00
+[2025-11-14T19:00:42.282+0000] {subprocess.py:93} INFO -  ⏩ Atualizando data para 2025-11-12 00:17:20+00:00 ⏩
+[2025-11-14T19:00:42.282+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00
+[2025-11-14T19:00:42.282+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-14T19:00:42.282+0000] {subprocess.py:93} INFO -  Nenhuma nova atividade encontrada, finalizando extração ⏳
+[2025-11-14T19:00:42.282+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00 2025-11-12 00:17:19+00:00 2025-11-12 00:17:19+00:00
+[2025-11-14T19:00:42.283+0000] {subprocess.py:93} INFO -  ⏩ Atualizando data para 2025-11-12 00:17:20+00:00 ⏩
+[2025-11-14T19:00:42.283+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00
+[2025-11-14T19:00:42.283+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-14T19:00:42.283+0000] {subprocess.py:93} INFO -  Nenhuma nova atividade encontrada, finalizando extração ⏳
+[2025-11-14T19:00:42.283+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00 2025-11-12 00:17:19+00:00 2025-11-12 00:17:19+00:00
+[2025-11-14T19:00:42.283+0000] {subprocess.py:93} INFO -  ⏩ Atualizando data para 2025-11-12 00:17:20+00:00 ⏩
+[2025-11-14T19:00:42.283+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00
+[2025-11-14T19:00:42.284+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-14T19:00:42.284+0000] {subprocess.py:93} INFO -  Nenhuma nova atividade encontrada, finalizando extração ⏳
+[2025-11-14T19:00:42.284+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00 2025-11-12 00:17:19+00:00 2025-11-12 00:17:19+00:00
+[2025-11-14T19:00:42.284+0000] {subprocess.py:93} INFO -  ⏩ Atualizando data para 2025-11-12 00:17:20+00:00 ⏩
+[2025-11-14T19:00:42.284+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00
+[2025-11-14T19:00:42.284+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-14T19:00:42.284+0000] {subprocess.py:93} INFO -  Nenhuma nova atividade encontrada, finalizando extração ⏳
+[2025-11-14T19:00:42.285+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00 2025-11-12 00:17:19+00:00 2025-11-12 00:17:19+00:00
+[2025-11-14T19:00:42.285+0000] {subprocess.py:93} INFO -  ⏩ Atualizando data para 2025-11-12 00:17:20+00:00 ⏩
+[2025-11-14T19:00:42.285+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00
+[2025-11-14T19:00:42.285+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-14T19:00:42.285+0000] {subprocess.py:93} INFO -  Nenhuma nova atividade encontrada, finalizando extração ⏳
+[2025-11-14T19:00:42.285+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00 2025-11-12 00:17:19+00:00 2025-11-12 00:17:19+00:00
+[2025-11-14T19:00:42.285+0000] {subprocess.py:93} INFO -  ⏩ Atualizando data para 2025-11-12 00:17:20+00:00 ⏩
+[2025-11-14T19:00:42.285+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00
+[2025-11-14T19:00:42.286+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-14T19:00:42.286+0000] {subprocess.py:93} INFO -  Nenhuma nova atividade encontrada, finalizando extração ⏳
+[2025-11-14T19:00:42.286+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00 2025-11-12 00:17:19+00:00 2025-11-12 00:17:19+00:00
+[2025-11-14T19:00:42.286+0000] {subprocess.py:93} INFO -  ⏩ Atualizando data para 2025-11-12 00:17:20+00:00 ⏩
+[2025-11-14T19:00:42.286+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00
+[2025-11-14T19:00:42.286+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-14T19:00:42.286+0000] {subprocess.py:93} INFO -  Nenhuma nova atividade encontrada, finalizando extração ⏳
+[2025-11-14T19:00:42.286+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00 2025-11-12 00:17:19+00:00 2025-11-12 00:17:19+00:00
+[2025-11-14T19:00:42.287+0000] {subprocess.py:93} INFO -  ⏩ Atualizando data para 2025-11-12 00:17:20+00:00 ⏩
+[2025-11-14T19:00:42.287+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00
+[2025-11-14T19:00:42.287+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-14T19:00:42.287+0000] {subprocess.py:93} INFO -  Nenhuma nova atividade encontrada, finalizando extração ⏳
+[2025-11-14T19:00:42.287+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00 2025-11-12 00:17:19+00:00 2025-11-12 00:17:19+00:00
+[2025-11-14T19:00:42.287+0000] {subprocess.py:93} INFO -  ⏩ Atualizando data para 2025-11-12 00:17:20+00:00 ⏩
+[2025-11-14T19:00:42.288+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00
+[2025-11-14T19:00:42.288+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-14T19:00:42.288+0000] {subprocess.py:93} INFO -  Nenhuma nova atividade encontrada, finalizando extração ⏳
+[2025-11-14T19:00:42.288+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00 2025-11-12 00:17:19+00:00 2025-11-12 00:17:19+00:00
+[2025-11-14T19:00:42.288+0000] {subprocess.py:93} INFO -  ⏩ Atualizando data para 2025-11-12 00:17:20+00:00 ⏩
+[2025-11-14T19:00:42.288+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00
+[2025-11-14T19:00:42.288+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-14T19:00:42.288+0000] {subprocess.py:93} INFO -  Nenhuma nova atividade encontrada, finalizando extração ⏳
+[2025-11-14T19:00:42.288+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00 2025-11-12 00:17:19+00:00 2025-11-12 00:17:19+00:00
+[2025-11-14T19:00:42.289+0000] {subprocess.py:93} INFO -  ⏩ Atualizando data para 2025-11-12 00:17:20+00:00 ⏩
+[2025-11-14T19:00:42.289+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00
+[2025-11-14T19:00:42.290+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-14T19:00:42.290+0000] {subprocess.py:93} INFO -  Nenhuma nova atividade encontrada, finalizando extração ⏳
+[2025-11-14T19:00:42.290+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00 2025-11-12 00:17:19+00:00 2025-11-12 00:17:19+00:00
+[2025-11-14T19:00:42.290+0000] {subprocess.py:93} INFO -  ⏩ Atualizando data para 2025-11-12 00:17:20+00:00 ⏩
+[2025-11-14T19:00:42.290+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00
+[2025-11-14T19:00:42.291+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-14T19:00:42.291+0000] {subprocess.py:93} INFO -  Nenhuma nova atividade encontrada, finalizando extração ⏳
+[2025-11-14T19:00:42.291+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00 2025-11-12 00:17:19+00:00 2025-11-12 00:17:19+00:00
+[2025-11-14T19:00:42.291+0000] {subprocess.py:93} INFO -  ⏩ Atualizando data para 2025-11-12 00:17:20+00:00 ⏩
+[2025-11-14T19:00:42.291+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00
+[2025-11-14T19:00:42.291+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-14T19:00:42.292+0000] {subprocess.py:93} INFO -  Nenhuma nova atividade encontrada, finalizando extração ⏳
+[2025-11-14T19:00:42.292+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00 2025-11-12 00:17:19+00:00 2025-11-12 00:17:19+00:00
+[2025-11-14T19:00:42.292+0000] {subprocess.py:93} INFO -  ⏩ Atualizando data para 2025-11-12 00:17:20+00:00 ⏩
+[2025-11-14T19:00:42.292+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00
+[2025-11-14T19:00:42.292+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-14T19:00:42.293+0000] {subprocess.py:93} INFO -  Nenhuma nova atividade encontrada, finalizando extração ⏳
+[2025-11-14T19:00:42.293+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00 2025-11-12 00:17:19+00:00 2025-11-12 00:17:19+00:00
+[2025-11-14T19:00:42.293+0000] {subprocess.py:93} INFO -  ⏩ Atualizando data para 2025-11-12 00:17:20+00:00 ⏩
+[2025-11-14T19:00:42.293+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00
+[2025-11-14T19:00:42.293+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-14T19:00:42.293+0000] {subprocess.py:93} INFO -  Nenhuma nova atividade encontrada, finalizando extração ⏳
+[2025-11-14T19:00:42.294+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00 2025-11-12 00:17:19+00:00 2025-11-12 00:17:19+00:00
+[2025-11-14T19:00:42.294+0000] {subprocess.py:93} INFO -  ⏩ Atualizando data para 2025-11-12 00:17:20+00:00 ⏩
+[2025-11-14T19:00:42.294+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00
+[2025-11-14T19:00:42.294+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-14T19:00:42.294+0000] {subprocess.py:93} INFO -  Nenhuma nova atividade encontrada, finalizando extração ⏳
+[2025-11-14T19:00:42.294+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00 2025-11-12 00:17:19+00:00 2025-11-12 00:17:19+00:00
+[2025-11-14T19:00:42.295+0000] {subprocess.py:93} INFO -  ⏩ Atualizando data para 2025-11-12 00:17:20+00:00 ⏩
+[2025-11-14T19:00:42.295+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00
+[2025-11-14T19:00:42.295+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-14T19:00:42.295+0000] {subprocess.py:93} INFO -  Nenhuma nova atividade encontrada, finalizando extração ⏳
+[2025-11-14T19:00:42.295+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00 2025-11-12 00:17:19+00:00 2025-11-12 00:17:19+00:00
+[2025-11-14T19:00:42.295+0000] {subprocess.py:93} INFO -  ⏩ Atualizando data para 2025-11-12 00:17:20+00:00 ⏩
+[2025-11-14T19:00:42.296+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00
+[2025-11-14T19:00:42.296+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-14T19:00:42.296+0000] {subprocess.py:93} INFO -  Nenhuma nova atividade encontrada, finalizando extração ⏳
+[2025-11-14T19:00:42.296+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00 2025-11-12 00:17:19+00:00 2025-11-12 00:17:19+00:00
+[2025-11-14T19:00:42.297+0000] {subprocess.py:93} INFO -  ⏩ Atualizando data para 2025-11-12 00:17:20+00:00 ⏩
+[2025-11-14T19:00:42.297+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00
+[2025-11-14T19:00:42.297+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-14T19:00:42.297+0000] {subprocess.py:93} INFO -  Nenhuma nova atividade encontrada, finalizando extração ⏳
+[2025-11-14T19:00:42.297+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00 2025-11-12 00:17:19+00:00 2025-11-12 00:17:19+00:00
+[2025-11-14T19:00:42.297+0000] {subprocess.py:93} INFO -  ⏩ Atualizando data para 2025-11-12 00:17:20+00:00 ⏩
+[2025-11-14T19:00:42.297+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00
+[2025-11-14T19:00:42.298+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-14T19:00:42.298+0000] {subprocess.py:93} INFO -  Nenhuma nova atividade encontrada, finalizando extração ⏳
+[2025-11-14T19:00:42.298+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00 2025-11-12 00:17:19+00:00 2025-11-12 00:17:19+00:00
+[2025-11-14T19:00:42.298+0000] {subprocess.py:93} INFO -  ⏩ Atualizando data para 2025-11-12 00:17:20+00:00 ⏩
+[2025-11-14T19:00:42.299+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00
+[2025-11-14T19:00:42.299+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-14T19:00:42.299+0000] {subprocess.py:93} INFO -  Nenhuma nova atividade encontrada, finalizando extração ⏳
+[2025-11-14T19:00:42.299+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00 2025-11-12 00:17:19+00:00 2025-11-12 00:17:19+00:00
+[2025-11-14T19:00:42.299+0000] {subprocess.py:93} INFO -  ⏩ Atualizando data para 2025-11-12 00:17:20+00:00 ⏩
+[2025-11-14T19:00:42.299+0000] {subprocess.py:93} INFO - 2025-11-12 00:17:20+00:00
+[2025-11-14T19:00:42.299+0000] {subprocess.py:93} INFO - Extraçao iniciada, aguarde... ⏳
+[2025-11-14T19:00:42.299+0000] {subprocess.py:93} INFO -  Nenhuma nova atividade encontrada, finalizando extração ⏳
+[2025-11-14T19:03:27.417+0000] {local_task_job_runner.py:124} ERROR - Received SIGTERM. Terminating subprocesses
+[2025-11-14T19:03:27.649+0000] {process_utils.py:132} INFO - Sending 15 to group 556. PIDs of all processes in the group: [557, 556]
+[2025-11-14T19:03:27.676+0000] {process_utils.py:87} INFO - Sending the signal 15 to group 556
+[2025-11-14T19:03:27.716+0000] {taskinstance.py:2611} ERROR - Received SIGTERM. Terminating subprocesses.
+[2025-11-14T19:03:27.746+0000] {subprocess.py:104} INFO - Sending SIGTERM signal to process group
+[2025-11-14T19:03:27.752+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-11-14T19:03:27.820+0000] {taskinstance.py:2905} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 401, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/bash.py", line 234, in execute
+    result = self.subprocess_hook.run_command(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/hooks/subprocess.py", line 91, in run_command
+    for raw_line in iter(self.sub_process.stdout.readline, b""):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 2613, in signal_handler
+    raise AirflowTaskTerminated("Task received SIGTERM signal")
+airflow.exceptions.AirflowTaskTerminated: Task received SIGTERM signal
+[2025-11-14T19:03:27.843+0000] {taskinstance.py:1206} INFO - Marking task as UP_FOR_RETRY. dag_id=etl_strava, task_id=extract_bronze_activities, run_id=manual__2025-11-14T18:55:25.087441+00:00, execution_date=20251114T185525, start_date=20251114T185525, end_date=20251114T190327
+[2025-11-14T19:03:27.920+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=556, status='terminated', exitcode=2, started='18:55:25') (556) terminated with exit code 2
+[2025-11-14T19:03:27.935+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=557, status='terminated', started='18:55:25') (557) terminated with exit code None
+[2025-11-14T19:03:27.938+0000] {local_task_job_runner.py:243} INFO - Task exited with return code 143
+[2025-11-14T19:03:27.999+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,49 @@
+[2025-11-15T23:05:59.490+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-11-15T23:05:59.535+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: etl_label_studio.extract_bronze_label_studio manual__2025-11-15T23:05:58.827631+00:00 [queued]>
+[2025-11-15T23:05:59.543+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: etl_label_studio.extract_bronze_label_studio manual__2025-11-15T23:05:58.827631+00:00 [queued]>
+[2025-11-15T23:05:59.544+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2025-11-15T23:05:59.555+0000] {taskinstance.py:2330} INFO - Executing <Task(BashOperator): extract_bronze_label_studio> on 2025-11-15 23:05:58.827631+00:00
+[2025-11-15T23:05:59.566+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:62 DeprecationWarning: This process (pid=694) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-11-15T23:05:59.562+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'etl_label_studio', 'extract_bronze_label_studio', 'manual__2025-11-15T23:05:58.827631+00:00', '--job-id', '311', '--raw', '--subdir', 'DAGS_FOLDER/pipeline_label_studio.py', '--cfg-path', '/tmp/tmpjpvlmfm6']
+[2025-11-15T23:05:59.568+0000] {standard_task_runner.py:64} INFO - Started process 695 to run task
+[2025-11-15T23:05:59.568+0000] {standard_task_runner.py:91} INFO - Job 311: Subtask extract_bronze_label_studio
+[2025-11-15T23:05:59.635+0000] {task_command.py:426} INFO - Running <TaskInstance: etl_label_studio.extract_bronze_label_studio manual__2025-11-15T23:05:58.827631+00:00 [running]> on host 070b9a911922
+[2025-11-15T23:05:59.718+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='rayane' AIRFLOW_CTX_DAG_ID='etl_label_studio' AIRFLOW_CTX_TASK_ID='extract_bronze_label_studio' AIRFLOW_CTX_EXECUTION_DATE='2025-11-15T23:05:58.827631+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-11-15T23:05:58.827631+00:00'
+[2025-11-15T23:05:59.718+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-11-15T23:05:59.739+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-11-15T23:05:59.740+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'python /opt/***/apps/extract_api_label_studio_strava.py']
+[2025-11-15T23:05:59.746+0000] {subprocess.py:86} INFO - Output:
+[2025-11-15T23:06:00.601+0000] {subprocess.py:93} INFO - Usando o arquivo de variáveis em: /opt/***/apps/.env
+[2025-11-15T23:06:00.604+0000] {subprocess.py:93} INFO - Label Studio URL: http://label-studio:8080
+[2025-11-15T23:06:00.604+0000] {subprocess.py:93} INFO - Bucket Bronze Label Studio: bronze-label-studio
+[2025-11-15T23:06:00.604+0000] {subprocess.py:93} INFO - Project ID: 1
+[2025-11-15T23:06:00.606+0000] {subprocess.py:93} INFO - Traceback (most recent call last):
+[2025-11-15T23:06:00.607+0000] {subprocess.py:93} INFO -   File "/opt/***/apps/extract_api_label_studio_strava.py", line 98, in <module>
+[2025-11-15T23:06:00.607+0000] {subprocess.py:93} INFO -     export_data = fetch_project_export(PROJECT_ID)
+[2025-11-15T23:06:00.608+0000] {subprocess.py:93} INFO -                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2025-11-15T23:06:00.608+0000] {subprocess.py:93} INFO -   File "/opt/***/apps/extract_api_label_studio_strava.py", line 84, in fetch_project_export
+[2025-11-15T23:06:00.609+0000] {subprocess.py:93} INFO -     resp.raise_for_status()
+[2025-11-15T23:06:00.611+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/requests/models.py", line 1024, in raise_for_status
+[2025-11-15T23:06:00.611+0000] {subprocess.py:93} INFO -     raise HTTPError(http_error_msg, response=self)
+[2025-11-15T23:06:00.611+0000] {subprocess.py:93} INFO - requests.exceptions.HTTPError: 401 Client Error: Unauthorized for url: http://label-studio:8080/api/projects/1/export?exportType=JSON
+[2025-11-15T23:06:00.646+0000] {subprocess.py:97} INFO - Command exited with return code 1
+[2025-11-15T23:06:00.647+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-11-15T23:06:00.662+0000] {taskinstance.py:2905} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 401, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/bash.py", line 243, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2025-11-15T23:06:00.666+0000] {taskinstance.py:1206} INFO - Marking task as UP_FOR_RETRY. dag_id=etl_label_studio, task_id=extract_bronze_label_studio, run_id=manual__2025-11-15T23:05:58.827631+00:00, execution_date=20251115T230558, start_date=20251115T230559, end_date=20251115T230600
+[2025-11-15T23:06:00.677+0000] {standard_task_runner.py:110} ERROR - Failed to execute job 311 for task extract_bronze_label_studio (Bash command failed. The command returned a non-zero exit code 1.; 695)
+[2025-11-15T23:06:00.714+0000] {local_task_job_runner.py:243} INFO - Task exited with return code 1
+[2025-11-15T23:06:00.731+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-11-15T23:06:00.732+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

@@ -1,0 +1,7 @@
+.ipynb_checkpoints
+*.meta.bkp
+*.part
+.usash_history
+.usage-cache
+.DS_Store
+__pycache__/

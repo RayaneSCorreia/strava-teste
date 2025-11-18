@@ -1,0 +1,297 @@
+services:
+  # -----------------------------
+  # Postgres do AIRFLOW
+  # -----------------------------
+  postgres_airflow:
+    image: postgres:13
+    container_name: postgres_airflow
+    environment:
+      POSTGRES_DB: airflow
+      POSTGRES_USER: airflow
+      POSTGRES_PASSWORD: airflow
+    volumes:
+      - ./airflow/postgres_data:/var/lib/postgresql/data    
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U airflow -d airflow"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+    restart: unless-stopped
+    networks:
+      - minio_network
+
+    # -----------------------------
+  # Airflow - init (migra DB e cria usuário, depois encerra)
+  # -----------------------------
+  airflow-init:
+    image: airflow-custom:2.9.3
+    build:
+      context: .
+      dockerfile: Dockerfile.airflow
+    container_name: airflow_init
+    depends_on:
+      postgres_airflow:
+        condition: service_healthy
+    environment:
+      AIRFLOW__CORE__EXECUTOR: LocalExecutor
+      AIRFLOW__CORE__LOAD_EXAMPLES: "False"
+      AIRFLOW__CORE__DEFAULT_TIMEZONE: America/Fortaleza
+      AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres_airflow:5432/airflow
+      LABEL_STUDIO_URL: "http://label-studio:8080"
+    volumes:
+      - ./airflow/dags:/opt/airflow/dags
+      - ./airflow/logs:/opt/airflow/logs
+      - ./airflow/plugins:/opt/airflow/plugins
+      - ./airflow/apps:/opt/airflow/apps
+
+    # 👇 Sobrescreve o entrypoint da imagem e roda tudo pelo bash
+    entrypoint: /bin/bash
+    command:
+      - -c
+      - |
+        echo "Rodando migrations do Airflow..."
+        airflow db upgrade
+
+        echo "Criando usuário admin do Airflow..."
+        airflow users create \
+          -u admin_airflow \
+          -p admin_airflow \
+          -f Rayane \
+          -l Correia \
+          -r Admin \
+          -e raayanecorreia20@gmail.com || true
+
+        echo "Init do Airflow finalizado com sucesso."
+
+    restart: "no"
+    networks:
+      - minio_network
+
+  # -----------------------------
+  # Airflow - Webserver
+  # -----------------------------
+  airflow-webserver:
+    image: airflow-custom:2.9.3
+    build:
+      context: .
+      dockerfile: Dockerfile.airflow
+    container_name: airflow_webserver
+    depends_on:
+      postgres_airflow:
+        condition: service_healthy
+      airflow-init:
+        condition: service_completed_successfully
+    environment:
+      AIRFLOW__CORE__EXECUTOR: LocalExecutor
+      AIRFLOW__CORE__LOAD_EXAMPLES: "False"
+      AIRFLOW__CORE__DEFAULT_TIMEZONE: America/Fortaleza
+      AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres_airflow:5432/airflow
+      LABEL_STUDIO_URL: "http://label-studio:8080"
+
+    volumes:
+      - ./airflow/dags:/opt/airflow/dags
+      - ./airflow/logs:/opt/airflow/logs
+      - ./airflow/plugins:/opt/airflow/plugins
+      - ./airflow/apps:/opt/airflow/apps
+
+    ports:
+      - "8080:8080"
+
+    command: bash -lc "airflow webserver"
+
+    healthcheck:
+      test: ["CMD-SHELL", "curl -sf http://localhost:8080/health || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 30
+    restart: unless-stopped
+    networks:
+      - minio_network
+
+  # -----------------------------
+  # Airflow - Scheduler
+  # -----------------------------
+  airflow-scheduler:
+    image: airflow-custom:2.9.3
+    build:
+      context: .
+      dockerfile: Dockerfile.airflow
+    container_name: airflow_scheduler
+    depends_on:
+      postgres_airflow:
+        condition: service_healthy
+      airflow-init:
+        condition: service_completed_successfully
+      airflow-webserver:
+        condition: service_started
+
+    environment:
+      AIRFLOW__CORE__EXECUTOR: LocalExecutor
+      AIRFLOW__CORE__LOAD_EXAMPLES: "False"
+      AIRFLOW__CORE__DEFAULT_TIMEZONE: America/Fortaleza
+      AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres_airflow:5432/airflow
+      LABEL_STUDIO_URL: "http://label-studio:8080"
+
+    volumes:
+      - ./airflow/dags:/opt/airflow/dags
+      - ./airflow/logs:/opt/airflow/logs
+      - ./airflow/plugins:/opt/airflow/plugins
+      - ./airflow/apps:/opt/airflow/apps
+
+    command: bash -lc "airflow scheduler"
+    restart: unless-stopped
+    networks:
+      - minio_network
+
+  # =====================================================
+  # Label Studio + Postgres
+  # =====================================================
+
+  postgres_labelstudio:
+    image: postgres:13
+    container_name: postgres_labelstudio
+    environment:
+      POSTGRES_DB: labelstudio
+      POSTGRES_USER: labelstudio
+      POSTGRES_PASSWORD: labelstudio
+    volumes:
+      - ./labelstudio/postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U labelstudio -d labelstudio"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+    restart: unless-stopped
+    networks:
+      - minio_network
+
+  label-studio:
+    image: heartexlabs/label-studio:latest
+    container_name: label_studio
+    depends_on:
+      postgres_labelstudio:
+        condition: service_healthy
+    environment:
+      # Config do Postgres para o Label Studio (oficial)
+      DJANGO_DB: "default"
+      POSTGRE_NAME: "labelstudio"
+      POSTGRE_USER: "labelstudio"
+      POSTGRE_PASSWORD: "labelstudio"
+      POSTGRE_HOST: "postgres_labelstudio"
+      POSTGRE_PORT: "5432"
+
+      # Usuário inicial do Label Studio
+      LABEL_STUDIO_USERNAME: "raayanecorreia20@gmail.com"
+      LABEL_STUDIO_PASSWORD: "admin_labelstudio_teste"
+
+      # Acesso a arquivos locais
+      LABEL_STUDIO_LOCAL_FILES_SERVING_ENABLED: "true"
+      LABEL_STUDIO_LOCAL_FILES_DOCUMENT_ROOT: "/label-studio/data"
+    ports:
+      - "8081:8080"        # host:container
+    volumes:
+      - ./labelstudio/data:/label-studio/data
+    restart: unless-stopped
+    networks:
+      - minio_network
+
+# =====================================================
+  # MinIO
+  # =====================================================
+
+  minio:
+    image: minio/minio:latest
+    container_name: minio-dataops
+    command: server /data --console-address ":9001"
+    ports:
+      - "9010:9000"
+      - "9011:9001"
+    environment:
+      MINIO_ROOT_USER: minioadmin
+      MINIO_ROOT_PASSWORD: minioadmin
+      MINIO_BROWSER_REDIRECT_URL: http://localhost:9011
+    volumes:
+      - ./minio/data:/data   
+    healthcheck:
+      test: ["CMD", "mc", "ready", "local"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+    networks:
+      - minio_network
+    restart: unless-stopped
+
+  minio-client:
+    image: minio/mc:latest
+    container_name: minio-client-dataops
+    depends_on:
+      - minio
+    entrypoint: >
+      /bin/sh -c "
+      sleep 5;
+      mc alias set local http://minio:9000 minioadmin minioadmin;
+      mc mb local/bronze-api-strava-user-json --ignore-existing;
+      mc mb local/bronze-api-strava-user-activities-json --ignore-existing;
+      mc mb local/bronze-log-files-user-activities-json --ignore-existing;
+      mc mb local/bronze-api-label-studio-json --ignore-existing;
+      echo 'Buckets bronze criados com sucesso!';
+      mc mb local/silver-strava-user-parquet --ignore-existing;
+      mc mb local/silver-strava-user-activities-parquet --ignore-existing;
+      mc mb local/silver-label-studio-parquet --ignore-existing;
+      echo 'Buckets silver criados com sucesso!';
+      mc mb local/gold-strava-user-delta --ignore-existing;
+      mc mb local/gold-strava-activities-labels-delta --ignore-existing;
+      echo 'Buckets gold criados com sucesso!';
+      exit 0;
+      "
+    networks:
+      - minio_network 
+
+  # -----------------------------
+  # POSTGRES BI (para o Metabase)
+  # -----------------------------
+  postgres_bi:
+    image: postgres:14
+    container_name: postgres_bi
+    environment:
+      POSTGRES_DB: bi
+      POSTGRES_USER: bi_user
+      POSTGRES_PASSWORD: bi_password
+    ports:
+      - "5433:5432"     # opcional — para acessar do host (DBeaver, etc)
+    volumes:
+      - ./postgres_bi_data:/var/lib/postgresql/data
+    networks:
+      - minio_network
+    restart: unless-stopped
+
+  # -----------------------------
+  # METABASE
+  # -----------------------------
+  metabase:
+    image: metabase/metabase:latest
+    container_name: metabase
+    depends_on:
+      - postgres_bi
+    environment: 
+      MB_DB_FILE: /metabase-data/metabase.db
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./metabase-data:/metabase-data
+    networks:
+      - minio_network
+    restart: unless-stopped
+  
+  metabase-init:
+    image: python:3.11
+    depends_on:
+      - metabase
+    volumes:
+      - ./monitoring:/monitoring
+    networks:
+      - minio_network
+
+networks:
+  minio_network:
+    driver: bridge
