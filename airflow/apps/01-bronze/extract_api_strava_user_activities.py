@@ -4,11 +4,10 @@ import json
 from stravalib import model, Client
 from pathlib import Path
 import os, time, io
-from datetime import datetime, timedelta
 import hashlib
 from minio import Minio
 from urllib3.exceptions import HTTPError, MaxRetryError
-
+from datetime import datetime, timedelta
 
 #Oculta warnings desnecessários
 os.environ["SILENCE_TOKEN_WARNINGS"] = "true"
@@ -112,23 +111,26 @@ def save_log_error(activitie_id, activitie_date, error_message):
         json.dump(logs, f, ensure_ascii=False, indent=4)
 
 
-def insert_files_json_to_bronze(start_date_process: str):
+def insert_files_json_to_bronze(start_date_process):
+    print(start_date_process)
     start_date = start_date_process
     end_date =  datetime.fromisoformat(str(datetime.now() - timedelta(days=1))[:10] + 'T23:59:59Z')
     activitie_count = 0
     ultimo_processado = None
     atividade_alterada = 0
-
-
     # A politica do strava so permite 100 requisicoes a cada 15min e uma requisicao pode voltar ate 200 registros
     #coloquei essa trava pra caso ele der problema aguardar os 15min pra continuar
     #o limite diario e 2k, mas estou ajustando pra rodar D-30 pra simular eventos de update, ninguem faz 2k de atividade e um mes
     # pelo menos n eu kkk entao n vai quebrar por isso
 
-    while start_date < end_date or start_date != ultimo_processado:
-        print(start_date)
+    while start_date < end_date:
+        print(start_date, end_date)
+        activities = []
+
         try:
+            print("Extraindo atividades")
             activities = list(client.get_activities(after=start_date, limit=200))
+            print(activities)
         except Exception as e:
             error = str(e)
             if '429' in error:
@@ -204,32 +206,34 @@ def insert_files_json_to_bronze(start_date_process: str):
                     set_key(str(ENV_PATH), "LAST_DATE_USER_ACTIVITIE", str(activitie.start_date_local)) 
                     print("Última data atualizada para:", str(activitie.start_date_local)) 
 
-        if activitie.start_date_local == ultimo_processado:
-                    start_date = ultimo_processado
-                    print(" Nenhuma nova atividade encontrada, finalizando extração ⏳")
-                    break
-        else:
-                start_date = activitie.start_date_local + timedelta(seconds=1)
-                ultimo_processado = activitie.start_date_local
+            if activitie.start_date_local == ultimo_processado:
+                        start_date = ultimo_processado
+                        print(" Nenhuma nova atividade encontrada, finalizando extração ⏳")
+                        break
+            else:
+                    start_date = activitie.start_date_local + timedelta(seconds=1)
+                    ultimo_processado = activitie.start_date_local
+        else: 
+            print("Náo ha mais atividades para serem inseridas.")
 
         print(start_date, ultimo_processado, activitie.start_date_local)
         print(f" ⏩ Atualizando data para {start_date} ⏩ ")
-            
-    else: 
-        print("Náo ha mais atividades para serem inseridas.")
         
     print(f" 📋 {activitie_count} Atividades registradas, {atividade_alterada} atividades alteradas")
     print(f" 📋 {start_date} Ultima data registrada ")
 
 #Verifica se o bucket esta vazio ou se é a primeira execucao full
 list_obj_buc = list(s3_client.list_objects(os.getenv("BRONZE_BUCKET_USER_ACTIVITIES"), recursive=True))
-if os.getenv("LAST_DATE_USER_ACTIVITIE") is None or len(list_obj_buc) == 0:
+if os.getenv("LAST_DATE_USER_ACTIVITIE") == "" or len(list_obj_buc) == 0:
     print("BUCKET VAZIO OU REPROCESSAMENTO FULL")
-    insert_files_json_to_bronze(os.getenv("FIRST_DATE_USER"))
+    formato = "%Y-%m-%d %H:%M:%S%z"
+    date_init = datetime.strptime(os.getenv("FIRST_DATE_USER"), formato)
+    insert_files_json_to_bronze(date_init)
     print(os.getenv("LAST_DATE_USER_ACTIVITIE"))
 else:
-    data_init = datetime.fromisoformat(os.getenv("LAST_DATE_USER_ACTIVITIE")) - timedelta(days=30)
-    print("PROCESSAMENTO INCREMENTAL A PARTIR DE {}".format(data_init))
-    insert_files_json_to_bronze(data_init)
+    formato = "%Y-%m-%d %H:%M:%S%z"
+    date_init = datetime.strptime(os.getenv("LAST_DATE_USER_ACTIVITIE"), formato) - timedelta(days=30)
+    print("PROCESSAMENTO INCREMENTAL A PARTIR DE {}".format(date_init))
+    insert_files_json_to_bronze(date_init)
     
 print("✅ Processo de extração finalizado ✅")

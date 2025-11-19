@@ -1,0 +1,50 @@
+[2025-11-18T23:15:47.179+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-11-18T23:15:47.198+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: etl_strava_activities.extract_bronze_activities manual__2025-11-18T23:10:44.251765+00:00 [queued]>
+[2025-11-18T23:15:47.202+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: etl_strava_activities.extract_bronze_activities manual__2025-11-18T23:10:44.251765+00:00 [queued]>
+[2025-11-18T23:15:47.202+0000] {taskinstance.py:2306} INFO - Starting attempt 2 of 2
+[2025-11-18T23:15:47.213+0000] {taskinstance.py:2330} INFO - Executing <Task(BashOperator): extract_bronze_activities> on 2025-11-18 23:10:44.251765+00:00
+[2025-11-18T23:15:47.220+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:62 DeprecationWarning: This process (pid=9787) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-11-18T23:15:47.219+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'etl_strava_activities', 'extract_bronze_activities', 'manual__2025-11-18T23:10:44.251765+00:00', '--job-id', '85', '--raw', '--subdir', 'DAGS_FOLDER/pipeline_strava_activities.py', '--cfg-path', '/tmp/tmp5bbf3wdv']
+[2025-11-18T23:15:47.221+0000] {standard_task_runner.py:64} INFO - Started process 9788 to run task
+[2025-11-18T23:15:47.221+0000] {standard_task_runner.py:91} INFO - Job 85: Subtask extract_bronze_activities
+[2025-11-18T23:15:47.278+0000] {task_command.py:426} INFO - Running <TaskInstance: etl_strava_activities.extract_bronze_activities manual__2025-11-18T23:10:44.251765+00:00 [running]> on host 1f6ebb9bd530
+[2025-11-18T23:15:47.325+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='rayane' AIRFLOW_CTX_DAG_ID='etl_strava_activities' AIRFLOW_CTX_TASK_ID='extract_bronze_activities' AIRFLOW_CTX_EXECUTION_DATE='2025-11-18T23:10:44.251765+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-11-18T23:10:44.251765+00:00'
+[2025-11-18T23:15:47.326+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-11-18T23:15:47.332+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-11-18T23:15:47.333+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'python /opt/***/apps/01-bronze/extract_api_strava_user_activities.py']
+[2025-11-18T23:15:47.336+0000] {subprocess.py:86} INFO - Output:
+[2025-11-18T23:15:48.914+0000] {subprocess.py:93} INFO - Usando o arquivo de variaveis em: /opt/***/apps/.env
+[2025-11-18T23:15:48.915+0000] {subprocess.py:93} INFO - 186060
+[2025-11-18T23:15:48.915+0000] {subprocess.py:93} INFO -  ⚠️  O Token atual expira em: 2025-11-18 23:57:12
+[2025-11-18T23:15:48.916+0000] {subprocess.py:93} INFO - Usando o arquivo de variaveis em: /opt/***/apps/.env
+[2025-11-18T23:15:48.916+0000] {subprocess.py:93} INFO - ✅ Credenciais Autenticadas
+[2025-11-18T23:15:48.917+0000] {subprocess.py:93} INFO - BUCKET VAZIO OU REPROCESSAMENTO FULL
+[2025-11-18T23:15:48.917+0000] {subprocess.py:93} INFO - 2025-07-16 12:46:52+00:00
+[2025-11-18T23:15:48.917+0000] {subprocess.py:93} INFO - Traceback (most recent call last):
+[2025-11-18T23:15:48.918+0000] {subprocess.py:93} INFO -   File "/opt/***/apps/01-bronze/extract_api_strava_user_activities.py", line 227, in <module>
+[2025-11-18T23:15:48.918+0000] {subprocess.py:93} INFO -     insert_files_json_to_bronze(os.getenv("FIRST_DATE_USER"))
+[2025-11-18T23:15:48.919+0000] {subprocess.py:93} INFO -   File "/opt/***/apps/01-bronze/extract_api_strava_user_activities.py", line 140, in insert_files_json_to_bronze
+[2025-11-18T23:15:48.919+0000] {subprocess.py:93} INFO -     if activities:
+[2025-11-18T23:15:48.920+0000] {subprocess.py:93} INFO -        ^^^^^^^^^^
+[2025-11-18T23:15:48.920+0000] {subprocess.py:93} INFO - UnboundLocalError: cannot access local variable 'activities' where it is not associated with a value
+[2025-11-18T23:15:48.971+0000] {subprocess.py:97} INFO - Command exited with return code 1
+[2025-11-18T23:15:48.972+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-11-18T23:15:48.977+0000] {taskinstance.py:2905} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 401, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/bash.py", line 243, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2025-11-18T23:15:48.979+0000] {taskinstance.py:1206} INFO - Marking task as FAILED. dag_id=etl_strava_activities, task_id=extract_bronze_activities, run_id=manual__2025-11-18T23:10:44.251765+00:00, execution_date=20251118T231044, start_date=20251118T231547, end_date=20251118T231548
+[2025-11-18T23:15:48.987+0000] {standard_task_runner.py:110} ERROR - Failed to execute job 85 for task extract_bronze_activities (Bash command failed. The command returned a non-zero exit code 1.; 9788)
+[2025-11-18T23:15:49.021+0000] {local_task_job_runner.py:243} INFO - Task exited with return code 1
+[2025-11-18T23:15:49.039+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-11-18T23:15:49.040+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

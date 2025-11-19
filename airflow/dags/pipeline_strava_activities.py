@@ -39,7 +39,7 @@ with DAG(
     # 4 Send to Postgres BI
     gold_activitties_to_postgres_bi = BashOperator(
         task_id="gold_activitties_to_postgres_bi",
-        bash_command="python /opt/airflow/apps/03-gold/fact_user_activities_strava.py"
+        bash_command="python /opt/airflow/apps/04-LoadBI/gold_activitties_to_postgres_bi.py"
     )
 
 

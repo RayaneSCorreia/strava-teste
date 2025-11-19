@@ -1,0 +1,50 @@
+[2025-11-19T00:40:31.739+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-11-19T00:40:31.755+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: etl_strava_activities.extract_bronze_activities manual__2025-11-19T00:35:28.154820+00:00 [queued]>
+[2025-11-19T00:40:31.758+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: etl_strava_activities.extract_bronze_activities manual__2025-11-19T00:35:28.154820+00:00 [queued]>
+[2025-11-19T00:40:31.758+0000] {taskinstance.py:2306} INFO - Starting attempt 2 of 2
+[2025-11-19T00:40:31.764+0000] {taskinstance.py:2330} INFO - Executing <Task(BashOperator): extract_bronze_activities> on 2025-11-19 00:35:28.154820+00:00
+[2025-11-19T00:40:31.772+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:62 DeprecationWarning: This process (pid=366) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-11-19T00:40:31.771+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'etl_strava_activities', 'extract_bronze_activities', 'manual__2025-11-19T00:35:28.154820+00:00', '--job-id', '109', '--raw', '--subdir', 'DAGS_FOLDER/pipeline_strava_activities.py', '--cfg-path', '/tmp/tmpgb1565c0']
+[2025-11-19T00:40:31.773+0000] {standard_task_runner.py:91} INFO - Job 109: Subtask extract_bronze_activities
+[2025-11-19T00:40:31.773+0000] {standard_task_runner.py:64} INFO - Started process 367 to run task
+[2025-11-19T00:40:31.796+0000] {task_command.py:426} INFO - Running <TaskInstance: etl_strava_activities.extract_bronze_activities manual__2025-11-19T00:35:28.154820+00:00 [running]> on host 5aaba18163ae
+[2025-11-19T00:40:31.839+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='rayane' AIRFLOW_CTX_DAG_ID='etl_strava_activities' AIRFLOW_CTX_TASK_ID='extract_bronze_activities' AIRFLOW_CTX_EXECUTION_DATE='2025-11-19T00:35:28.154820+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-11-19T00:35:28.154820+00:00'
+[2025-11-19T00:40:31.840+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-11-19T00:40:31.846+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-11-19T00:40:31.847+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'python /opt/***/apps/01-bronze/extract_api_strava_user_activities.py']
+[2025-11-19T00:40:31.856+0000] {subprocess.py:86} INFO - Output:
+[2025-11-19T00:40:33.042+0000] {subprocess.py:93} INFO - Usando o arquivo de variaveis em: /opt/***/apps/.env
+[2025-11-19T00:40:33.042+0000] {subprocess.py:93} INFO - 186060
+[2025-11-19T00:40:33.043+0000] {subprocess.py:93} INFO -  ⚠️  O Token atual expira em: 2025-11-19 02:17:02
+[2025-11-19T00:40:33.043+0000] {subprocess.py:93} INFO - Usando o arquivo de variaveis em: /opt/***/apps/.env
+[2025-11-19T00:40:33.043+0000] {subprocess.py:93} INFO - ✅ Credenciais Autenticadas
+[2025-11-19T00:40:33.043+0000] {subprocess.py:93} INFO - PROCESSAMENTO INCREMENTAL A PARTIR DE 2025-10-18T17:59:23+00:00
+[2025-11-19T00:40:33.043+0000] {subprocess.py:93} INFO - 2025-10-18 17:59:23+00:00
+[2025-11-19T00:40:33.043+0000] {subprocess.py:93} INFO - Traceback (most recent call last):
+[2025-11-19T00:40:33.043+0000] {subprocess.py:93} INFO -   File "/opt/***/apps/01-bronze/extract_api_strava_user_activities.py", line 238, in <module>
+[2025-11-19T00:40:33.043+0000] {subprocess.py:93} INFO -     insert_files_json_to_bronze(data_init)
+[2025-11-19T00:40:33.043+0000] {subprocess.py:93} INFO -   File "/opt/***/apps/01-bronze/extract_api_strava_user_activities.py", line 124, in insert_files_json_to_bronze
+[2025-11-19T00:40:33.043+0000] {subprocess.py:93} INFO -     start_date = datetime.strptime(start_date, formato)
+[2025-11-19T00:40:33.043+0000] {subprocess.py:93} INFO -                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2025-11-19T00:40:33.043+0000] {subprocess.py:93} INFO - TypeError: strptime() argument 1 must be str, not datetime.datetime
+[2025-11-19T00:40:33.099+0000] {subprocess.py:97} INFO - Command exited with return code 1
+[2025-11-19T00:40:33.102+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-11-19T00:40:33.111+0000] {taskinstance.py:2905} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 401, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/bash.py", line 243, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2025-11-19T00:40:33.112+0000] {taskinstance.py:1206} INFO - Marking task as FAILED. dag_id=etl_strava_activities, task_id=extract_bronze_activities, run_id=manual__2025-11-19T00:35:28.154820+00:00, execution_date=20251119T003528, start_date=20251119T004031, end_date=20251119T004033
+[2025-11-19T00:40:33.120+0000] {standard_task_runner.py:110} ERROR - Failed to execute job 109 for task extract_bronze_activities (Bash command failed. The command returned a non-zero exit code 1.; 367)
+[2025-11-19T00:40:33.142+0000] {local_task_job_runner.py:243} INFO - Task exited with return code 1
+[2025-11-19T00:40:33.151+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-11-19T00:40:33.153+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
