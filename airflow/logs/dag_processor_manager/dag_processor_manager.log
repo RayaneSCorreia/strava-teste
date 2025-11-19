@@ -98309,3 +98309,1048 @@ File Path                                        PID    Runtime      # DAGs    #
 /opt/airflow/dags/pipeline_strava_user.py                                 1           0  0.16s           2025-11-19T20:02:32
 /opt/airflow/dags/pipeline_label_studio.py                                1           0  0.09s           2025-11-19T20:02:32
 ================================================================================
+[2025-11-19T22:10:16.816+0000] {manager.py:470} INFO - Processing files using up to 2 processes at a time 
+[2025-11-19T22:10:16.822+0000] {manager.py:471} INFO - Process each file at most once every 30 seconds
+[2025-11-19T22:10:16.828+0000] {manager.py:472} INFO - Checking for new files in /opt/airflow/dags every 300 seconds
+[2025-11-19T22:10:16.844+0000] {manager.py:737} INFO - Searching for files in /opt/airflow/dags
+[2025-11-19T22:10:16.933+0000] {manager.py:740} INFO - There are 3 files in /opt/airflow/dags
+[2025-11-19T22:10:17.485+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                          PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  ----------
+/opt/airflow/dags/pipeline_strava_user.py          167  0.24s             0           0
+/opt/airflow/dags/pipeline_strava_activities.py    165  0.27s             0           0
+/opt/airflow/dags/pipeline_label_studio.py                                0           0
+================================================================================
+[2025-11-19T22:10:47.736+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/pipeline_strava_activities.py                           1           0  1.49s           2025-11-19T22:10:18
+/opt/airflow/dags/pipeline_strava_user.py                                 1           0  1.48s           2025-11-19T22:10:18
+/opt/airflow/dags/pipeline_label_studio.py                                1           0  0.93s           2025-11-19T22:10:19
+================================================================================
+[2025-11-19T22:11:17.742+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/pipeline_label_studio.py                                1           0  0.41s           2025-11-19T22:10:50
+/opt/airflow/dags/pipeline_strava_activities.py                           1           0  0.37s           2025-11-19T22:10:49
+/opt/airflow/dags/pipeline_strava_user.py                                 1           0  0.34s           2025-11-19T22:10:49
+================================================================================
+[2025-11-19T22:11:47.927+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/pipeline_strava_activities.py                           1           0  0.27s           2025-11-19T22:11:19
+/opt/airflow/dags/pipeline_strava_user.py                                 1           0  0.25s           2025-11-19T22:11:19
+/opt/airflow/dags/pipeline_label_studio.py                                1           0  0.20s           2025-11-19T22:11:20
+================================================================================
+[2025-11-19T22:12:18.303+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/pipeline_strava_activities.py                           1           0  0.15s           2025-11-19T22:11:50
+/opt/airflow/dags/pipeline_strava_user.py                                 1           0  0.14s           2025-11-19T22:11:50
+/opt/airflow/dags/pipeline_label_studio.py                                1           0  0.09s           2025-11-19T22:11:51
+================================================================================
+[2025-11-19T22:12:48.793+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/pipeline_strava_activities.py                           1           0  0.14s           2025-11-19T22:12:20
+/opt/airflow/dags/pipeline_strava_user.py                                 1           0  0.14s           2025-11-19T22:12:20
+/opt/airflow/dags/pipeline_label_studio.py                                1           0  0.14s           2025-11-19T22:12:21
+================================================================================
+[2025-11-19T22:13:19.068+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/pipeline_strava_activities.py                           1           0  0.16s           2025-11-19T22:12:50
+/opt/airflow/dags/pipeline_strava_user.py                                 1           0  0.15s           2025-11-19T22:12:50
+/opt/airflow/dags/pipeline_label_studio.py                                1           0  0.11s           2025-11-19T22:12:51
+================================================================================
+[2025-11-19T22:13:49.405+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/pipeline_strava_activities.py                           1           0  0.11s           2025-11-19T22:13:21
+/opt/airflow/dags/pipeline_strava_user.py                                 1           0  0.09s           2025-11-19T22:13:21
+/opt/airflow/dags/pipeline_label_studio.py                                1           0  0.09s           2025-11-19T22:13:22
+================================================================================
+[2025-11-19T22:14:19.652+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/pipeline_strava_activities.py                           1           0  0.16s           2025-11-19T22:13:51
+/opt/airflow/dags/pipeline_strava_user.py                                 1           0  0.15s           2025-11-19T22:13:51
+/opt/airflow/dags/pipeline_label_studio.py                                1           0  0.09s           2025-11-19T22:13:52
+================================================================================
+[2025-11-19T22:14:50.042+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/pipeline_strava_activities.py                           1           0  0.15s           2025-11-19T22:14:21
+/opt/airflow/dags/pipeline_strava_user.py                                 1           0  0.13s           2025-11-19T22:14:21
+/opt/airflow/dags/pipeline_label_studio.py                                1           0  0.11s           2025-11-19T22:14:22
+================================================================================
+[2025-11-19T22:15:17.228+0000] {manager.py:737} INFO - Searching for files in /opt/airflow/dags
+[2025-11-19T22:15:17.235+0000] {manager.py:740} INFO - There are 3 files in /opt/airflow/dags
+[2025-11-19T22:15:20.271+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/pipeline_strava_activities.py                           1           0  0.11s           2025-11-19T22:14:52
+/opt/airflow/dags/pipeline_strava_user.py                                 1           0  0.10s           2025-11-19T22:14:52
+/opt/airflow/dags/pipeline_label_studio.py                                1           0  0.09s           2025-11-19T22:14:53
+================================================================================
+[2025-11-19T22:15:50.614+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/pipeline_label_studio.py                                1           0  0.13s           2025-11-19T22:15:23
+/opt/airflow/dags/pipeline_strava_activities.py                           1           0  0.12s           2025-11-19T22:15:22
+/opt/airflow/dags/pipeline_strava_user.py                                 1           0  0.09s           2025-11-19T22:15:22
+================================================================================
+[2025-11-19T22:16:20.979+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/pipeline_strava_activities.py                           1           0  0.12s           2025-11-19T22:15:52
+/opt/airflow/dags/pipeline_strava_user.py                                 1           0  0.12s           2025-11-19T22:15:52
+/opt/airflow/dags/pipeline_label_studio.py                                1           0  0.09s           2025-11-19T22:15:53
+================================================================================
+[2025-11-19T22:16:51.318+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/pipeline_strava_activities.py                           1           0  0.09s           2025-11-19T22:16:23
+/opt/airflow/dags/pipeline_label_studio.py                                1           0  0.09s           2025-11-19T22:16:24
+/opt/airflow/dags/pipeline_strava_user.py                                 1           0  0.09s           2025-11-19T22:16:23
+================================================================================
+[2025-11-19T22:17:21.586+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/pipeline_strava_activities.py                           1           0  0.13s           2025-11-19T22:16:53
+/opt/airflow/dags/pipeline_strava_user.py                                 1           0  0.12s           2025-11-19T22:16:53
+/opt/airflow/dags/pipeline_label_studio.py                                1           0  0.09s           2025-11-19T22:16:54
+================================================================================
+[2025-11-19T22:17:51.869+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/pipeline_strava_activities.py                           1           0  0.15s           2025-11-19T22:17:23
+/opt/airflow/dags/pipeline_strava_user.py                                 1           0  0.15s           2025-11-19T22:17:23
+/opt/airflow/dags/pipeline_label_studio.py                                1           0  0.09s           2025-11-19T22:17:24
+================================================================================
+[2025-11-19T22:18:22.160+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/pipeline_strava_activities.py                           1           0  0.14s           2025-11-19T22:17:54
+/opt/airflow/dags/pipeline_strava_user.py                                 1           0  0.13s           2025-11-19T22:17:54
+/opt/airflow/dags/pipeline_label_studio.py                                1           0  0.09s           2025-11-19T22:17:55
+================================================================================
+[2025-11-19T22:18:52.517+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/pipeline_strava_activities.py                           1           0  0.10s           2025-11-19T22:18:24
+/opt/airflow/dags/pipeline_strava_user.py                                 1           0  0.09s           2025-11-19T22:18:24
+/opt/airflow/dags/pipeline_label_studio.py                                1           0  0.09s           2025-11-19T22:18:25
+================================================================================
+[2025-11-19T22:19:22.774+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/pipeline_strava_activities.py                           1           0  0.12s           2025-11-19T22:18:54
+/opt/airflow/dags/pipeline_strava_user.py                                 1           0  0.11s           2025-11-19T22:18:54
+/opt/airflow/dags/pipeline_label_studio.py                                1           0  0.09s           2025-11-19T22:18:55
+================================================================================
+[2025-11-19T22:19:53.150+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/pipeline_strava_activities.py                           1           0  0.13s           2025-11-19T22:19:24
+/opt/airflow/dags/pipeline_strava_user.py                                 1           0  0.12s           2025-11-19T22:19:24
+/opt/airflow/dags/pipeline_label_studio.py                                1           0  0.09s           2025-11-19T22:19:25
+================================================================================
+[2025-11-19T22:20:17.397+0000] {manager.py:737} INFO - Searching for files in /opt/airflow/dags
+[2025-11-19T22:20:17.405+0000] {manager.py:740} INFO - There are 3 files in /opt/airflow/dags
+[2025-11-19T22:20:23.466+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/pipeline_strava_activities.py                           1           0  0.15s           2025-11-19T22:19:55
+/opt/airflow/dags/pipeline_strava_user.py                                 1           0  0.14s           2025-11-19T22:19:55
+/opt/airflow/dags/pipeline_label_studio.py                                1           0  0.11s           2025-11-19T22:19:56
+================================================================================
+[2025-11-19T22:20:53.786+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/pipeline_strava_activities.py                           1           0  0.11s           2025-11-19T22:20:25
+/opt/airflow/dags/pipeline_strava_user.py                                 1           0  0.10s           2025-11-19T22:20:25
+/opt/airflow/dags/pipeline_label_studio.py                                1           0  0.09s           2025-11-19T22:20:26
+================================================================================
+[2025-11-19T22:21:24.081+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/pipeline_strava_activities.py                           1           0  0.18s           2025-11-19T22:20:55
+/opt/airflow/dags/pipeline_strava_user.py                                 1           0  0.15s           2025-11-19T22:20:55
+/opt/airflow/dags/pipeline_label_studio.py                                1           0  0.10s           2025-11-19T22:20:56
+================================================================================
+[2025-11-19T22:21:54.388+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/pipeline_strava_activities.py                           1           0  0.21s           2025-11-19T22:21:26
+/opt/airflow/dags/pipeline_strava_user.py                                 1           0  0.20s           2025-11-19T22:21:26
+/opt/airflow/dags/pipeline_label_studio.py                                1           0  0.09s           2025-11-19T22:21:27
+================================================================================
+[2025-11-19T22:22:24.772+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/pipeline_strava_activities.py                           1           0  0.10s           2025-11-19T22:21:56
+/opt/airflow/dags/pipeline_strava_user.py                                 1           0  0.09s           2025-11-19T22:21:56
+/opt/airflow/dags/pipeline_label_studio.py                                1           0  0.09s           2025-11-19T22:21:57
+================================================================================
+[2025-11-19T22:22:55.048+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/pipeline_strava_activities.py                           1           0  0.21s           2025-11-19T22:22:26
+/opt/airflow/dags/pipeline_strava_user.py                                 1           0  0.19s           2025-11-19T22:22:26
+/opt/airflow/dags/pipeline_label_studio.py                                1           0  0.11s           2025-11-19T22:22:27
+================================================================================
+[2025-11-19T22:23:25.486+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/pipeline_strava_activities.py                           1           0  0.13s           2025-11-19T22:22:57
+/opt/airflow/dags/pipeline_strava_user.py                                 1           0  0.12s           2025-11-19T22:22:57
+/opt/airflow/dags/pipeline_label_studio.py                                1           0  0.10s           2025-11-19T22:22:58
+================================================================================
+[2025-11-19T22:23:55.838+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/pipeline_strava_activities.py                           1           0  0.28s           2025-11-19T22:23:27
+/opt/airflow/dags/pipeline_strava_user.py                                 1           0  0.26s           2025-11-19T22:23:27
+/opt/airflow/dags/pipeline_label_studio.py                                1           0  0.11s           2025-11-19T22:23:28
+================================================================================
+[2025-11-19T22:24:26.105+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/pipeline_strava_activities.py                           1           0  0.24s           2025-11-19T22:23:58
+/opt/airflow/dags/pipeline_strava_user.py                                 1           0  0.22s           2025-11-19T22:23:58
+/opt/airflow/dags/pipeline_label_studio.py                                1           0  0.10s           2025-11-19T22:23:58
+================================================================================
+[2025-11-19T22:24:56.421+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/pipeline_strava_activities.py                           1           0  0.22s           2025-11-19T22:24:28
+/opt/airflow/dags/pipeline_strava_user.py                                 1           0  0.20s           2025-11-19T22:24:28
+/opt/airflow/dags/pipeline_label_studio.py                                1           0  0.09s           2025-11-19T22:24:29
+================================================================================
+[2025-11-19T22:25:17.633+0000] {manager.py:737} INFO - Searching for files in /opt/airflow/dags
+[2025-11-19T22:25:17.644+0000] {manager.py:740} INFO - There are 3 files in /opt/airflow/dags
+[2025-11-19T22:25:26.738+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/pipeline_strava_activities.py                           1           0  0.21s           2025-11-19T22:24:58
+/opt/airflow/dags/pipeline_strava_user.py                                 1           0  0.20s           2025-11-19T22:24:58
+/opt/airflow/dags/pipeline_label_studio.py                                1           0  0.09s           2025-11-19T22:24:59
+================================================================================
+[2025-11-19T22:25:57.063+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/pipeline_strava_activities.py                           1           0  0.21s           2025-11-19T22:25:28
+/opt/airflow/dags/pipeline_strava_user.py                                 1           0  0.20s           2025-11-19T22:25:28
+/opt/airflow/dags/pipeline_label_studio.py                                1           0  0.14s           2025-11-19T22:25:29
+================================================================================
+[2025-11-19T22:26:27.532+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/pipeline_strava_activities.py                           1           0  0.17s           2025-11-19T22:25:59
+/opt/airflow/dags/pipeline_strava_user.py                                 1           0  0.16s           2025-11-19T22:25:59
+/opt/airflow/dags/pipeline_label_studio.py                                1           0  0.11s           2025-11-19T22:26:00
+================================================================================
+[2025-11-19T22:26:57.782+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/pipeline_strava_activities.py                           1           0  0.16s           2025-11-19T22:26:29
+/opt/airflow/dags/pipeline_strava_user.py                                 1           0  0.15s           2025-11-19T22:26:29
+/opt/airflow/dags/pipeline_label_studio.py                                1           0  0.09s           2025-11-19T22:26:30
+================================================================================
+[2025-11-19T22:27:28.187+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/pipeline_strava_activities.py                           1           0  0.15s           2025-11-19T22:26:59
+/opt/airflow/dags/pipeline_strava_user.py                                 1           0  0.14s           2025-11-19T22:26:59
+/opt/airflow/dags/pipeline_label_studio.py                                1           0  0.10s           2025-11-19T22:27:00
+================================================================================
+[2025-11-19T22:27:58.432+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/pipeline_strava_activities.py                           1           0  0.23s           2025-11-19T22:27:30
+/opt/airflow/dags/pipeline_strava_user.py                                 1           0  0.22s           2025-11-19T22:27:30
+/opt/airflow/dags/pipeline_label_studio.py                                1           0  0.12s           2025-11-19T22:27:31
+================================================================================
+[2025-11-19T22:28:28.751+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/pipeline_strava_activities.py                           1           0  0.16s           2025-11-19T22:28:00
+/opt/airflow/dags/pipeline_strava_user.py                                 1           0  0.14s           2025-11-19T22:28:00
+/opt/airflow/dags/pipeline_label_studio.py                                1           0  0.09s           2025-11-19T22:28:01
+================================================================================
+[2025-11-19T22:28:59.020+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/pipeline_strava_activities.py                           1           0  0.17s           2025-11-19T22:28:30
+/opt/airflow/dags/pipeline_strava_user.py                                 1           0  0.16s           2025-11-19T22:28:30
+/opt/airflow/dags/pipeline_label_studio.py                                1           0  0.10s           2025-11-19T22:28:31
+================================================================================
+[2025-11-19T22:29:29.279+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/pipeline_strava_activities.py                           1           0  0.28s           2025-11-19T22:29:01
+/opt/airflow/dags/pipeline_strava_user.py                                 1           0  0.25s           2025-11-19T22:29:01
+/opt/airflow/dags/pipeline_label_studio.py                                1           0  0.10s           2025-11-19T22:29:02
+================================================================================
+[2025-11-19T22:29:59.734+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/pipeline_strava_activities.py                           1           0  0.12s           2025-11-19T22:29:31
+/opt/airflow/dags/pipeline_strava_user.py                                 1           0  0.11s           2025-11-19T22:29:31
+/opt/airflow/dags/pipeline_label_studio.py                                1           0  0.10s           2025-11-19T22:29:32
+================================================================================
+[2025-11-19T22:30:17.906+0000] {manager.py:737} INFO - Searching for files in /opt/airflow/dags
+[2025-11-19T22:30:17.915+0000] {manager.py:740} INFO - There are 3 files in /opt/airflow/dags
+[2025-11-19T22:30:30.001+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/pipeline_strava_activities.py                           1           0  0.12s           2025-11-19T22:30:01
+/opt/airflow/dags/pipeline_strava_user.py                                 1           0  0.11s           2025-11-19T22:30:01
+/opt/airflow/dags/pipeline_label_studio.py                                1           0  0.08s           2025-11-19T22:30:02
+================================================================================
+[2025-11-19T22:31:00.334+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/pipeline_strava_activities.py                           1           0  0.10s           2025-11-19T22:30:32
+/opt/airflow/dags/pipeline_label_studio.py                                1           0  0.09s           2025-11-19T22:30:33
+/opt/airflow/dags/pipeline_strava_user.py                                 1           0  0.09s           2025-11-19T22:30:32
+================================================================================
+[2025-11-19T22:31:30.671+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/pipeline_strava_activities.py                           1           0  0.10s           2025-11-19T22:31:02
+/opt/airflow/dags/pipeline_label_studio.py                                1           0  0.09s           2025-11-19T22:31:03
+/opt/airflow/dags/pipeline_strava_user.py                                 1           0  0.09s           2025-11-19T22:31:02
+================================================================================
+[2025-11-19T22:32:00.981+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/pipeline_strava_activities.py                           1           0  0.14s           2025-11-19T22:31:32
+/opt/airflow/dags/pipeline_strava_user.py                                 1           0  0.13s           2025-11-19T22:31:32
+/opt/airflow/dags/pipeline_label_studio.py                                1           0  0.09s           2025-11-19T22:31:33
+================================================================================
+[2025-11-19T22:32:31.265+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/pipeline_strava_activities.py                           1           0  0.14s           2025-11-19T22:32:03
+/opt/airflow/dags/pipeline_strava_user.py                                 1           0  0.13s           2025-11-19T22:32:03
+/opt/airflow/dags/pipeline_label_studio.py                                1           0  0.08s           2025-11-19T22:32:04
+================================================================================
+[2025-11-19T22:33:01.519+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/pipeline_strava_activities.py                           1           0  0.14s           2025-11-19T22:32:33
+/opt/airflow/dags/pipeline_strava_user.py                                 1           0  0.13s           2025-11-19T22:32:33
+/opt/airflow/dags/pipeline_label_studio.py                                1           0  0.08s           2025-11-19T22:32:34
+================================================================================
+[2025-11-19T22:33:31.884+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/pipeline_strava_activities.py                           1           0  0.14s           2025-11-19T22:33:03
+/opt/airflow/dags/pipeline_strava_user.py                                 1           0  0.14s           2025-11-19T22:33:03
+/opt/airflow/dags/pipeline_label_studio.py                                1           0  0.10s           2025-11-19T22:33:04
+================================================================================
+[2025-11-19T22:34:02.217+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/pipeline_strava_activities.py                           1           0  0.11s           2025-11-19T22:33:34
+/opt/airflow/dags/pipeline_label_studio.py                                1           0  0.11s           2025-11-19T22:33:35
+/opt/airflow/dags/pipeline_strava_user.py                                 1           0  0.10s           2025-11-19T22:33:34
+================================================================================
+[2025-11-19T22:34:32.598+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/pipeline_strava_activities.py                           1           0  0.11s           2025-11-19T22:34:04
+/opt/airflow/dags/pipeline_label_studio.py                                1           0  0.11s           2025-11-19T22:34:05
+/opt/airflow/dags/pipeline_strava_user.py                                 1           0  0.10s           2025-11-19T22:34:04
+================================================================================
+[2025-11-19T22:35:02.888+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/pipeline_strava_activities.py                           1           0  0.16s           2025-11-19T22:34:34
+/opt/airflow/dags/pipeline_strava_user.py                                 1           0  0.15s           2025-11-19T22:34:34
+/opt/airflow/dags/pipeline_label_studio.py                                1           0  0.10s           2025-11-19T22:34:35
+================================================================================
+[2025-11-19T22:35:18.131+0000] {manager.py:737} INFO - Searching for files in /opt/airflow/dags
+[2025-11-19T22:35:18.140+0000] {manager.py:740} INFO - There are 3 files in /opt/airflow/dags
+[2025-11-19T22:35:33.269+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/pipeline_strava_activities.py                           1           0  0.11s           2025-11-19T22:35:05
+/opt/airflow/dags/pipeline_strava_user.py                                 1           0  0.10s           2025-11-19T22:35:05
+/opt/airflow/dags/pipeline_label_studio.py                                1           0  0.09s           2025-11-19T22:35:06
+================================================================================
+[2025-11-19T22:36:03.720+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/pipeline_strava_activities.py                           1           0  0.19s           2025-11-19T22:35:35
+/opt/airflow/dags/pipeline_strava_user.py                                 1           0  0.17s           2025-11-19T22:35:35
+/opt/airflow/dags/pipeline_label_studio.py                                1           0  0.14s           2025-11-19T22:35:36
+================================================================================
+[2025-11-19T22:36:34.027+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/pipeline_strava_activities.py                           1           0  0.20s           2025-11-19T22:36:05
+/opt/airflow/dags/pipeline_strava_user.py                                 1           0  0.19s           2025-11-19T22:36:05
+/opt/airflow/dags/pipeline_label_studio.py                                1           0  0.10s           2025-11-19T22:36:06
+================================================================================
+[2025-11-19T22:37:04.374+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/pipeline_strava_activities.py                           1           0  0.26s           2025-11-19T22:36:36
+/opt/airflow/dags/pipeline_strava_user.py                                 1           0  0.23s           2025-11-19T22:36:36
+/opt/airflow/dags/pipeline_label_studio.py                                1           0  0.10s           2025-11-19T22:36:37
+================================================================================
+[2025-11-19T22:37:34.620+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/pipeline_strava_activities.py                           1           0  0.18s           2025-11-19T22:37:06
+/opt/airflow/dags/pipeline_strava_user.py                                 1           0  0.17s           2025-11-19T22:37:06
+/opt/airflow/dags/pipeline_label_studio.py                                1           0  0.14s           2025-11-19T22:37:07
+================================================================================
+[2025-11-19T22:38:04.672+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/pipeline_label_studio.py                                1           0  0.62s           2025-11-19T22:37:38
+/opt/airflow/dags/pipeline_strava_activities.py                           1           0  0.17s           2025-11-19T22:37:36
+/opt/airflow/dags/pipeline_strava_user.py                                 1           0  0.15s           2025-11-19T22:37:36
+================================================================================
+[2025-11-19T22:38:35.316+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/pipeline_strava_activities.py                           1           0  0.29s           2025-11-19T22:38:07
+/opt/airflow/dags/pipeline_strava_user.py                                 1           0  0.28s           2025-11-19T22:38:07
+/opt/airflow/dags/pipeline_label_studio.py                                1           0  0.10s           2025-11-19T22:38:09
+================================================================================
+[2025-11-19T22:39:05.589+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/pipeline_strava_activities.py                           1           0  0.17s           2025-11-19T22:38:37
+/opt/airflow/dags/pipeline_strava_user.py                                 1           0  0.15s           2025-11-19T22:38:37
+/opt/airflow/dags/pipeline_label_studio.py                                1           0  0.10s           2025-11-19T22:38:39
+================================================================================
+[2025-11-19T22:39:35.946+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/pipeline_label_studio.py                                1           0  0.10s           2025-11-19T22:39:09
+/opt/airflow/dags/pipeline_strava_activities.py                           1           0  0.09s           2025-11-19T22:39:07
+/opt/airflow/dags/pipeline_strava_user.py                                 1           0  0.08s           2025-11-19T22:39:07
+================================================================================
+[2025-11-19T22:40:06.205+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/pipeline_strava_activities.py                           1           0  0.17s           2025-11-19T22:39:38
+/opt/airflow/dags/pipeline_strava_user.py                                 1           0  0.16s           2025-11-19T22:39:38
+/opt/airflow/dags/pipeline_label_studio.py                                1           0  0.13s           2025-11-19T22:39:40
+================================================================================
+[2025-11-19T22:40:18.422+0000] {manager.py:737} INFO - Searching for files in /opt/airflow/dags
+[2025-11-19T22:40:18.432+0000] {manager.py:740} INFO - There are 3 files in /opt/airflow/dags
+[2025-11-19T22:40:36.596+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/pipeline_strava_activities.py                           1           0  0.11s           2025-11-19T22:40:08
+/opt/airflow/dags/pipeline_strava_user.py                                 1           0  0.10s           2025-11-19T22:40:08
+/opt/airflow/dags/pipeline_label_studio.py                                1           0  0.10s           2025-11-19T22:40:10
+================================================================================
+[2025-11-19T22:41:06.985+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/pipeline_strava_activities.py                           1           0  0.17s           2025-11-19T22:40:38
+/opt/airflow/dags/pipeline_label_studio.py                                1           0  0.17s           2025-11-19T22:40:40
+/opt/airflow/dags/pipeline_strava_user.py                                 1           0  0.15s           2025-11-19T22:40:38
+================================================================================
+[2025-11-19T22:41:37.312+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/pipeline_strava_activities.py                           1           0  0.20s           2025-11-19T22:41:09
+/opt/airflow/dags/pipeline_strava_user.py                                 1           0  0.18s           2025-11-19T22:41:09
+/opt/airflow/dags/pipeline_label_studio.py                                1           0  0.10s           2025-11-19T22:41:11
+================================================================================
+[2025-11-19T22:42:07.625+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/pipeline_strava_activities.py                           1           0  0.16s           2025-11-19T22:41:39
+/opt/airflow/dags/pipeline_strava_user.py                                 1           0  0.15s           2025-11-19T22:41:39
+/opt/airflow/dags/pipeline_label_studio.py                                1           0  0.11s           2025-11-19T22:41:41
+================================================================================
+[2025-11-19T22:42:37.927+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/pipeline_strava_activities.py                           1           0  0.22s           2025-11-19T22:42:09
+/opt/airflow/dags/pipeline_strava_user.py                                 1           0  0.21s           2025-11-19T22:42:09
+/opt/airflow/dags/pipeline_label_studio.py                                1           0  0.11s           2025-11-19T22:42:11
+================================================================================
+[2025-11-19T22:43:08.256+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/pipeline_strava_activities.py                           1           0  0.30s           2025-11-19T22:42:40
+/opt/airflow/dags/pipeline_strava_user.py                                 1           0  0.29s           2025-11-19T22:42:40
+/opt/airflow/dags/pipeline_label_studio.py                                1           0  0.10s           2025-11-19T22:42:42
+================================================================================
+[2025-11-19T22:43:38.564+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/pipeline_strava_activities.py                           1           0  0.22s           2025-11-19T22:43:10
+/opt/airflow/dags/pipeline_strava_user.py                                 1           0  0.21s           2025-11-19T22:43:10
+/opt/airflow/dags/pipeline_label_studio.py                                1           0  0.11s           2025-11-19T22:43:12
+================================================================================
+[2025-11-19T22:44:08.873+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/pipeline_strava_activities.py                           1           0  0.27s           2025-11-19T22:43:40
+/opt/airflow/dags/pipeline_strava_user.py                                 1           0  0.26s           2025-11-19T22:43:40
+/opt/airflow/dags/pipeline_label_studio.py                                1           0  0.10s           2025-11-19T22:43:42
+================================================================================
+[2025-11-19T22:44:39.163+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/pipeline_strava_activities.py                           1           0  0.24s           2025-11-19T22:44:11
+/opt/airflow/dags/pipeline_strava_user.py                                 1           0  0.22s           2025-11-19T22:44:11
+/opt/airflow/dags/pipeline_label_studio.py                                1           0  0.11s           2025-11-19T22:44:13
+================================================================================
+[2025-11-19T22:45:09.525+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/pipeline_strava_activities.py                           1           0  0.19s           2025-11-19T22:44:41
+/opt/airflow/dags/pipeline_strava_user.py                                 1           0  0.18s           2025-11-19T22:44:41
+/opt/airflow/dags/pipeline_label_studio.py                                1           0  0.09s           2025-11-19T22:44:43
+================================================================================
+[2025-11-19T22:45:18.628+0000] {manager.py:737} INFO - Searching for files in /opt/airflow/dags
+[2025-11-19T22:45:18.636+0000] {manager.py:740} INFO - There are 3 files in /opt/airflow/dags
+[2025-11-19T22:45:39.783+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/pipeline_strava_activities.py                           1           0  0.14s           2025-11-19T22:45:11
+/opt/airflow/dags/pipeline_strava_user.py                                 1           0  0.13s           2025-11-19T22:45:11
+/opt/airflow/dags/pipeline_label_studio.py                                1           0  0.09s           2025-11-19T22:45:13
+================================================================================
+[2025-11-19T22:46:10.214+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/pipeline_label_studio.py                                1           0  0.22s           2025-11-19T22:45:44
+/opt/airflow/dags/pipeline_strava_activities.py                           1           0  0.18s           2025-11-19T22:45:41
+/opt/airflow/dags/pipeline_strava_user.py                                 1           0  0.16s           2025-11-19T22:45:41
+================================================================================
+[2025-11-19T22:46:40.659+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/pipeline_strava_activities.py                           1           0  0.17s           2025-11-19T22:46:12
+/opt/airflow/dags/pipeline_strava_user.py                                 1           0  0.16s           2025-11-19T22:46:12
+/opt/airflow/dags/pipeline_label_studio.py                                1           0  0.10s           2025-11-19T22:46:14
+================================================================================
+[2025-11-19T22:47:10.927+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/pipeline_strava_activities.py                           1           0  0.23s           2025-11-19T22:46:42
+/opt/airflow/dags/pipeline_strava_user.py                                 1           0  0.21s           2025-11-19T22:46:42
+/opt/airflow/dags/pipeline_label_studio.py                                1           0  0.11s           2025-11-19T22:46:44
+================================================================================
+[2025-11-19T22:47:41.363+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/pipeline_strava_activities.py                           1           0  0.17s           2025-11-19T22:47:13
+/opt/airflow/dags/pipeline_strava_user.py                                 1           0  0.16s           2025-11-19T22:47:13
+/opt/airflow/dags/pipeline_label_studio.py                                1           0  0.09s           2025-11-19T22:47:15
+================================================================================
+[2025-11-19T22:48:11.639+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/pipeline_strava_activities.py                           1           0  0.22s           2025-11-19T22:47:43
+/opt/airflow/dags/pipeline_strava_user.py                                 1           0  0.21s           2025-11-19T22:47:43
+/opt/airflow/dags/pipeline_label_studio.py                                1           0  0.10s           2025-11-19T22:47:45
+================================================================================
+[2025-11-19T22:48:42.007+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/pipeline_strava_activities.py                           1           0  0.28s           2025-11-19T22:48:13
+/opt/airflow/dags/pipeline_strava_user.py                                 1           0  0.26s           2025-11-19T22:48:13
+/opt/airflow/dags/pipeline_label_studio.py                                1           0  0.13s           2025-11-19T22:48:15
+================================================================================
+[2025-11-19T22:49:12.310+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/pipeline_strava_activities.py                           1           0  0.19s           2025-11-19T22:48:44
+/opt/airflow/dags/pipeline_strava_user.py                                 1           0  0.17s           2025-11-19T22:48:44
+/opt/airflow/dags/pipeline_label_studio.py                                1           0  0.09s           2025-11-19T22:48:46
+================================================================================
+[2025-11-19T22:49:42.608+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/pipeline_strava_activities.py                           1           0  0.20s           2025-11-19T22:49:14
+/opt/airflow/dags/pipeline_strava_user.py                                 1           0  0.18s           2025-11-19T22:49:14
+/opt/airflow/dags/pipeline_label_studio.py                                1           0  0.11s           2025-11-19T22:49:16
+================================================================================
+[2025-11-19T22:50:12.953+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/pipeline_strava_activities.py                           1           0  0.21s           2025-11-19T22:49:44
+/opt/airflow/dags/pipeline_strava_user.py                                 1           0  0.20s           2025-11-19T22:49:44
+/opt/airflow/dags/pipeline_label_studio.py                                1           0  0.12s           2025-11-19T22:49:46
+================================================================================
+[2025-11-19T22:50:19.091+0000] {manager.py:737} INFO - Searching for files in /opt/airflow/dags
+[2025-11-19T22:50:19.104+0000] {manager.py:740} INFO - There are 3 files in /opt/airflow/dags
+[2025-11-19T22:50:43.363+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/pipeline_strava_activities.py                           1           0  0.25s           2025-11-19T22:50:15
+/opt/airflow/dags/pipeline_strava_user.py                                 1           0  0.21s           2025-11-19T22:50:15
+/opt/airflow/dags/pipeline_label_studio.py                                1           0  0.17s           2025-11-19T22:50:17
+================================================================================
+[2025-11-19T22:51:13.700+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/pipeline_strava_activities.py                           1           0  0.20s           2025-11-19T22:50:45
+/opt/airflow/dags/pipeline_strava_user.py                                 1           0  0.18s           2025-11-19T22:50:45
+/opt/airflow/dags/pipeline_label_studio.py                                1           0  0.12s           2025-11-19T22:50:47
+================================================================================
+[2025-11-19T22:51:43.923+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/pipeline_strava_activities.py                           1           0  0.16s           2025-11-19T22:51:15
+/opt/airflow/dags/pipeline_strava_user.py                                 1           0  0.15s           2025-11-19T22:51:15
+/opt/airflow/dags/pipeline_label_studio.py                                1           0  0.10s           2025-11-19T22:51:17
+================================================================================
+[2025-11-19T22:52:14.384+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/pipeline_strava_activities.py                           1           0  0.12s           2025-11-19T22:51:46
+/opt/airflow/dags/pipeline_strava_user.py                                 1           0  0.10s           2025-11-19T22:51:46
+/opt/airflow/dags/pipeline_label_studio.py                                1           0  0.08s           2025-11-19T22:51:48
+================================================================================
+[2025-11-19T22:52:44.703+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/pipeline_strava_activities.py                           1           0  0.25s           2025-11-19T22:52:16
+/opt/airflow/dags/pipeline_strava_user.py                                 1           0  0.23s           2025-11-19T22:52:16
+/opt/airflow/dags/pipeline_label_studio.py                                1           0  0.22s           2025-11-19T22:52:18
+================================================================================
+[2025-11-19T22:53:15.136+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/pipeline_strava_activities.py                           1           0  0.16s           2025-11-19T22:52:46
+/opt/airflow/dags/pipeline_strava_user.py                                 1           0  0.15s           2025-11-19T22:52:46
+/opt/airflow/dags/pipeline_label_studio.py                                1           0  0.11s           2025-11-19T22:52:48
+================================================================================
+[2025-11-19T22:53:45.403+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/pipeline_strava_activities.py                           1           0  0.21s           2025-11-19T22:53:17
+/opt/airflow/dags/pipeline_strava_user.py                                 1           0  0.20s           2025-11-19T22:53:17
+/opt/airflow/dags/pipeline_label_studio.py                                1           0  0.11s           2025-11-19T22:53:19
+================================================================================
+[2025-11-19T22:54:15.802+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/pipeline_strava_activities.py                           1           0  0.17s           2025-11-19T22:53:47
+/opt/airflow/dags/pipeline_strava_user.py                                 1           0  0.15s           2025-11-19T22:53:47
+/opt/airflow/dags/pipeline_label_studio.py                                1           0  0.09s           2025-11-19T22:53:49
+================================================================================
+[2025-11-19T22:54:46.147+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/pipeline_strava_activities.py                           1           0  0.17s           2025-11-19T22:54:17
+/opt/airflow/dags/pipeline_strava_user.py                                 1           0  0.16s           2025-11-19T22:54:17
+/opt/airflow/dags/pipeline_label_studio.py                                1           0  0.09s           2025-11-19T22:54:19
+================================================================================
+[2025-11-19T22:55:16.416+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/pipeline_strava_activities.py                           1           0  0.18s           2025-11-19T22:54:48
+/opt/airflow/dags/pipeline_strava_user.py                                 1           0  0.16s           2025-11-19T22:54:48
+/opt/airflow/dags/pipeline_label_studio.py                                1           0  0.10s           2025-11-19T22:54:50
+================================================================================
+[2025-11-19T22:55:19.477+0000] {manager.py:737} INFO - Searching for files in /opt/airflow/dags
+[2025-11-19T22:55:19.485+0000] {manager.py:740} INFO - There are 3 files in /opt/airflow/dags
+[2025-11-19T22:55:46.710+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/pipeline_strava_activities.py                           1           0  0.17s           2025-11-19T22:55:18
+/opt/airflow/dags/pipeline_strava_user.py                                 1           0  0.16s           2025-11-19T22:55:18
+/opt/airflow/dags/pipeline_label_studio.py                                1           0  0.10s           2025-11-19T22:55:20
+================================================================================
+[2025-11-19T22:56:16.981+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/pipeline_strava_activities.py                           1           0  0.14s           2025-11-19T22:55:48
+/opt/airflow/dags/pipeline_strava_user.py                                 1           0  0.13s           2025-11-19T22:55:48
+/opt/airflow/dags/pipeline_label_studio.py                                1           0  0.09s           2025-11-19T22:55:50
+================================================================================
+[2025-11-19T22:56:47.537+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/pipeline_strava_activities.py                           1           0  0.33s           2025-11-19T22:56:19
+/opt/airflow/dags/pipeline_strava_user.py                                 1           0  0.30s           2025-11-19T22:56:19
+/opt/airflow/dags/pipeline_label_studio.py                                1           0  0.10s           2025-11-19T22:56:21
+================================================================================
+[2025-11-19T22:57:17.975+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/pipeline_strava_activities.py                           1           0  0.15s           2025-11-19T22:56:49
+/opt/airflow/dags/pipeline_strava_user.py                                 1           0  0.13s           2025-11-19T22:56:49
+/opt/airflow/dags/pipeline_label_studio.py                                1           0  0.12s           2025-11-19T22:56:51
+================================================================================
+[2025-11-19T22:57:48.356+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/pipeline_strava_activities.py                           1           0  0.18s           2025-11-19T22:57:20
+/opt/airflow/dags/pipeline_strava_user.py                                 1           0  0.16s           2025-11-19T22:57:20
+/opt/airflow/dags/pipeline_label_studio.py                                1           0  0.11s           2025-11-19T22:57:22
+================================================================================
+[2025-11-19T22:58:18.660+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/pipeline_strava_activities.py                           1           0  0.28s           2025-11-19T22:57:50
+/opt/airflow/dags/pipeline_strava_user.py                                 1           0  0.26s           2025-11-19T22:57:50
+/opt/airflow/dags/pipeline_label_studio.py                                1           0  0.11s           2025-11-19T22:57:52
+================================================================================
+[2025-11-19T22:58:48.997+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/pipeline_strava_activities.py                           1           0  0.17s           2025-11-19T22:58:20
+/opt/airflow/dags/pipeline_strava_user.py                                 1           0  0.16s           2025-11-19T22:58:20
+/opt/airflow/dags/pipeline_label_studio.py                                1           0  0.11s           2025-11-19T22:58:22
+================================================================================
+[2025-11-19T22:59:19.326+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/pipeline_strava_activities.py                           1           0  0.21s           2025-11-19T22:58:51
+/opt/airflow/dags/pipeline_strava_user.py                                 1           0  0.18s           2025-11-19T22:58:51
+/opt/airflow/dags/pipeline_label_studio.py                                1           0  0.12s           2025-11-19T22:58:53
+================================================================================
+[2025-11-19T22:59:49.609+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/pipeline_strava_activities.py                           1           0  0.25s           2025-11-19T22:59:21
+/opt/airflow/dags/pipeline_strava_user.py                                 1           0  0.23s           2025-11-19T22:59:21
+/opt/airflow/dags/pipeline_label_studio.py                                1           0  0.16s           2025-11-19T22:59:23
+================================================================================
+[2025-11-19T23:00:20.007+0000] {manager.py:737} INFO - Searching for files in /opt/airflow/dags
+[2025-11-19T23:00:20.020+0000] {manager.py:740} INFO - There are 3 files in /opt/airflow/dags
+[2025-11-19T23:00:20.033+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/pipeline_strava_activities.py                           1           0  0.17s           2025-11-19T22:59:51
+/opt/airflow/dags/pipeline_strava_user.py                                 1           0  0.16s           2025-11-19T22:59:51
+/opt/airflow/dags/pipeline_label_studio.py                                1           0  0.09s           2025-11-19T22:59:53
+================================================================================
+[2025-11-19T23:00:50.314+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/pipeline_strava_activities.py                           1           0  0.17s           2025-11-19T23:00:22
+/opt/airflow/dags/pipeline_strava_user.py                                 1           0  0.16s           2025-11-19T23:00:22
+/opt/airflow/dags/pipeline_label_studio.py                                1           0  0.10s           2025-11-19T23:00:24
+================================================================================
+[2025-11-19T23:01:20.722+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/pipeline_strava_activities.py                           1           0  0.15s           2025-11-19T23:00:52
+/opt/airflow/dags/pipeline_strava_user.py                                 1           0  0.13s           2025-11-19T23:00:52
+/opt/airflow/dags/pipeline_label_studio.py                                1           0  0.10s           2025-11-19T23:00:54
+================================================================================

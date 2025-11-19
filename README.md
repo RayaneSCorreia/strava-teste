@@ -59,20 +59,16 @@ Necessária para:
 ## 📐 Arquitetura Geral
 
 ```
-─▶  Extrações:
-   Strava API  
-   Label Studio (anotações) 
-
-─▶  Orquestração :
-   Airflow ─▶ Bronze (MinIO)
-               │
-               ├─▶ Silver (Parquet particionado)
-               │
-               ├─▶ Gold (dim/fact)
-               │
-               ├─▶ Postgres Airflow ─▶ Metabase Dashboard de Monitoramento
-               │
-               └─▶ Postgres BI ─▶ Metabase Dashboard Negocial
+STRAVA API ──────┐
+                  ├──▶ 🥉 Bronze (MinIO)
+LABEL STUDIO ────┘          │
+                            ├──▶ 🥈 Silver (Parquet)
+                            │
+                            ├──▶ 🥇 Gold (Modelos DIM / FACT)
+                            │
+                            ├──▶ PostgreSQL Airflow → Metabase (Monitoramento)
+                            │
+                            └──▶ PostgreSQL BI → Metabase (Dashboards finais)
 
 ```
 
@@ -142,8 +138,13 @@ Necessária para:
 ├── labelstudio/                      
 ├── metabase-data/                       
 ├── postgres_bi_data/
-├── postgres_data/                        
-│ 
+├── postgres_data/  
+│
+├── docs_projeto/
+│   ├── PRINTS DE TELA     
+│   ├── PDF DASHBOARD DE MONITORAMENTO
+│   ├── PDF DASHBOARD NEGOCIAL 
+│                  
 ├── 🐳 docker-compose.yml                 
 ├── 🐳 Dockerfile.airflow                 
 ├── requirements.txt           
@@ -199,6 +200,55 @@ Modelo analítico:
 
 Usados como fonte do Metabase.
 
+## 🧪 Data Quality – Camada Ouro (Gold Layer)
+
+A camada Ouro passa por uma etapa de **Data Quality automatizada**, garantindo que apenas dados íntegros alimentem o BI e os dashboards.
+
+As validações cobrem:
+
+### ✔️ Integridade
+- Atividade sem data  
+- Atividade sem usuário associado  
+
+### ✔️ Consistência
+- Valores nulos em campos críticos  
+
+### ✔️ Qualidade da Modelagem
+- Atividades duplicadas  
+- Atividades presentes na Silver e ausentes na Gold  
+
+Caso qualquer regra retorne inconsistências, a DAG é interrompida automaticamente, impedindo que dados incorretos sejam propagados.
+
+---
+
+# 📊 Dashboard Público do Metabase
+
+O dashboard de monitoramento já vem pronto dentro da pasta **metabase-data**, que contém o banco interno do Metabase.
+
+### 🔗 Link público (funciona em qualquer máquina que subir o projeto)
+
+DASHBOARD DE MONITORAMENTO DO AIRFLOW
+**http://localhost:3000/public/dashboard/b53236fe-88cc-47ad-aeb5-26aee8ae0fd9**
+
+DASHBOARD DE NEGOCIAL
+**http://localhost:3000/public/dashboard/f153605f-5169-49a9-83c4-99cbbe771dce**
+
+O dashboard Negocial já vem pronto dentro da pasta **metabase-data**, que contém o banco interno do Metabase.
+
+
+### 🧠 Por que funciona?
+O link público e o dashboard são salvos no volume:
+
+```
+./metabase-data/
+```
+
+Isso garante:
+
+- Reprodutibilidade total  
+- Dashboard sempre restaurado  
+- Configurações preservadas  
+
 ---
 
 # 📦 Orquestração – Apache Airflow
@@ -212,17 +262,6 @@ Funções:
 - Silver → Gold  
 - Monitoramento e logs  
 - Input em SGBD
-
----
-
-# 🌐 Acesso aos Serviços
-
-| Serviço | URL |
-|---------|-----|
-| **Airflow Webserver** | http://localhost:8080 |
-| **MinIO Console** | http://localhost:9011 |
-| **Metabase** | http://localhost:3000 |
-| **Label Studio** | http://localhost:8081 |
 
 ---
 
@@ -246,11 +285,52 @@ Para usar a API do Strava:
 
 ###  ⚠️ IMPORTANTE — Execução Inicial Obrigatória
 
-Antes de rodar qualquer DAG do pipeline, é **obrigatório executar apenas uma vez** o script:
+### Preencher o .env com:
+- CLIENT_ID  
+- CLIENT_SECRET  
+- REDIRECT_URI  
 
+### Rodar o fluxo inicial de autorização
+
+Entre no container do Airflow:
+
+```bash
+docker exec -it airflow_webserver /bin/bash
 ```
-airflow/apps/first_auth_user.py
+
+Execute o script:
+
+```bash
+python /opt/airflow/apps/first_auth_user.py
 ```
+
+### 🎯 O que vai acontecer
+
+O script imprime uma URL de autorização do Strava
+
+Você clica nela → o navegador abre e redireciona para um link que dá erro
+
+Isso é proposital
+A URL de redirecionamento contém o parâmetro ?code=...
+
+Copie SOMENTE o valor do code
+
+Cole no terminal quando o script pedir:
+
+### 👉 Cole no campo abaixo o código que veio no redirect:
+
+Exemplo de URL real:
+
+
+```bash
+http://localhost/exchange_token?state=&code=c4570d274ac2c8ff370888e0eac617a92b4d591e&scope=read,activity:read_all,profile:read_all
+```
+
+O importante é apenas isso:
+```bash
+c4570d274ac2c8ff370888e0eac617a92b4d591e
+```
+
 
 ### 🔍 Por que isso é necessário?
 
@@ -276,15 +356,19 @@ Para gerar o token:
 3. Clique em **Access Tokens**  
 4. Gere um novo token
 
+### Preencher o .env com:
+
+- LABEL_STUDIO_TOKEN
+
 📌 O Label Studio gera um **Personal Access Token (PAT)**.  
 Esse token precisa ser enviado no formato correto pelo pipeline (via cabeçalho de autenticação), mas a geração é feita **totalmente via interface**, sem comandos.
 
-### ⚠️ IMPORTANTE — ETemplate de Anotação — Label Studio
+### ⚠️ IMPORTANTE — Template de Anotação — Label Studio
 
  projeto inclui o arquivo:
 
 ```
-docs_projeto/template_label_studio.yml
+emplate_label_studio.yml
 ```
 
 Este arquivo contém o **layout oficial de anotação**, incluindo:
@@ -299,36 +383,7 @@ Este arquivo contém o **layout oficial de anotação**, incluindo:
 💡 **Esse template pode ser carregado diretamente no Label Studio**  
 em *Settings → Labeling Interface → Import → YAML*.
 
----
 
-# 📊 Dashboard Público do Metabase
-
-O dashboard de monitoramento já vem pronto dentro da pasta **metabase-data**, que contém o banco interno do Metabase.
-
-### 🔗 Link público (funciona em qualquer máquina que subir o projeto)
-
-**http://localhost:3000/public/dashboard/b53236fe-88cc-47ad-aeb5-26aee8ae0fd9**
-
-O dashboard Negocial já vem pronto dentro da pasta **metabase-data**, que contém o banco interno do Metabase.
-
-### 🔗 Link público (funciona em qualquer máquina que subir o projeto)
-
-**http://localhost:3000/public/dashboard/b53236fe-88cc-47ad-aeb5-26aee8ae0fd9**
-
-### 🧠 Por que funciona?
-O link público e o dashboard são salvos no volume:
-
-```
-./metabase-data/
-```
-
-Isso garante:
-
-- Reprodutibilidade total  
-- Dashboard sempre restaurado  
-- Configurações preservadas  
-
----
 
 
 
@@ -410,34 +465,22 @@ Tudo sobe automaticamente:
 
 ---
 
-## ✅ Passos para iniciar o ambiente:
+### Fazer as configs obrigatorias do STRAVA API
+---
+### Verificar se o ambiente está acessível
 
-### 1️⃣ Inserir as variáveis no arquivo `.env`
-Preencha o arquivo:
+Acesse os serviços para confirmar que estão operacionais
 
-```
-airflow/.env
-```
+# 🌐 Acesso aos Serviços
 
-com suas credenciais:
-- Strava API  
-- Label Studio  
-- Buckets  
-- Endpoint interno do MinIO (`http://minio:9000`)  
-- Datas de processamento (podem iniciar vazias)
+| Serviço | URL |
+|---------|-----|
+| **Airflow Webserver** | http://localhost:8080 |
+| **MinIO Console** | http://localhost:9011 |
+| **Metabase** | http://localhost:3000 |
+| **Label Studio** | http://localhost:8081 |
 
-### 2️⃣ Executar o `first_auth_user.py` (somente 1 vez)
-Este script obtém o **refresh token permanente** do Strava, necessário para que o pipeline renove automaticamente o `access_token`.
-
-```bash
-python airflow/apps/first_auth_user.py
-```
-
-Após isso, **nunca mais é necessário autenticar manualmente**.
-
-### 3️⃣ Verificar se o ambiente está acessível
-Acesse os serviços para confirmar que estão operacionais:
-
+---
 
 Quando tudo estiver disponível, o pipeline está pronto para rodar.
 

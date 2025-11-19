@@ -6403,3 +6403,721 @@
 [2025-11-19T20:02:32.249+0000] {logging_mixin.py:188} INFO - [2025-11-19T20:02:32.249+0000] {dag.py:3089} INFO - Sync 1 DAGs
 [2025-11-19T20:02:32.275+0000] {logging_mixin.py:188} INFO - [2025-11-19T20:02:32.275+0000] {dag.py:3947} INFO - Setting next_dagrun for etl_strava_user_profile to 2025-11-19 03:00:00+00:00, run_after=2025-11-20 03:00:00+00:00
 [2025-11-19T20:02:32.293+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_strava_user.py took 0.147 seconds
+[2025-11-19T22:10:17.328+0000] {processor.py:161} INFO - Started process (PID=167) to work on /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:10:17.351+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_strava_user.py for tasks to queue
+[2025-11-19T22:10:17.360+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:10:17.359+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:10:17.447+0000] {processor.py:840} INFO - DAG(s) 'etl_strava_user_profile' retrieved from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:10:18.495+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:10:18.494+0000] {override.py:1858} INFO - Created Permission View: can read on DAG:etl_strava_user_profile
+[2025-11-19T22:10:18.513+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:10:18.512+0000] {override.py:1858} INFO - Created Permission View: can edit on DAG:etl_strava_user_profile
+[2025-11-19T22:10:18.521+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:10:18.521+0000] {override.py:1858} INFO - Created Permission View: can delete on DAG:etl_strava_user_profile
+[2025-11-19T22:10:18.523+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:10:18.522+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2025-11-19T22:10:18.555+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:10:18.555+0000] {dag.py:3111} INFO - Creating ORM DAG for etl_strava_user_profile
+[2025-11-19T22:10:18.592+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:10:18.592+0000] {dag.py:3947} INFO - Setting next_dagrun for etl_strava_user_profile to 2025-11-18 03:00:00+00:00, run_after=2025-11-19 03:00:00+00:00
+[2025-11-19T22:10:18.646+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_strava_user.py took 1.342 seconds
+[2025-11-19T22:10:48.835+0000] {processor.py:161} INFO - Started process (PID=184) to work on /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:10:48.837+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_strava_user.py for tasks to queue
+[2025-11-19T22:10:48.842+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:10:48.841+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:10:48.895+0000] {processor.py:840} INFO - DAG(s) 'etl_strava_user_profile' retrieved from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:10:49.006+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:10:49.005+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2025-11-19T22:10:49.099+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:10:49.099+0000] {dag.py:3947} INFO - Setting next_dagrun for etl_strava_user_profile to 2025-11-18 03:00:00+00:00, run_after=2025-11-19 03:00:00+00:00
+[2025-11-19T22:10:49.139+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_strava_user.py took 0.324 seconds
+[2025-11-19T22:11:19.439+0000] {processor.py:161} INFO - Started process (PID=199) to work on /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:11:19.443+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_strava_user.py for tasks to queue
+[2025-11-19T22:11:19.447+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:11:19.446+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:11:19.470+0000] {processor.py:840} INFO - DAG(s) 'etl_strava_user_profile' retrieved from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:11:19.577+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:11:19.576+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2025-11-19T22:11:19.635+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:11:19.634+0000] {dag.py:3947} INFO - Setting next_dagrun for etl_strava_user_profile to 2025-11-18 03:00:00+00:00, run_after=2025-11-19 03:00:00+00:00
+[2025-11-19T22:11:19.667+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_strava_user.py took 0.234 seconds
+[2025-11-19T22:11:49.969+0000] {processor.py:161} INFO - Started process (PID=214) to work on /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:11:49.973+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_strava_user.py for tasks to queue
+[2025-11-19T22:11:49.976+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:11:49.976+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:11:49.995+0000] {processor.py:840} INFO - DAG(s) 'etl_strava_user_profile' retrieved from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:11:50.030+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:11:50.029+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2025-11-19T22:11:50.059+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:11:50.059+0000] {dag.py:3947} INFO - Setting next_dagrun for etl_strava_user_profile to 2025-11-18 03:00:00+00:00, run_after=2025-11-19 03:00:00+00:00
+[2025-11-19T22:11:50.085+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_strava_user.py took 0.123 seconds
+[2025-11-19T22:12:20.351+0000] {processor.py:161} INFO - Started process (PID=228) to work on /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:12:20.358+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_strava_user.py for tasks to queue
+[2025-11-19T22:12:20.361+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:12:20.361+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:12:20.376+0000] {processor.py:840} INFO - DAG(s) 'etl_strava_user_profile' retrieved from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:12:20.417+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:12:20.416+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2025-11-19T22:12:20.442+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:12:20.442+0000] {dag.py:3947} INFO - Setting next_dagrun for etl_strava_user_profile to 2025-11-18 03:00:00+00:00, run_after=2025-11-19 03:00:00+00:00
+[2025-11-19T22:12:20.469+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_strava_user.py took 0.125 seconds
+[2025-11-19T22:12:50.840+0000] {processor.py:161} INFO - Started process (PID=244) to work on /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:12:50.876+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_strava_user.py for tasks to queue
+[2025-11-19T22:12:50.879+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:12:50.878+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:12:50.895+0000] {processor.py:840} INFO - DAG(s) 'etl_strava_user_profile' retrieved from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:12:50.930+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:12:50.930+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2025-11-19T22:12:50.951+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:12:50.951+0000] {dag.py:3947} INFO - Setting next_dagrun for etl_strava_user_profile to 2025-11-18 03:00:00+00:00, run_after=2025-11-19 03:00:00+00:00
+[2025-11-19T22:12:50.967+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_strava_user.py took 0.133 seconds
+[2025-11-19T22:13:21.109+0000] {processor.py:161} INFO - Started process (PID=259) to work on /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:13:21.111+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_strava_user.py for tasks to queue
+[2025-11-19T22:13:21.112+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:13:21.112+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:13:21.122+0000] {processor.py:840} INFO - DAG(s) 'etl_strava_user_profile' retrieved from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:13:21.146+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:13:21.146+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2025-11-19T22:13:21.165+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:13:21.165+0000] {dag.py:3947} INFO - Setting next_dagrun for etl_strava_user_profile to 2025-11-18 03:00:00+00:00, run_after=2025-11-19 03:00:00+00:00
+[2025-11-19T22:13:21.179+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_strava_user.py took 0.076 seconds
+[2025-11-19T22:13:51.460+0000] {processor.py:161} INFO - Started process (PID=274) to work on /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:13:51.465+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_strava_user.py for tasks to queue
+[2025-11-19T22:13:51.468+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:13:51.467+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:13:51.485+0000] {processor.py:840} INFO - DAG(s) 'etl_strava_user_profile' retrieved from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:13:51.523+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:13:51.523+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2025-11-19T22:13:51.545+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:13:51.545+0000] {dag.py:3947} INFO - Setting next_dagrun for etl_strava_user_profile to 2025-11-18 03:00:00+00:00, run_after=2025-11-19 03:00:00+00:00
+[2025-11-19T22:13:51.583+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_strava_user.py took 0.131 seconds
+[2025-11-19T22:14:21.706+0000] {processor.py:161} INFO - Started process (PID=289) to work on /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:14:21.710+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_strava_user.py for tasks to queue
+[2025-11-19T22:14:21.713+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:14:21.712+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:14:21.745+0000] {processor.py:840} INFO - DAG(s) 'etl_strava_user_profile' retrieved from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:14:21.781+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:14:21.781+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2025-11-19T22:14:21.805+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:14:21.805+0000] {dag.py:3947} INFO - Setting next_dagrun for etl_strava_user_profile to 2025-11-18 03:00:00+00:00, run_after=2025-11-19 03:00:00+00:00
+[2025-11-19T22:14:21.820+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_strava_user.py took 0.119 seconds
+[2025-11-19T22:14:52.077+0000] {processor.py:161} INFO - Started process (PID=303) to work on /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:14:52.082+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_strava_user.py for tasks to queue
+[2025-11-19T22:14:52.084+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:14:52.084+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:14:52.098+0000] {processor.py:840} INFO - DAG(s) 'etl_strava_user_profile' retrieved from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:14:52.127+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:14:52.127+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2025-11-19T22:14:52.147+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:14:52.147+0000] {dag.py:3947} INFO - Setting next_dagrun for etl_strava_user_profile to 2025-11-18 03:00:00+00:00, run_after=2025-11-19 03:00:00+00:00
+[2025-11-19T22:14:52.161+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_strava_user.py took 0.089 seconds
+[2025-11-19T22:15:22.305+0000] {processor.py:161} INFO - Started process (PID=319) to work on /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:15:22.307+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_strava_user.py for tasks to queue
+[2025-11-19T22:15:22.309+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:15:22.308+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:15:22.318+0000] {processor.py:840} INFO - DAG(s) 'etl_strava_user_profile' retrieved from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:15:22.348+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:15:22.348+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2025-11-19T22:15:22.368+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:15:22.368+0000] {dag.py:3947} INFO - Setting next_dagrun for etl_strava_user_profile to 2025-11-18 03:00:00+00:00, run_after=2025-11-19 03:00:00+00:00
+[2025-11-19T22:15:22.381+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_strava_user.py took 0.080 seconds
+[2025-11-19T22:15:52.656+0000] {processor.py:161} INFO - Started process (PID=333) to work on /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:15:52.659+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_strava_user.py for tasks to queue
+[2025-11-19T22:15:52.662+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:15:52.661+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:15:52.681+0000] {processor.py:840} INFO - DAG(s) 'etl_strava_user_profile' retrieved from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:15:52.713+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:15:52.713+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2025-11-19T22:15:52.734+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:15:52.734+0000] {dag.py:3947} INFO - Setting next_dagrun for etl_strava_user_profile to 2025-11-18 03:00:00+00:00, run_after=2025-11-19 03:00:00+00:00
+[2025-11-19T22:15:52.749+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_strava_user.py took 0.099 seconds
+[2025-11-19T22:16:23.014+0000] {processor.py:161} INFO - Started process (PID=349) to work on /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:16:23.016+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_strava_user.py for tasks to queue
+[2025-11-19T22:16:23.018+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:16:23.017+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:16:23.026+0000] {processor.py:840} INFO - DAG(s) 'etl_strava_user_profile' retrieved from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:16:23.048+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:16:23.048+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2025-11-19T22:16:23.066+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:16:23.065+0000] {dag.py:3947} INFO - Setting next_dagrun for etl_strava_user_profile to 2025-11-18 03:00:00+00:00, run_after=2025-11-19 03:00:00+00:00
+[2025-11-19T22:16:23.079+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_strava_user.py took 0.068 seconds
+[2025-11-19T22:16:53.362+0000] {processor.py:161} INFO - Started process (PID=364) to work on /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:16:53.364+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_strava_user.py for tasks to queue
+[2025-11-19T22:16:53.367+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:16:53.367+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:16:53.384+0000] {processor.py:840} INFO - DAG(s) 'etl_strava_user_profile' retrieved from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:16:53.421+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:16:53.421+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2025-11-19T22:16:53.443+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:16:53.442+0000] {dag.py:3947} INFO - Setting next_dagrun for etl_strava_user_profile to 2025-11-18 03:00:00+00:00, run_after=2025-11-19 03:00:00+00:00
+[2025-11-19T22:16:53.457+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_strava_user.py took 0.100 seconds
+[2025-11-19T22:17:23.634+0000] {processor.py:161} INFO - Started process (PID=379) to work on /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:17:23.636+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_strava_user.py for tasks to queue
+[2025-11-19T22:17:23.638+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:17:23.638+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:17:23.650+0000] {processor.py:840} INFO - DAG(s) 'etl_strava_user_profile' retrieved from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:17:23.679+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:17:23.679+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2025-11-19T22:17:23.710+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:17:23.709+0000] {dag.py:3947} INFO - Setting next_dagrun for etl_strava_user_profile to 2025-11-18 03:00:00+00:00, run_after=2025-11-19 03:00:00+00:00
+[2025-11-19T22:17:23.745+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_strava_user.py took 0.116 seconds
+[2025-11-19T22:17:53.923+0000] {processor.py:161} INFO - Started process (PID=394) to work on /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:17:53.927+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_strava_user.py for tasks to queue
+[2025-11-19T22:17:53.930+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:17:53.930+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:17:53.949+0000] {processor.py:840} INFO - DAG(s) 'etl_strava_user_profile' retrieved from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:17:53.984+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:17:53.983+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2025-11-19T22:17:54.011+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:17:54.011+0000] {dag.py:3947} INFO - Setting next_dagrun for etl_strava_user_profile to 2025-11-18 03:00:00+00:00, run_after=2025-11-19 03:00:00+00:00
+[2025-11-19T22:17:54.026+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_strava_user.py took 0.111 seconds
+[2025-11-19T22:18:24.206+0000] {processor.py:161} INFO - Started process (PID=409) to work on /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:18:24.208+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_strava_user.py for tasks to queue
+[2025-11-19T22:18:24.210+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:18:24.209+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:18:24.220+0000] {processor.py:840} INFO - DAG(s) 'etl_strava_user_profile' retrieved from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:18:24.247+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:18:24.247+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2025-11-19T22:18:24.264+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:18:24.264+0000] {dag.py:3947} INFO - Setting next_dagrun for etl_strava_user_profile to 2025-11-18 03:00:00+00:00, run_after=2025-11-19 03:00:00+00:00
+[2025-11-19T22:18:24.277+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_strava_user.py took 0.076 seconds
+[2025-11-19T22:18:54.567+0000] {processor.py:161} INFO - Started process (PID=424) to work on /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:18:54.570+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_strava_user.py for tasks to queue
+[2025-11-19T22:18:54.573+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:18:54.573+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:18:54.588+0000] {processor.py:840} INFO - DAG(s) 'etl_strava_user_profile' retrieved from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:18:54.621+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:18:54.621+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2025-11-19T22:18:54.643+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:18:54.642+0000] {dag.py:3947} INFO - Setting next_dagrun for etl_strava_user_profile to 2025-11-18 03:00:00+00:00, run_after=2025-11-19 03:00:00+00:00
+[2025-11-19T22:18:54.657+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_strava_user.py took 0.095 seconds
+[2025-11-19T22:19:24.821+0000] {processor.py:161} INFO - Started process (PID=439) to work on /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:19:24.825+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_strava_user.py for tasks to queue
+[2025-11-19T22:19:24.828+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:19:24.827+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:19:24.847+0000] {processor.py:840} INFO - DAG(s) 'etl_strava_user_profile' retrieved from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:19:24.885+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:19:24.885+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2025-11-19T22:19:24.906+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:19:24.906+0000] {dag.py:3947} INFO - Setting next_dagrun for etl_strava_user_profile to 2025-11-18 03:00:00+00:00, run_after=2025-11-19 03:00:00+00:00
+[2025-11-19T22:19:24.919+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_strava_user.py took 0.104 seconds
+[2025-11-19T22:19:55.208+0000] {processor.py:161} INFO - Started process (PID=454) to work on /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:19:55.213+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_strava_user.py for tasks to queue
+[2025-11-19T22:19:55.216+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:19:55.215+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:19:55.231+0000] {processor.py:840} INFO - DAG(s) 'etl_strava_user_profile' retrieved from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:19:55.269+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:19:55.269+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2025-11-19T22:19:55.299+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:19:55.299+0000] {dag.py:3947} INFO - Setting next_dagrun for etl_strava_user_profile to 2025-11-18 03:00:00+00:00, run_after=2025-11-19 03:00:00+00:00
+[2025-11-19T22:19:55.316+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_strava_user.py took 0.116 seconds
+[2025-11-19T22:20:25.496+0000] {processor.py:161} INFO - Started process (PID=469) to work on /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:20:25.498+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_strava_user.py for tasks to queue
+[2025-11-19T22:20:25.500+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:20:25.499+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:20:25.515+0000] {processor.py:840} INFO - DAG(s) 'etl_strava_user_profile' retrieved from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:20:25.542+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:20:25.542+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2025-11-19T22:20:25.562+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:20:25.562+0000] {dag.py:3947} INFO - Setting next_dagrun for etl_strava_user_profile to 2025-11-18 03:00:00+00:00, run_after=2025-11-19 03:00:00+00:00
+[2025-11-19T22:20:25.579+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_strava_user.py took 0.086 seconds
+[2025-11-19T22:20:55.851+0000] {processor.py:161} INFO - Started process (PID=483) to work on /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:20:55.857+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_strava_user.py for tasks to queue
+[2025-11-19T22:20:55.860+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:20:55.860+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:20:55.882+0000] {processor.py:840} INFO - DAG(s) 'etl_strava_user_profile' retrieved from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:20:55.923+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:20:55.923+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2025-11-19T22:20:55.957+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:20:55.956+0000] {dag.py:3947} INFO - Setting next_dagrun for etl_strava_user_profile to 2025-11-18 03:00:00+00:00, run_after=2025-11-19 03:00:00+00:00
+[2025-11-19T22:20:55.974+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_strava_user.py took 0.133 seconds
+[2025-11-19T22:21:26.149+0000] {processor.py:161} INFO - Started process (PID=498) to work on /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:21:26.154+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_strava_user.py for tasks to queue
+[2025-11-19T22:21:26.157+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:21:26.156+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:21:26.177+0000] {processor.py:840} INFO - DAG(s) 'etl_strava_user_profile' retrieved from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:21:26.232+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:21:26.232+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2025-11-19T22:21:26.278+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:21:26.278+0000] {dag.py:3947} INFO - Setting next_dagrun for etl_strava_user_profile to 2025-11-18 03:00:00+00:00, run_after=2025-11-19 03:00:00+00:00
+[2025-11-19T22:21:26.303+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_strava_user.py took 0.166 seconds
+[2025-11-19T22:21:56.437+0000] {processor.py:161} INFO - Started process (PID=514) to work on /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:21:56.439+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_strava_user.py for tasks to queue
+[2025-11-19T22:21:56.441+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:21:56.440+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:21:56.454+0000] {processor.py:840} INFO - DAG(s) 'etl_strava_user_profile' retrieved from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:21:56.478+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:21:56.478+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2025-11-19T22:21:56.495+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:21:56.495+0000] {dag.py:3947} INFO - Setting next_dagrun for etl_strava_user_profile to 2025-11-18 03:00:00+00:00, run_after=2025-11-19 03:00:00+00:00
+[2025-11-19T22:21:56.508+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_strava_user.py took 0.077 seconds
+[2025-11-19T22:22:26.820+0000] {processor.py:161} INFO - Started process (PID=529) to work on /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:22:26.824+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_strava_user.py for tasks to queue
+[2025-11-19T22:22:26.827+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:22:26.826+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:22:26.858+0000] {processor.py:840} INFO - DAG(s) 'etl_strava_user_profile' retrieved from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:22:26.903+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:22:26.903+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2025-11-19T22:22:26.952+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:22:26.952+0000] {dag.py:3947} INFO - Setting next_dagrun for etl_strava_user_profile to 2025-11-18 03:00:00+00:00, run_after=2025-11-19 03:00:00+00:00
+[2025-11-19T22:22:26.986+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_strava_user.py took 0.174 seconds
+[2025-11-19T22:22:57.085+0000] {processor.py:161} INFO - Started process (PID=544) to work on /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:22:57.088+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_strava_user.py for tasks to queue
+[2025-11-19T22:22:57.089+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:22:57.089+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:22:57.107+0000] {processor.py:840} INFO - DAG(s) 'etl_strava_user_profile' retrieved from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:22:57.142+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:22:57.142+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2025-11-19T22:22:57.169+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:22:57.169+0000] {dag.py:3947} INFO - Setting next_dagrun for etl_strava_user_profile to 2025-11-18 03:00:00+00:00, run_after=2025-11-19 03:00:00+00:00
+[2025-11-19T22:22:57.186+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_strava_user.py took 0.107 seconds
+[2025-11-19T22:23:27.554+0000] {processor.py:161} INFO - Started process (PID=559) to work on /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:23:27.576+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_strava_user.py for tasks to queue
+[2025-11-19T22:23:27.579+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:23:27.578+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:23:27.631+0000] {processor.py:840} INFO - DAG(s) 'etl_strava_user_profile' retrieved from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:23:27.709+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:23:27.709+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2025-11-19T22:23:27.760+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:23:27.760+0000] {dag.py:3947} INFO - Setting next_dagrun for etl_strava_user_profile to 2025-11-18 03:00:00+00:00, run_after=2025-11-19 03:00:00+00:00
+[2025-11-19T22:23:27.786+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_strava_user.py took 0.237 seconds
+[2025-11-19T22:23:57.897+0000] {processor.py:161} INFO - Started process (PID=574) to work on /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:23:57.903+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_strava_user.py for tasks to queue
+[2025-11-19T22:23:57.907+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:23:57.906+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:23:57.954+0000] {processor.py:840} INFO - DAG(s) 'etl_strava_user_profile' retrieved from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:23:58.029+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:23:58.028+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2025-11-19T22:23:58.060+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:23:58.060+0000] {dag.py:3947} INFO - Setting next_dagrun for etl_strava_user_profile to 2025-11-18 03:00:00+00:00, run_after=2025-11-19 03:00:00+00:00
+[2025-11-19T22:23:58.090+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_strava_user.py took 0.205 seconds
+[2025-11-19T22:24:28.171+0000] {processor.py:161} INFO - Started process (PID=589) to work on /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:24:28.177+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_strava_user.py for tasks to queue
+[2025-11-19T22:24:28.183+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:24:28.183+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:24:28.203+0000] {processor.py:840} INFO - DAG(s) 'etl_strava_user_profile' retrieved from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:24:28.271+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:24:28.271+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2025-11-19T22:24:28.306+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:24:28.306+0000] {dag.py:3947} INFO - Setting next_dagrun for etl_strava_user_profile to 2025-11-18 03:00:00+00:00, run_after=2025-11-19 03:00:00+00:00
+[2025-11-19T22:24:28.336+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_strava_user.py took 0.175 seconds
+[2025-11-19T22:24:58.477+0000] {processor.py:161} INFO - Started process (PID=603) to work on /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:24:58.482+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_strava_user.py for tasks to queue
+[2025-11-19T22:24:58.487+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:24:58.485+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:24:58.519+0000] {processor.py:840} INFO - DAG(s) 'etl_strava_user_profile' retrieved from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:24:58.585+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:24:58.585+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2025-11-19T22:24:58.626+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:24:58.626+0000] {dag.py:3947} INFO - Setting next_dagrun for etl_strava_user_profile to 2025-11-18 03:00:00+00:00, run_after=2025-11-19 03:00:00+00:00
+[2025-11-19T22:24:58.646+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_strava_user.py took 0.177 seconds
+[2025-11-19T22:25:28.797+0000] {processor.py:161} INFO - Started process (PID=619) to work on /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:25:28.821+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_strava_user.py for tasks to queue
+[2025-11-19T22:25:28.825+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:25:28.824+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:25:28.853+0000] {processor.py:840} INFO - DAG(s) 'etl_strava_user_profile' retrieved from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:25:28.914+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:25:28.913+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2025-11-19T22:25:28.946+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:25:28.946+0000] {dag.py:3947} INFO - Setting next_dagrun for etl_strava_user_profile to 2025-11-18 03:00:00+00:00, run_after=2025-11-19 03:00:00+00:00
+[2025-11-19T22:25:28.965+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_strava_user.py took 0.176 seconds
+[2025-11-19T22:25:59.115+0000] {processor.py:161} INFO - Started process (PID=634) to work on /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:25:59.120+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_strava_user.py for tasks to queue
+[2025-11-19T22:25:59.124+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:25:59.123+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:25:59.144+0000] {processor.py:840} INFO - DAG(s) 'etl_strava_user_profile' retrieved from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:25:59.191+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:25:59.191+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2025-11-19T22:25:59.229+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:25:59.229+0000] {dag.py:3947} INFO - Setting next_dagrun for etl_strava_user_profile to 2025-11-18 03:00:00+00:00, run_after=2025-11-19 03:00:00+00:00
+[2025-11-19T22:25:59.247+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_strava_user.py took 0.140 seconds
+[2025-11-19T22:26:29.583+0000] {processor.py:161} INFO - Started process (PID=648) to work on /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:26:29.588+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_strava_user.py for tasks to queue
+[2025-11-19T22:26:29.591+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:26:29.591+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:26:29.611+0000] {processor.py:840} INFO - DAG(s) 'etl_strava_user_profile' retrieved from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:26:29.654+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:26:29.654+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2025-11-19T22:26:29.688+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:26:29.688+0000] {dag.py:3947} INFO - Setting next_dagrun for etl_strava_user_profile to 2025-11-18 03:00:00+00:00, run_after=2025-11-19 03:00:00+00:00
+[2025-11-19T22:26:29.708+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_strava_user.py took 0.136 seconds
+[2025-11-19T22:26:59.826+0000] {processor.py:161} INFO - Started process (PID=663) to work on /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:26:59.831+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_strava_user.py for tasks to queue
+[2025-11-19T22:26:59.834+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:26:59.833+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:26:59.854+0000] {processor.py:840} INFO - DAG(s) 'etl_strava_user_profile' retrieved from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:26:59.899+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:26:59.899+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2025-11-19T22:26:59.926+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:26:59.926+0000] {dag.py:3947} INFO - Setting next_dagrun for etl_strava_user_profile to 2025-11-18 03:00:00+00:00, run_after=2025-11-19 03:00:00+00:00
+[2025-11-19T22:26:59.947+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_strava_user.py took 0.127 seconds
+[2025-11-19T22:27:30.248+0000] {processor.py:161} INFO - Started process (PID=679) to work on /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:27:30.254+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_strava_user.py for tasks to queue
+[2025-11-19T22:27:30.264+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:27:30.262+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:27:30.306+0000] {processor.py:840} INFO - DAG(s) 'etl_strava_user_profile' retrieved from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:27:30.378+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:27:30.378+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2025-11-19T22:27:30.412+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:27:30.411+0000] {dag.py:3947} INFO - Setting next_dagrun for etl_strava_user_profile to 2025-11-18 03:00:00+00:00, run_after=2025-11-19 03:00:00+00:00
+[2025-11-19T22:27:30.431+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_strava_user.py took 0.197 seconds
+[2025-11-19T22:28:00.483+0000] {processor.py:161} INFO - Started process (PID=693) to work on /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:28:00.488+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_strava_user.py for tasks to queue
+[2025-11-19T22:28:00.491+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:28:00.491+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:28:00.511+0000] {processor.py:840} INFO - DAG(s) 'etl_strava_user_profile' retrieved from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:28:00.559+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:28:00.558+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2025-11-19T22:28:00.585+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:28:00.585+0000] {dag.py:3947} INFO - Setting next_dagrun for etl_strava_user_profile to 2025-11-18 03:00:00+00:00, run_after=2025-11-19 03:00:00+00:00
+[2025-11-19T22:28:00.605+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_strava_user.py took 0.129 seconds
+[2025-11-19T22:28:30.801+0000] {processor.py:161} INFO - Started process (PID=708) to work on /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:28:30.820+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_strava_user.py for tasks to queue
+[2025-11-19T22:28:30.824+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:28:30.823+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:28:30.850+0000] {processor.py:840} INFO - DAG(s) 'etl_strava_user_profile' retrieved from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:28:30.895+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:28:30.895+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2025-11-19T22:28:30.921+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:28:30.921+0000] {dag.py:3947} INFO - Setting next_dagrun for etl_strava_user_profile to 2025-11-18 03:00:00+00:00, run_after=2025-11-19 03:00:00+00:00
+[2025-11-19T22:28:30.938+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_strava_user.py took 0.146 seconds
+[2025-11-19T22:29:01.081+0000] {processor.py:161} INFO - Started process (PID=724) to work on /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:29:01.086+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_strava_user.py for tasks to queue
+[2025-11-19T22:29:01.091+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:29:01.090+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:29:01.126+0000] {processor.py:840} INFO - DAG(s) 'etl_strava_user_profile' retrieved from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:29:01.193+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:29:01.193+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2025-11-19T22:29:01.248+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:29:01.245+0000] {dag.py:3947} INFO - Setting next_dagrun for etl_strava_user_profile to 2025-11-18 03:00:00+00:00, run_after=2025-11-19 03:00:00+00:00
+[2025-11-19T22:29:01.296+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_strava_user.py took 0.225 seconds
+[2025-11-19T22:29:31.412+0000] {processor.py:161} INFO - Started process (PID=739) to work on /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:29:31.416+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_strava_user.py for tasks to queue
+[2025-11-19T22:29:31.419+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:29:31.419+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:29:31.433+0000] {processor.py:840} INFO - DAG(s) 'etl_strava_user_profile' retrieved from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:29:31.463+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:29:31.463+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2025-11-19T22:29:31.483+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:29:31.483+0000] {dag.py:3947} INFO - Setting next_dagrun for etl_strava_user_profile to 2025-11-18 03:00:00+00:00, run_after=2025-11-19 03:00:00+00:00
+[2025-11-19T22:29:31.497+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_strava_user.py took 0.091 seconds
+[2025-11-19T22:30:01.778+0000] {processor.py:161} INFO - Started process (PID=754) to work on /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:30:01.780+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_strava_user.py for tasks to queue
+[2025-11-19T22:30:01.782+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:30:01.781+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:30:01.794+0000] {processor.py:840} INFO - DAG(s) 'etl_strava_user_profile' retrieved from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:30:01.823+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:30:01.823+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2025-11-19T22:30:01.846+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:30:01.846+0000] {dag.py:3947} INFO - Setting next_dagrun for etl_strava_user_profile to 2025-11-18 03:00:00+00:00, run_after=2025-11-19 03:00:00+00:00
+[2025-11-19T22:30:01.860+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_strava_user.py took 0.088 seconds
+[2025-11-19T22:30:32.049+0000] {processor.py:161} INFO - Started process (PID=769) to work on /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:30:32.051+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_strava_user.py for tasks to queue
+[2025-11-19T22:30:32.052+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:30:32.052+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:30:32.060+0000] {processor.py:840} INFO - DAG(s) 'etl_strava_user_profile' retrieved from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:30:32.085+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:30:32.084+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2025-11-19T22:30:32.103+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:30:32.103+0000] {dag.py:3947} INFO - Setting next_dagrun for etl_strava_user_profile to 2025-11-18 03:00:00+00:00, run_after=2025-11-19 03:00:00+00:00
+[2025-11-19T22:30:32.115+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_strava_user.py took 0.070 seconds
+[2025-11-19T22:31:02.376+0000] {processor.py:161} INFO - Started process (PID=784) to work on /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:31:02.378+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_strava_user.py for tasks to queue
+[2025-11-19T22:31:02.379+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:31:02.379+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:31:02.389+0000] {processor.py:840} INFO - DAG(s) 'etl_strava_user_profile' retrieved from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:31:02.414+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:31:02.414+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2025-11-19T22:31:02.431+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:31:02.431+0000] {dag.py:3947} INFO - Setting next_dagrun for etl_strava_user_profile to 2025-11-18 03:00:00+00:00, run_after=2025-11-19 03:00:00+00:00
+[2025-11-19T22:31:02.444+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_strava_user.py took 0.072 seconds
+[2025-11-19T22:31:32.732+0000] {processor.py:161} INFO - Started process (PID=799) to work on /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:31:32.734+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_strava_user.py for tasks to queue
+[2025-11-19T22:31:32.736+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:31:32.736+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:31:32.750+0000] {processor.py:840} INFO - DAG(s) 'etl_strava_user_profile' retrieved from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:31:32.785+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:31:32.785+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2025-11-19T22:31:32.811+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:31:32.811+0000] {dag.py:3947} INFO - Setting next_dagrun for etl_strava_user_profile to 2025-11-18 03:00:00+00:00, run_after=2025-11-19 03:00:00+00:00
+[2025-11-19T22:31:32.827+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_strava_user.py took 0.103 seconds
+[2025-11-19T22:32:03.037+0000] {processor.py:161} INFO - Started process (PID=814) to work on /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:32:03.041+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_strava_user.py for tasks to queue
+[2025-11-19T22:32:03.043+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:32:03.043+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:32:03.064+0000] {processor.py:840} INFO - DAG(s) 'etl_strava_user_profile' retrieved from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:32:03.101+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:32:03.101+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2025-11-19T22:32:03.125+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:32:03.125+0000] {dag.py:3947} INFO - Setting next_dagrun for etl_strava_user_profile to 2025-11-18 03:00:00+00:00, run_after=2025-11-19 03:00:00+00:00
+[2025-11-19T22:32:03.142+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_strava_user.py took 0.109 seconds
+[2025-11-19T22:32:33.314+0000] {processor.py:161} INFO - Started process (PID=829) to work on /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:32:33.319+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_strava_user.py for tasks to queue
+[2025-11-19T22:32:33.321+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:32:33.321+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:32:33.338+0000] {processor.py:840} INFO - DAG(s) 'etl_strava_user_profile' retrieved from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:32:33.375+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:32:33.375+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2025-11-19T22:32:33.401+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:32:33.401+0000] {dag.py:3947} INFO - Setting next_dagrun for etl_strava_user_profile to 2025-11-18 03:00:00+00:00, run_after=2025-11-19 03:00:00+00:00
+[2025-11-19T22:32:33.417+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_strava_user.py took 0.109 seconds
+[2025-11-19T22:33:03.556+0000] {processor.py:161} INFO - Started process (PID=844) to work on /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:33:03.560+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_strava_user.py for tasks to queue
+[2025-11-19T22:33:03.565+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:33:03.565+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:33:03.585+0000] {processor.py:840} INFO - DAG(s) 'etl_strava_user_profile' retrieved from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:33:03.618+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:33:03.618+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2025-11-19T22:33:03.653+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:33:03.653+0000] {dag.py:3947} INFO - Setting next_dagrun for etl_strava_user_profile to 2025-11-18 03:00:00+00:00, run_after=2025-11-19 03:00:00+00:00
+[2025-11-19T22:33:03.670+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_strava_user.py took 0.120 seconds
+[2025-11-19T22:33:33.927+0000] {processor.py:161} INFO - Started process (PID=859) to work on /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:33:33.929+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_strava_user.py for tasks to queue
+[2025-11-19T22:33:33.930+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:33:33.930+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:33:33.940+0000] {processor.py:840} INFO - DAG(s) 'etl_strava_user_profile' retrieved from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:33:33.969+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:33:33.969+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2025-11-19T22:33:33.988+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:33:33.988+0000] {dag.py:3947} INFO - Setting next_dagrun for etl_strava_user_profile to 2025-11-18 03:00:00+00:00, run_after=2025-11-19 03:00:00+00:00
+[2025-11-19T22:33:34.001+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_strava_user.py took 0.080 seconds
+[2025-11-19T22:34:04.264+0000] {processor.py:161} INFO - Started process (PID=874) to work on /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:34:04.266+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_strava_user.py for tasks to queue
+[2025-11-19T22:34:04.268+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:34:04.267+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:34:04.279+0000] {processor.py:840} INFO - DAG(s) 'etl_strava_user_profile' retrieved from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:34:04.309+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:34:04.309+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2025-11-19T22:34:04.332+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:34:04.332+0000] {dag.py:3947} INFO - Setting next_dagrun for etl_strava_user_profile to 2025-11-18 03:00:00+00:00, run_after=2025-11-19 03:00:00+00:00
+[2025-11-19T22:34:04.346+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_strava_user.py took 0.087 seconds
+[2025-11-19T22:34:34.654+0000] {processor.py:161} INFO - Started process (PID=889) to work on /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:34:34.659+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_strava_user.py for tasks to queue
+[2025-11-19T22:34:34.662+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:34:34.662+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:34:34.684+0000] {processor.py:840} INFO - DAG(s) 'etl_strava_user_profile' retrieved from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:34:34.722+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:34:34.721+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2025-11-19T22:34:34.759+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:34:34.759+0000] {dag.py:3947} INFO - Setting next_dagrun for etl_strava_user_profile to 2025-11-18 03:00:00+00:00, run_after=2025-11-19 03:00:00+00:00
+[2025-11-19T22:34:34.776+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_strava_user.py took 0.130 seconds
+[2025-11-19T22:35:04.938+0000] {processor.py:161} INFO - Started process (PID=904) to work on /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:35:04.940+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_strava_user.py for tasks to queue
+[2025-11-19T22:35:04.942+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:35:04.941+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:35:04.952+0000] {processor.py:840} INFO - DAG(s) 'etl_strava_user_profile' retrieved from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:35:04.980+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:35:04.980+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2025-11-19T22:35:04.999+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:35:04.999+0000] {dag.py:3947} INFO - Setting next_dagrun for etl_strava_user_profile to 2025-11-18 03:00:00+00:00, run_after=2025-11-19 03:00:00+00:00
+[2025-11-19T22:35:05.013+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_strava_user.py took 0.081 seconds
+[2025-11-19T22:35:35.350+0000] {processor.py:161} INFO - Started process (PID=919) to work on /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:35:35.355+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_strava_user.py for tasks to queue
+[2025-11-19T22:35:35.358+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:35:35.357+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:35:35.388+0000] {processor.py:840} INFO - DAG(s) 'etl_strava_user_profile' retrieved from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:35:35.437+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:35:35.437+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2025-11-19T22:35:35.467+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:35:35.466+0000] {dag.py:3947} INFO - Setting next_dagrun for etl_strava_user_profile to 2025-11-18 03:00:00+00:00, run_after=2025-11-19 03:00:00+00:00
+[2025-11-19T22:35:35.486+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_strava_user.py took 0.146 seconds
+[2025-11-19T22:36:05.778+0000] {processor.py:161} INFO - Started process (PID=934) to work on /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:36:05.813+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_strava_user.py for tasks to queue
+[2025-11-19T22:36:05.817+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:36:05.816+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:36:05.842+0000] {processor.py:840} INFO - DAG(s) 'etl_strava_user_profile' retrieved from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:36:05.887+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:36:05.886+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2025-11-19T22:36:05.917+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:36:05.917+0000] {dag.py:3947} INFO - Setting next_dagrun for etl_strava_user_profile to 2025-11-18 03:00:00+00:00, run_after=2025-11-19 03:00:00+00:00
+[2025-11-19T22:36:05.936+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_strava_user.py took 0.168 seconds
+[2025-11-19T22:36:36.100+0000] {processor.py:161} INFO - Started process (PID=948) to work on /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:36:36.140+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_strava_user.py for tasks to queue
+[2025-11-19T22:36:36.143+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:36:36.143+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:36:36.180+0000] {processor.py:840} INFO - DAG(s) 'etl_strava_user_profile' retrieved from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:36:36.241+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:36:36.240+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2025-11-19T22:36:36.276+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:36:36.275+0000] {dag.py:3947} INFO - Setting next_dagrun for etl_strava_user_profile to 2025-11-18 03:00:00+00:00, run_after=2025-11-19 03:00:00+00:00
+[2025-11-19T22:36:36.294+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_strava_user.py took 0.208 seconds
+[2025-11-19T22:37:06.423+0000] {processor.py:161} INFO - Started process (PID=964) to work on /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:37:06.428+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_strava_user.py for tasks to queue
+[2025-11-19T22:37:06.431+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:37:06.430+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:37:06.463+0000] {processor.py:840} INFO - DAG(s) 'etl_strava_user_profile' retrieved from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:37:06.507+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:37:06.507+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2025-11-19T22:37:06.548+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:37:06.547+0000] {dag.py:3947} INFO - Setting next_dagrun for etl_strava_user_profile to 2025-11-18 03:00:00+00:00, run_after=2025-11-19 03:00:00+00:00
+[2025-11-19T22:37:06.568+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_strava_user.py took 0.151 seconds
+[2025-11-19T22:37:36.679+0000] {processor.py:161} INFO - Started process (PID=979) to work on /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:37:36.684+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_strava_user.py for tasks to queue
+[2025-11-19T22:37:36.688+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:37:36.687+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:37:36.711+0000] {processor.py:840} INFO - DAG(s) 'etl_strava_user_profile' retrieved from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:37:36.760+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:37:36.759+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2025-11-19T22:37:36.789+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:37:36.788+0000] {dag.py:3947} INFO - Setting next_dagrun for etl_strava_user_profile to 2025-11-18 03:00:00+00:00, run_after=2025-11-19 03:00:00+00:00
+[2025-11-19T22:37:36.806+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_strava_user.py took 0.134 seconds
+[2025-11-19T22:38:07.082+0000] {processor.py:161} INFO - Started process (PID=994) to work on /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:38:07.086+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_strava_user.py for tasks to queue
+[2025-11-19T22:38:07.090+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:38:07.090+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:38:07.117+0000] {processor.py:840} INFO - DAG(s) 'etl_strava_user_profile' retrieved from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:38:07.235+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:38:07.235+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2025-11-19T22:38:07.274+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:38:07.274+0000] {dag.py:3947} INFO - Setting next_dagrun for etl_strava_user_profile to 2025-11-18 03:00:00+00:00, run_after=2025-11-19 03:00:00+00:00
+[2025-11-19T22:38:07.325+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_strava_user.py took 0.251 seconds
+[2025-11-19T22:38:37.379+0000] {processor.py:161} INFO - Started process (PID=1009) to work on /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:38:37.384+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_strava_user.py for tasks to queue
+[2025-11-19T22:38:37.389+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:38:37.389+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:38:37.421+0000] {processor.py:840} INFO - DAG(s) 'etl_strava_user_profile' retrieved from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:38:37.470+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:38:37.470+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2025-11-19T22:38:37.494+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:38:37.494+0000] {dag.py:3947} INFO - Setting next_dagrun for etl_strava_user_profile to 2025-11-18 03:00:00+00:00, run_after=2025-11-19 03:00:00+00:00
+[2025-11-19T22:38:37.512+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_strava_user.py took 0.139 seconds
+[2025-11-19T22:39:07.622+0000] {processor.py:161} INFO - Started process (PID=1024) to work on /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:39:07.624+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_strava_user.py for tasks to queue
+[2025-11-19T22:39:07.625+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:39:07.625+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:39:07.634+0000] {processor.py:840} INFO - DAG(s) 'etl_strava_user_profile' retrieved from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:39:07.658+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:39:07.658+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2025-11-19T22:39:07.676+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:39:07.676+0000] {dag.py:3947} INFO - Setting next_dagrun for etl_strava_user_profile to 2025-11-18 03:00:00+00:00, run_after=2025-11-19 03:00:00+00:00
+[2025-11-19T22:39:07.688+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_strava_user.py took 0.071 seconds
+[2025-11-19T22:39:38.013+0000] {processor.py:161} INFO - Started process (PID=1038) to work on /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:39:38.017+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_strava_user.py for tasks to queue
+[2025-11-19T22:39:38.021+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:39:38.021+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:39:38.046+0000] {processor.py:840} INFO - DAG(s) 'etl_strava_user_profile' retrieved from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:39:38.090+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:39:38.089+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2025-11-19T22:39:38.117+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:39:38.117+0000] {dag.py:3947} INFO - Setting next_dagrun for etl_strava_user_profile to 2025-11-18 03:00:00+00:00, run_after=2025-11-19 03:00:00+00:00
+[2025-11-19T22:39:38.137+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_strava_user.py took 0.136 seconds
+[2025-11-19T22:40:08.247+0000] {processor.py:161} INFO - Started process (PID=1054) to work on /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:40:08.249+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_strava_user.py for tasks to queue
+[2025-11-19T22:40:08.251+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:40:08.251+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:40:08.261+0000] {processor.py:840} INFO - DAG(s) 'etl_strava_user_profile' retrieved from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:40:08.291+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:40:08.290+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2025-11-19T22:40:08.317+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:40:08.317+0000] {dag.py:3947} INFO - Setting next_dagrun for etl_strava_user_profile to 2025-11-18 03:00:00+00:00, run_after=2025-11-19 03:00:00+00:00
+[2025-11-19T22:40:08.330+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_strava_user.py took 0.088 seconds
+[2025-11-19T22:40:38.646+0000] {processor.py:161} INFO - Started process (PID=1069) to work on /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:40:38.650+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_strava_user.py for tasks to queue
+[2025-11-19T22:40:38.652+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:40:38.652+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:40:38.670+0000] {processor.py:840} INFO - DAG(s) 'etl_strava_user_profile' retrieved from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:40:38.722+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:40:38.721+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2025-11-19T22:40:38.758+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:40:38.758+0000] {dag.py:3947} INFO - Setting next_dagrun for etl_strava_user_profile to 2025-11-18 03:00:00+00:00, run_after=2025-11-19 03:00:00+00:00
+[2025-11-19T22:40:38.777+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_strava_user.py took 0.137 seconds
+[2025-11-19T22:41:09.042+0000] {processor.py:161} INFO - Started process (PID=1084) to work on /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:41:09.046+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_strava_user.py for tasks to queue
+[2025-11-19T22:41:09.050+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:41:09.050+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:41:09.081+0000] {processor.py:840} INFO - DAG(s) 'etl_strava_user_profile' retrieved from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:41:09.141+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:41:09.140+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2025-11-19T22:41:09.179+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:41:09.178+0000] {dag.py:3947} INFO - Setting next_dagrun for etl_strava_user_profile to 2025-11-18 03:00:00+00:00, run_after=2025-11-19 03:00:00+00:00
+[2025-11-19T22:41:09.199+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_strava_user.py took 0.162 seconds
+[2025-11-19T22:41:39.365+0000] {processor.py:161} INFO - Started process (PID=1099) to work on /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:41:39.371+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_strava_user.py for tasks to queue
+[2025-11-19T22:41:39.375+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:41:39.374+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:41:39.397+0000] {processor.py:840} INFO - DAG(s) 'etl_strava_user_profile' retrieved from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:41:39.443+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:41:39.443+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2025-11-19T22:41:39.471+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:41:39.471+0000] {dag.py:3947} INFO - Setting next_dagrun for etl_strava_user_profile to 2025-11-18 03:00:00+00:00, run_after=2025-11-19 03:00:00+00:00
+[2025-11-19T22:41:39.490+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_strava_user.py took 0.132 seconds
+[2025-11-19T22:42:09.682+0000] {processor.py:161} INFO - Started process (PID=1114) to work on /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:42:09.716+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_strava_user.py for tasks to queue
+[2025-11-19T22:42:09.720+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:42:09.719+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:42:09.742+0000] {processor.py:840} INFO - DAG(s) 'etl_strava_user_profile' retrieved from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:42:09.805+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:42:09.805+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2025-11-19T22:42:09.847+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:42:09.846+0000] {dag.py:3947} INFO - Setting next_dagrun for etl_strava_user_profile to 2025-11-18 03:00:00+00:00, run_after=2025-11-19 03:00:00+00:00
+[2025-11-19T22:42:09.864+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_strava_user.py took 0.193 seconds
+[2025-11-19T22:42:39.977+0000] {processor.py:161} INFO - Started process (PID=1129) to work on /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:42:40.024+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_strava_user.py for tasks to queue
+[2025-11-19T22:42:40.028+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:42:40.027+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:42:40.051+0000] {processor.py:840} INFO - DAG(s) 'etl_strava_user_profile' retrieved from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:42:40.120+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:42:40.119+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2025-11-19T22:42:40.204+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:42:40.204+0000] {dag.py:3947} INFO - Setting next_dagrun for etl_strava_user_profile to 2025-11-18 03:00:00+00:00, run_after=2025-11-19 03:00:00+00:00
+[2025-11-19T22:42:40.238+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_strava_user.py took 0.267 seconds
+[2025-11-19T22:43:10.315+0000] {processor.py:161} INFO - Started process (PID=1143) to work on /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:43:10.361+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_strava_user.py for tasks to queue
+[2025-11-19T22:43:10.364+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:43:10.363+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:43:10.389+0000] {processor.py:840} INFO - DAG(s) 'etl_strava_user_profile' retrieved from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:43:10.444+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:43:10.444+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2025-11-19T22:43:10.475+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:43:10.475+0000] {dag.py:3947} INFO - Setting next_dagrun for etl_strava_user_profile to 2025-11-18 03:00:00+00:00, run_after=2025-11-19 03:00:00+00:00
+[2025-11-19T22:43:10.492+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_strava_user.py took 0.192 seconds
+[2025-11-19T22:43:40.629+0000] {processor.py:161} INFO - Started process (PID=1159) to work on /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:43:40.673+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_strava_user.py for tasks to queue
+[2025-11-19T22:43:40.677+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:43:40.677+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:43:40.704+0000] {processor.py:840} INFO - DAG(s) 'etl_strava_user_profile' retrieved from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:43:40.782+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:43:40.782+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2025-11-19T22:43:40.822+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:43:40.821+0000] {dag.py:3947} INFO - Setting next_dagrun for etl_strava_user_profile to 2025-11-18 03:00:00+00:00, run_after=2025-11-19 03:00:00+00:00
+[2025-11-19T22:43:40.843+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_strava_user.py took 0.229 seconds
+[2025-11-19T22:44:10.945+0000] {processor.py:161} INFO - Started process (PID=1174) to work on /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:44:10.985+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_strava_user.py for tasks to queue
+[2025-11-19T22:44:10.988+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:44:10.987+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:44:11.019+0000] {processor.py:840} INFO - DAG(s) 'etl_strava_user_profile' retrieved from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:44:11.081+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:44:11.081+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2025-11-19T22:44:11.119+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:44:11.119+0000] {dag.py:3947} INFO - Setting next_dagrun for etl_strava_user_profile to 2025-11-18 03:00:00+00:00, run_after=2025-11-19 03:00:00+00:00
+[2025-11-19T22:44:11.137+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_strava_user.py took 0.203 seconds
+[2025-11-19T22:44:41.218+0000] {processor.py:161} INFO - Started process (PID=1189) to work on /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:44:41.224+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_strava_user.py for tasks to queue
+[2025-11-19T22:44:41.227+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:44:41.227+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:44:41.250+0000] {processor.py:840} INFO - DAG(s) 'etl_strava_user_profile' retrieved from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:44:41.301+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:44:41.300+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2025-11-19T22:44:41.337+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:44:41.337+0000] {dag.py:3947} INFO - Setting next_dagrun for etl_strava_user_profile to 2025-11-18 03:00:00+00:00, run_after=2025-11-19 03:00:00+00:00
+[2025-11-19T22:44:41.369+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_strava_user.py took 0.157 seconds
+[2025-11-19T22:45:11.579+0000] {processor.py:161} INFO - Started process (PID=1204) to work on /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:45:11.583+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_strava_user.py for tasks to queue
+[2025-11-19T22:45:11.585+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:45:11.584+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:45:11.602+0000] {processor.py:840} INFO - DAG(s) 'etl_strava_user_profile' retrieved from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:45:11.641+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:45:11.641+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2025-11-19T22:45:11.668+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:45:11.667+0000] {dag.py:3947} INFO - Setting next_dagrun for etl_strava_user_profile to 2025-11-18 03:00:00+00:00, run_after=2025-11-19 03:00:00+00:00
+[2025-11-19T22:45:11.685+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_strava_user.py took 0.110 seconds
+[2025-11-19T22:45:41.853+0000] {processor.py:161} INFO - Started process (PID=1217) to work on /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:45:41.859+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_strava_user.py for tasks to queue
+[2025-11-19T22:45:41.863+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:45:41.862+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:45:41.894+0000] {processor.py:840} INFO - DAG(s) 'etl_strava_user_profile' retrieved from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:45:41.937+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:45:41.937+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2025-11-19T22:45:41.963+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:45:41.963+0000] {dag.py:3947} INFO - Setting next_dagrun for etl_strava_user_profile to 2025-11-18 03:00:00+00:00, run_after=2025-11-19 03:00:00+00:00
+[2025-11-19T22:45:41.981+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_strava_user.py took 0.136 seconds
+[2025-11-19T22:46:12.260+0000] {processor.py:161} INFO - Started process (PID=1233) to work on /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:46:12.299+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_strava_user.py for tasks to queue
+[2025-11-19T22:46:12.303+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:46:12.302+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:46:12.323+0000] {processor.py:840} INFO - DAG(s) 'etl_strava_user_profile' retrieved from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:46:12.359+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:46:12.359+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2025-11-19T22:46:12.382+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:46:12.382+0000] {dag.py:3947} INFO - Setting next_dagrun for etl_strava_user_profile to 2025-11-18 03:00:00+00:00, run_after=2025-11-19 03:00:00+00:00
+[2025-11-19T22:46:12.397+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_strava_user.py took 0.145 seconds
+[2025-11-19T22:46:42.720+0000] {processor.py:161} INFO - Started process (PID=1248) to work on /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:46:42.762+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_strava_user.py for tasks to queue
+[2025-11-19T22:46:42.765+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:46:42.764+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:46:42.787+0000] {processor.py:840} INFO - DAG(s) 'etl_strava_user_profile' retrieved from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:46:42.846+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:46:42.846+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2025-11-19T22:46:42.888+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:46:42.888+0000] {dag.py:3947} INFO - Setting next_dagrun for etl_strava_user_profile to 2025-11-18 03:00:00+00:00, run_after=2025-11-19 03:00:00+00:00
+[2025-11-19T22:46:42.906+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_strava_user.py took 0.194 seconds
+[2025-11-19T22:47:12.974+0000] {processor.py:161} INFO - Started process (PID=1264) to work on /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:47:12.979+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_strava_user.py for tasks to queue
+[2025-11-19T22:47:12.983+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:47:12.983+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:47:13.006+0000] {processor.py:840} INFO - DAG(s) 'etl_strava_user_profile' retrieved from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:47:13.053+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:47:13.053+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2025-11-19T22:47:13.082+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:47:13.082+0000] {dag.py:3947} INFO - Setting next_dagrun for etl_strava_user_profile to 2025-11-18 03:00:00+00:00, run_after=2025-11-19 03:00:00+00:00
+[2025-11-19T22:47:13.107+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_strava_user.py took 0.142 seconds
+[2025-11-19T22:47:43.435+0000] {processor.py:161} INFO - Started process (PID=1279) to work on /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:47:43.477+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_strava_user.py for tasks to queue
+[2025-11-19T22:47:43.481+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:47:43.480+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:47:43.508+0000] {processor.py:840} INFO - DAG(s) 'etl_strava_user_profile' retrieved from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:47:43.554+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:47:43.554+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2025-11-19T22:47:43.584+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:47:43.584+0000] {dag.py:3947} INFO - Setting next_dagrun for etl_strava_user_profile to 2025-11-18 03:00:00+00:00, run_after=2025-11-19 03:00:00+00:00
+[2025-11-19T22:47:43.605+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_strava_user.py took 0.182 seconds
+[2025-11-19T22:48:13.709+0000] {processor.py:161} INFO - Started process (PID=1294) to work on /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:48:13.745+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_strava_user.py for tasks to queue
+[2025-11-19T22:48:13.751+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:48:13.748+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:48:13.789+0000] {processor.py:840} INFO - DAG(s) 'etl_strava_user_profile' retrieved from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:48:13.876+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:48:13.875+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2025-11-19T22:48:13.918+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:48:13.918+0000] {dag.py:3947} INFO - Setting next_dagrun for etl_strava_user_profile to 2025-11-18 03:00:00+00:00, run_after=2025-11-19 03:00:00+00:00
+[2025-11-19T22:48:13.938+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_strava_user.py took 0.241 seconds
+[2025-11-19T22:48:44.054+0000] {processor.py:161} INFO - Started process (PID=1309) to work on /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:48:44.059+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_strava_user.py for tasks to queue
+[2025-11-19T22:48:44.063+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:48:44.062+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:48:44.090+0000] {processor.py:840} INFO - DAG(s) 'etl_strava_user_profile' retrieved from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:48:44.149+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:48:44.149+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2025-11-19T22:48:44.183+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:48:44.182+0000] {dag.py:3947} INFO - Setting next_dagrun for etl_strava_user_profile to 2025-11-18 03:00:00+00:00, run_after=2025-11-19 03:00:00+00:00
+[2025-11-19T22:48:44.201+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_strava_user.py took 0.155 seconds
+[2025-11-19T22:49:14.364+0000] {processor.py:161} INFO - Started process (PID=1324) to work on /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:49:14.403+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_strava_user.py for tasks to queue
+[2025-11-19T22:49:14.407+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:49:14.406+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:49:14.430+0000] {processor.py:840} INFO - DAG(s) 'etl_strava_user_profile' retrieved from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:49:14.472+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:49:14.472+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2025-11-19T22:49:14.502+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:49:14.501+0000] {dag.py:3947} INFO - Setting next_dagrun for etl_strava_user_profile to 2025-11-18 03:00:00+00:00, run_after=2025-11-19 03:00:00+00:00
+[2025-11-19T22:49:14.520+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_strava_user.py took 0.165 seconds
+[2025-11-19T22:49:44.670+0000] {processor.py:161} INFO - Started process (PID=1339) to work on /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:49:44.708+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_strava_user.py for tasks to queue
+[2025-11-19T22:49:44.712+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:49:44.711+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:49:44.738+0000] {processor.py:840} INFO - DAG(s) 'etl_strava_user_profile' retrieved from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:49:44.791+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:49:44.790+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2025-11-19T22:49:44.822+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:49:44.822+0000] {dag.py:3947} INFO - Setting next_dagrun for etl_strava_user_profile to 2025-11-18 03:00:00+00:00, run_after=2025-11-19 03:00:00+00:00
+[2025-11-19T22:49:44.840+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_strava_user.py took 0.180 seconds
+[2025-11-19T22:50:15.062+0000] {processor.py:161} INFO - Started process (PID=1354) to work on /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:50:15.070+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_strava_user.py for tasks to queue
+[2025-11-19T22:50:15.074+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:50:15.074+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:50:15.109+0000] {processor.py:840} INFO - DAG(s) 'etl_strava_user_profile' retrieved from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:50:15.178+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:50:15.178+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2025-11-19T22:50:15.213+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:50:15.212+0000] {dag.py:3947} INFO - Setting next_dagrun for etl_strava_user_profile to 2025-11-18 03:00:00+00:00, run_after=2025-11-19 03:00:00+00:00
+[2025-11-19T22:50:15.231+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_strava_user.py took 0.186 seconds
+[2025-11-19T22:50:45.437+0000] {processor.py:161} INFO - Started process (PID=1368) to work on /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:50:45.443+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_strava_user.py for tasks to queue
+[2025-11-19T22:50:45.447+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:50:45.446+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:50:45.475+0000] {processor.py:840} INFO - DAG(s) 'etl_strava_user_profile' retrieved from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:50:45.521+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:50:45.520+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2025-11-19T22:50:45.561+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:50:45.561+0000] {dag.py:3947} INFO - Setting next_dagrun for etl_strava_user_profile to 2025-11-18 03:00:00+00:00, run_after=2025-11-19 03:00:00+00:00
+[2025-11-19T22:50:45.578+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_strava_user.py took 0.165 seconds
+[2025-11-19T22:51:15.749+0000] {processor.py:161} INFO - Started process (PID=1384) to work on /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:51:15.755+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_strava_user.py for tasks to queue
+[2025-11-19T22:51:15.760+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:51:15.759+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:51:15.784+0000] {processor.py:840} INFO - DAG(s) 'etl_strava_user_profile' retrieved from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:51:15.833+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:51:15.833+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2025-11-19T22:51:15.858+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:51:15.858+0000] {dag.py:3947} INFO - Setting next_dagrun for etl_strava_user_profile to 2025-11-18 03:00:00+00:00, run_after=2025-11-19 03:00:00+00:00
+[2025-11-19T22:51:15.874+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_strava_user.py took 0.132 seconds
+[2025-11-19T22:51:45.958+0000] {processor.py:161} INFO - Started process (PID=1398) to work on /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:51:45.961+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_strava_user.py for tasks to queue
+[2025-11-19T22:51:45.964+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:51:45.964+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:51:45.981+0000] {processor.py:840} INFO - DAG(s) 'etl_strava_user_profile' retrieved from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:51:45.998+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:51:45.998+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2025-11-19T22:51:46.023+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:51:46.023+0000] {dag.py:3947} INFO - Setting next_dagrun for etl_strava_user_profile to 2025-11-18 03:00:00+00:00, run_after=2025-11-19 03:00:00+00:00
+[2025-11-19T22:51:46.040+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_strava_user.py took 0.089 seconds
+[2025-11-19T22:52:16.453+0000] {processor.py:161} INFO - Started process (PID=1414) to work on /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:52:16.458+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_strava_user.py for tasks to queue
+[2025-11-19T22:52:16.461+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:52:16.460+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:52:16.478+0000] {processor.py:840} INFO - DAG(s) 'etl_strava_user_profile' retrieved from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:52:16.626+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:52:16.626+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2025-11-19T22:52:16.648+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:52:16.647+0000] {dag.py:3947} INFO - Setting next_dagrun for etl_strava_user_profile to 2025-11-18 03:00:00+00:00, run_after=2025-11-19 03:00:00+00:00
+[2025-11-19T22:52:16.662+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_strava_user.py took 0.217 seconds
+[2025-11-19T22:52:46.749+0000] {processor.py:161} INFO - Started process (PID=1429) to work on /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:52:46.755+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_strava_user.py for tasks to queue
+[2025-11-19T22:52:46.757+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:52:46.757+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:52:46.781+0000] {processor.py:840} INFO - DAG(s) 'etl_strava_user_profile' retrieved from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:52:46.837+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:52:46.837+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2025-11-19T22:52:46.861+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:52:46.860+0000] {dag.py:3947} INFO - Setting next_dagrun for etl_strava_user_profile to 2025-11-18 03:00:00+00:00, run_after=2025-11-19 03:00:00+00:00
+[2025-11-19T22:52:46.877+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_strava_user.py took 0.135 seconds
+[2025-11-19T22:53:17.202+0000] {processor.py:161} INFO - Started process (PID=1442) to work on /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:53:17.210+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_strava_user.py for tasks to queue
+[2025-11-19T22:53:17.216+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:53:17.215+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:53:17.248+0000] {processor.py:840} INFO - DAG(s) 'etl_strava_user_profile' retrieved from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:53:17.320+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:53:17.320+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2025-11-19T22:53:17.349+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:53:17.349+0000] {dag.py:3947} INFO - Setting next_dagrun for etl_strava_user_profile to 2025-11-18 03:00:00+00:00, run_after=2025-11-19 03:00:00+00:00
+[2025-11-19T22:53:17.366+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_strava_user.py took 0.183 seconds
+[2025-11-19T22:53:47.471+0000] {processor.py:161} INFO - Started process (PID=1458) to work on /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:53:47.476+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_strava_user.py for tasks to queue
+[2025-11-19T22:53:47.480+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:53:47.480+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:53:47.502+0000] {processor.py:840} INFO - DAG(s) 'etl_strava_user_profile' retrieved from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:53:47.548+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:53:47.547+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2025-11-19T22:53:47.570+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:53:47.570+0000] {dag.py:3947} INFO - Setting next_dagrun for etl_strava_user_profile to 2025-11-18 03:00:00+00:00, run_after=2025-11-19 03:00:00+00:00
+[2025-11-19T22:53:47.593+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_strava_user.py took 0.137 seconds
+[2025-11-19T22:54:17.847+0000] {processor.py:161} INFO - Started process (PID=1474) to work on /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:54:17.852+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_strava_user.py for tasks to queue
+[2025-11-19T22:54:17.855+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:54:17.855+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:54:17.878+0000] {processor.py:840} INFO - DAG(s) 'etl_strava_user_profile' retrieved from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:54:17.929+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:54:17.928+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2025-11-19T22:54:17.961+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:54:17.961+0000] {dag.py:3947} INFO - Setting next_dagrun for etl_strava_user_profile to 2025-11-18 03:00:00+00:00, run_after=2025-11-19 03:00:00+00:00
+[2025-11-19T22:54:17.977+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_strava_user.py took 0.142 seconds
+[2025-11-19T22:54:48.201+0000] {processor.py:161} INFO - Started process (PID=1488) to work on /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:54:48.208+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_strava_user.py for tasks to queue
+[2025-11-19T22:54:48.214+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:54:48.213+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:54:48.243+0000] {processor.py:840} INFO - DAG(s) 'etl_strava_user_profile' retrieved from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:54:48.292+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:54:48.292+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2025-11-19T22:54:48.320+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:54:48.320+0000] {dag.py:3947} INFO - Setting next_dagrun for etl_strava_user_profile to 2025-11-18 03:00:00+00:00, run_after=2025-11-19 03:00:00+00:00
+[2025-11-19T22:54:48.335+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_strava_user.py took 0.146 seconds
+[2025-11-19T22:55:18.468+0000] {processor.py:161} INFO - Started process (PID=1503) to work on /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:55:18.473+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_strava_user.py for tasks to queue
+[2025-11-19T22:55:18.482+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:55:18.480+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:55:18.509+0000] {processor.py:840} INFO - DAG(s) 'etl_strava_user_profile' retrieved from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:55:18.554+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:55:18.554+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2025-11-19T22:55:18.580+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:55:18.580+0000] {dag.py:3947} INFO - Setting next_dagrun for etl_strava_user_profile to 2025-11-18 03:00:00+00:00, run_after=2025-11-19 03:00:00+00:00
+[2025-11-19T22:55:18.596+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_strava_user.py took 0.145 seconds
+[2025-11-19T22:55:48.762+0000] {processor.py:161} INFO - Started process (PID=1519) to work on /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:55:48.765+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_strava_user.py for tasks to queue
+[2025-11-19T22:55:48.768+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:55:48.768+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:55:48.786+0000] {processor.py:840} INFO - DAG(s) 'etl_strava_user_profile' retrieved from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:55:48.824+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:55:48.824+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2025-11-19T22:55:48.846+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:55:48.846+0000] {dag.py:3947} INFO - Setting next_dagrun for etl_strava_user_profile to 2025-11-18 03:00:00+00:00, run_after=2025-11-19 03:00:00+00:00
+[2025-11-19T22:55:48.860+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_strava_user.py took 0.106 seconds
+[2025-11-19T22:56:19.079+0000] {processor.py:161} INFO - Started process (PID=1534) to work on /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:56:19.085+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_strava_user.py for tasks to queue
+[2025-11-19T22:56:19.090+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:56:19.089+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:56:19.133+0000] {processor.py:840} INFO - DAG(s) 'etl_strava_user_profile' retrieved from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:56:19.217+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:56:19.216+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2025-11-19T22:56:19.281+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:56:19.281+0000] {dag.py:3947} INFO - Setting next_dagrun for etl_strava_user_profile to 2025-11-18 03:00:00+00:00, run_after=2025-11-19 03:00:00+00:00
+[2025-11-19T22:56:19.318+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_strava_user.py took 0.271 seconds
+[2025-11-19T22:56:49.597+0000] {processor.py:161} INFO - Started process (PID=1549) to work on /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:56:49.604+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_strava_user.py for tasks to queue
+[2025-11-19T22:56:49.608+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:56:49.607+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:56:49.629+0000] {processor.py:840} INFO - DAG(s) 'etl_strava_user_profile' retrieved from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:56:49.666+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:56:49.666+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2025-11-19T22:56:49.688+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:56:49.688+0000] {dag.py:3947} INFO - Setting next_dagrun for etl_strava_user_profile to 2025-11-18 03:00:00+00:00, run_after=2025-11-19 03:00:00+00:00
+[2025-11-19T22:56:49.703+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_strava_user.py took 0.116 seconds
+[2025-11-19T22:57:20.072+0000] {processor.py:161} INFO - Started process (PID=1564) to work on /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:57:20.078+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_strava_user.py for tasks to queue
+[2025-11-19T22:57:20.081+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:57:20.081+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:57:20.103+0000] {processor.py:840} INFO - DAG(s) 'etl_strava_user_profile' retrieved from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:57:20.148+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:57:20.148+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2025-11-19T22:57:20.174+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:57:20.174+0000] {dag.py:3947} INFO - Setting next_dagrun for etl_strava_user_profile to 2025-11-18 03:00:00+00:00, run_after=2025-11-19 03:00:00+00:00
+[2025-11-19T22:57:20.203+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_strava_user.py took 0.139 seconds
+[2025-11-19T22:57:50.434+0000] {processor.py:161} INFO - Started process (PID=1578) to work on /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:57:50.476+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_strava_user.py for tasks to queue
+[2025-11-19T22:57:50.481+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:57:50.480+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:57:50.510+0000] {processor.py:840} INFO - DAG(s) 'etl_strava_user_profile' retrieved from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:57:50.597+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:57:50.596+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2025-11-19T22:57:50.634+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:57:50.633+0000] {dag.py:3947} INFO - Setting next_dagrun for etl_strava_user_profile to 2025-11-18 03:00:00+00:00, run_after=2025-11-19 03:00:00+00:00
+[2025-11-19T22:57:50.650+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_strava_user.py took 0.230 seconds
+[2025-11-19T22:58:20.735+0000] {processor.py:161} INFO - Started process (PID=1594) to work on /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:58:20.743+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_strava_user.py for tasks to queue
+[2025-11-19T22:58:20.748+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:58:20.747+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:58:20.774+0000] {processor.py:840} INFO - DAG(s) 'etl_strava_user_profile' retrieved from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:58:20.815+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:58:20.815+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2025-11-19T22:58:20.843+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:58:20.843+0000] {dag.py:3947} INFO - Setting next_dagrun for etl_strava_user_profile to 2025-11-18 03:00:00+00:00, run_after=2025-11-19 03:00:00+00:00
+[2025-11-19T22:58:20.859+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_strava_user.py took 0.134 seconds
+[2025-11-19T22:58:51.077+0000] {processor.py:161} INFO - Started process (PID=1608) to work on /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:58:51.084+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_strava_user.py for tasks to queue
+[2025-11-19T22:58:51.088+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:58:51.087+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:58:51.119+0000] {processor.py:840} INFO - DAG(s) 'etl_strava_user_profile' retrieved from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:58:51.178+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:58:51.178+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2025-11-19T22:58:51.205+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:58:51.205+0000] {dag.py:3947} INFO - Setting next_dagrun for etl_strava_user_profile to 2025-11-18 03:00:00+00:00, run_after=2025-11-19 03:00:00+00:00
+[2025-11-19T22:58:51.226+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_strava_user.py took 0.159 seconds
+[2025-11-19T22:59:21.405+0000] {processor.py:161} INFO - Started process (PID=1623) to work on /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:59:21.457+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_strava_user.py for tasks to queue
+[2025-11-19T22:59:21.461+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:59:21.461+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:59:21.492+0000] {processor.py:840} INFO - DAG(s) 'etl_strava_user_profile' retrieved from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:59:21.556+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:59:21.556+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2025-11-19T22:59:21.584+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:59:21.583+0000] {dag.py:3947} INFO - Setting next_dagrun for etl_strava_user_profile to 2025-11-18 03:00:00+00:00, run_after=2025-11-19 03:00:00+00:00
+[2025-11-19T22:59:21.600+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_strava_user.py took 0.204 seconds
+[2025-11-19T22:59:51.648+0000] {processor.py:161} INFO - Started process (PID=1638) to work on /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:59:51.655+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_strava_user.py for tasks to queue
+[2025-11-19T22:59:51.658+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:59:51.658+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:59:51.681+0000] {processor.py:840} INFO - DAG(s) 'etl_strava_user_profile' retrieved from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T22:59:51.737+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:59:51.736+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2025-11-19T22:59:51.769+0000] {logging_mixin.py:188} INFO - [2025-11-19T22:59:51.769+0000] {dag.py:3947} INFO - Setting next_dagrun for etl_strava_user_profile to 2025-11-18 03:00:00+00:00, run_after=2025-11-19 03:00:00+00:00
+[2025-11-19T22:59:51.784+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_strava_user.py took 0.144 seconds
+[2025-11-19T23:00:22.098+0000] {processor.py:161} INFO - Started process (PID=1654) to work on /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T23:00:22.108+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_strava_user.py for tasks to queue
+[2025-11-19T23:00:22.113+0000] {logging_mixin.py:188} INFO - [2025-11-19T23:00:22.112+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T23:00:22.133+0000] {processor.py:840} INFO - DAG(s) 'etl_strava_user_profile' retrieved from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T23:00:22.181+0000] {logging_mixin.py:188} INFO - [2025-11-19T23:00:22.181+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2025-11-19T23:00:22.204+0000] {logging_mixin.py:188} INFO - [2025-11-19T23:00:22.204+0000] {dag.py:3947} INFO - Setting next_dagrun for etl_strava_user_profile to 2025-11-18 03:00:00+00:00, run_after=2025-11-19 03:00:00+00:00
+[2025-11-19T23:00:22.220+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_strava_user.py took 0.144 seconds
+[2025-11-19T23:00:52.367+0000] {processor.py:161} INFO - Started process (PID=1669) to work on /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T23:00:52.372+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_strava_user.py for tasks to queue
+[2025-11-19T23:00:52.377+0000] {logging_mixin.py:188} INFO - [2025-11-19T23:00:52.376+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T23:00:52.399+0000] {processor.py:840} INFO - DAG(s) 'etl_strava_user_profile' retrieved from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T23:00:52.439+0000] {logging_mixin.py:188} INFO - [2025-11-19T23:00:52.439+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2025-11-19T23:00:52.461+0000] {logging_mixin.py:188} INFO - [2025-11-19T23:00:52.461+0000] {dag.py:3947} INFO - Setting next_dagrun for etl_strava_user_profile to 2025-11-18 03:00:00+00:00, run_after=2025-11-19 03:00:00+00:00
+[2025-11-19T23:00:52.476+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_strava_user.py took 0.118 seconds
+[2025-11-19T23:01:22.780+0000] {processor.py:161} INFO - Started process (PID=1684) to work on /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T23:01:22.783+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_strava_user.py for tasks to queue
+[2025-11-19T23:01:22.786+0000] {logging_mixin.py:188} INFO - [2025-11-19T23:01:22.785+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T23:01:22.806+0000] {processor.py:840} INFO - DAG(s) 'etl_strava_user_profile' retrieved from /opt/airflow/dags/pipeline_strava_user.py
+[2025-11-19T23:01:22.847+0000] {logging_mixin.py:188} INFO - [2025-11-19T23:01:22.846+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2025-11-19T23:01:22.877+0000] {logging_mixin.py:188} INFO - [2025-11-19T23:01:22.877+0000] {dag.py:3947} INFO - Setting next_dagrun for etl_strava_user_profile to 2025-11-18 03:00:00+00:00, run_after=2025-11-19 03:00:00+00:00
+[2025-11-19T23:01:22.894+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_strava_user.py took 0.123 seconds
