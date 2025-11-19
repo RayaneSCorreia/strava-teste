@@ -211,7 +211,7 @@ services:
 
   minio-client:
     image: minio/mc:latest
-    container_name: minio-client-dataops
+    container_name: minio-client-dataops-strava
     depends_on:
       - minio
     entrypoint: >

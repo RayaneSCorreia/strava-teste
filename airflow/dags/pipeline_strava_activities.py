@@ -36,6 +36,12 @@ with DAG(
         bash_command="python /opt/airflow/apps/03-gold/fact_user_activities_strava.py"
     )
 
+    # Aplicando camada de data quality
+    gold_data_quality = BashOperator(
+        task_id="data_quality_gold_activities",
+        bash_command="python /opt/airflow/apps/05-DataQuality/data_quality_gold.py"
+    )
+
     # 4 Send to Postgres BI
     gold_activitties_to_postgres_bi = BashOperator(
         task_id="gold_activitties_to_postgres_bi",
@@ -44,5 +50,5 @@ with DAG(
 
 
     # Definir a ordem
-    bronze_task_activities >> silver_task_activities >> gold_task_activities >> gold_activitties_to_postgres_bi
+    bronze_task_activities >> silver_task_activities >> gold_task_activities >> gold_data_quality >> gold_activitties_to_postgres_bi
     

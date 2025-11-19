@@ -1,0 +1,85 @@
+[2025-11-19T16:24:33.135+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-11-19T16:24:33.221+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: etl_strava_activities.gold_activitties_to_postgres_bi manual__2025-11-19T16:23:23.815681+00:00 [queued]>
+[2025-11-19T16:24:33.233+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: etl_strava_activities.gold_activitties_to_postgres_bi manual__2025-11-19T16:23:23.815681+00:00 [queued]>
+[2025-11-19T16:24:33.234+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2025-11-19T16:24:33.252+0000] {taskinstance.py:2330} INFO - Executing <Task(BashOperator): gold_activitties_to_postgres_bi> on 2025-11-19 16:23:23.815681+00:00
+[2025-11-19T16:24:33.269+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'etl_strava_activities', 'gold_activitties_to_postgres_bi', 'manual__2025-11-19T16:23:23.815681+00:00', '--job-id', '139', '--raw', '--subdir', 'DAGS_FOLDER/pipeline_strava_activities.py', '--cfg-path', '/tmp/tmpauw8h22j']
+[2025-11-19T16:24:33.292+0000] {standard_task_runner.py:91} INFO - Job 139: Subtask gold_activitties_to_postgres_bi
+[2025-11-19T16:24:33.292+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:62 DeprecationWarning: This process (pid=3161) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-11-19T16:24:33.293+0000] {standard_task_runner.py:64} INFO - Started process 3162 to run task
+[2025-11-19T16:24:33.422+0000] {task_command.py:426} INFO - Running <TaskInstance: etl_strava_activities.gold_activitties_to_postgres_bi manual__2025-11-19T16:23:23.815681+00:00 [running]> on host c0ed16a56df2
+[2025-11-19T16:24:33.574+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='rayane' AIRFLOW_CTX_DAG_ID='etl_strava_activities' AIRFLOW_CTX_TASK_ID='gold_activitties_to_postgres_bi' AIRFLOW_CTX_EXECUTION_DATE='2025-11-19T16:23:23.815681+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-11-19T16:23:23.815681+00:00'
+[2025-11-19T16:24:33.576+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-11-19T16:24:33.606+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-11-19T16:24:33.607+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'python /opt/***/apps/04-LoadBI/gold_activitties_to_postgres_bi.py']
+[2025-11-19T16:24:33.614+0000] {subprocess.py:86} INFO - Output:
+[2025-11-19T16:24:37.565+0000] {subprocess.py:93} INFO - 25/11/19 16:24:37 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[2025-11-19T16:24:37.946+0000] {subprocess.py:93} INFO - Setting default log level to "WARN".
+[2025-11-19T16:24:37.949+0000] {subprocess.py:93} INFO - To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+[2025-11-19T16:24:47.889+0000] {subprocess.py:93} INFO - 25/11/19 16:24:47 WARN MetricsConfig: Cannot locate configuration: tried hadoop-metrics2-s3a-file-system.properties,hadoop-metrics2.properties
+[2025-11-19T16:24:53.956+0000] {subprocess.py:93} INFO - [Stage 0:>                                                          (0 + 1) / 1]                                                                                25/11/19 16:24:53 WARN SparkStringUtils: Truncated the string representation of a plan since it was too large. This behavior can be adjusted by setting 'spark.sql.debug.maxToStringFields'.
+[2025-11-19T16:25:00.394+0000] {subprocess.py:93} INFO - [Stage 1:>                                                          (0 + 9) / 9][Stage 1:======>                                                    (1 + 8) / 9][Stage 1:=======================================>                   (6 + 3) / 9]                                                                                Usando o arquivo de variaveis em: /opt/***/apps/.env
+[2025-11-19T16:25:00.429+0000] {subprocess.py:93} INFO - Lendo GOLD em: s3a://gold-strava-activities-labels-delta/fact_user_activities_labels
+[2025-11-19T16:25:00.438+0000] {subprocess.py:93} INFO - Schema da GOLD:
+[2025-11-19T16:25:00.448+0000] {subprocess.py:93} INFO - root
+[2025-11-19T16:25:00.453+0000] {subprocess.py:93} INFO -  |-- activity_id: long (nullable = true)
+[2025-11-19T16:25:00.465+0000] {subprocess.py:93} INFO -  |-- hash_id: string (nullable = true)
+[2025-11-19T16:25:00.477+0000] {subprocess.py:93} INFO -  |-- timestamp: string (nullable = true)
+[2025-11-19T16:25:00.481+0000] {subprocess.py:93} INFO -  |-- start_date: string (nullable = true)
+[2025-11-19T16:25:00.485+0000] {subprocess.py:93} INFO -  |-- start_date_local: string (nullable = true)
+[2025-11-19T16:25:00.490+0000] {subprocess.py:93} INFO -  |-- timezone: string (nullable = true)
+[2025-11-19T16:25:00.492+0000] {subprocess.py:93} INFO -  |-- name: string (nullable = true)
+[2025-11-19T16:25:00.493+0000] {subprocess.py:93} INFO -  |-- sport_type: string (nullable = true)
+[2025-11-19T16:25:00.494+0000] {subprocess.py:93} INFO -  |-- type: string (nullable = true)
+[2025-11-19T16:25:00.496+0000] {subprocess.py:93} INFO -  |-- workout_type: double (nullable = true)
+[2025-11-19T16:25:00.497+0000] {subprocess.py:93} INFO -  |-- distance: double (nullable = true)
+[2025-11-19T16:25:00.498+0000] {subprocess.py:93} INFO -  |-- elapsed_time: long (nullable = true)
+[2025-11-19T16:25:00.499+0000] {subprocess.py:93} INFO -  |-- moving_time: long (nullable = true)
+[2025-11-19T16:25:00.500+0000] {subprocess.py:93} INFO -  |-- average_speed: double (nullable = true)
+[2025-11-19T16:25:00.502+0000] {subprocess.py:93} INFO -  |-- max_speed: double (nullable = true)
+[2025-11-19T16:25:00.504+0000] {subprocess.py:93} INFO -  |-- total_elevation_gain: double (nullable = true)
+[2025-11-19T16:25:00.507+0000] {subprocess.py:93} INFO -  |-- elev_high: double (nullable = true)
+[2025-11-19T16:25:00.509+0000] {subprocess.py:93} INFO -  |-- elev_low: double (nullable = true)
+[2025-11-19T16:25:00.510+0000] {subprocess.py:93} INFO -  |-- average_cadence: double (nullable = true)
+[2025-11-19T16:25:00.510+0000] {subprocess.py:93} INFO -  |-- max_cadence: integer (nullable = true)
+[2025-11-19T16:25:00.513+0000] {subprocess.py:93} INFO -  |-- average_watts: double (nullable = true)
+[2025-11-19T16:25:00.514+0000] {subprocess.py:93} INFO -  |-- max_watts: double (nullable = true)
+[2025-11-19T16:25:00.514+0000] {subprocess.py:93} INFO -  |-- weighted_average_watts: double (nullable = true)
+[2025-11-19T16:25:00.515+0000] {subprocess.py:93} INFO -  |-- has_heartrate: boolean (nullable = true)
+[2025-11-19T16:25:00.516+0000] {subprocess.py:93} INFO -  |-- average_heartrate: double (nullable = true)
+[2025-11-19T16:25:00.517+0000] {subprocess.py:93} INFO -  |-- max_heartrate: double (nullable = true)
+[2025-11-19T16:25:00.519+0000] {subprocess.py:93} INFO -  |-- suffer_score: double (nullable = true)
+[2025-11-19T16:25:00.520+0000] {subprocess.py:93} INFO -  |-- trainer: boolean (nullable = true)
+[2025-11-19T16:25:00.520+0000] {subprocess.py:93} INFO -  |-- commute: boolean (nullable = true)
+[2025-11-19T16:25:00.520+0000] {subprocess.py:93} INFO -  |-- private: boolean (nullable = true)
+[2025-11-19T16:25:00.521+0000] {subprocess.py:93} INFO -  |-- visibility: string (nullable = true)
+[2025-11-19T16:25:00.522+0000] {subprocess.py:93} INFO -  |-- manual: boolean (nullable = true)
+[2025-11-19T16:25:00.524+0000] {subprocess.py:93} INFO -  |-- kudos_count: long (nullable = true)
+[2025-11-19T16:25:00.525+0000] {subprocess.py:93} INFO -  |-- athlete_id: long (nullable = true)
+[2025-11-19T16:25:00.526+0000] {subprocess.py:93} INFO -  |-- map_id: string (nullable = true)
+[2025-11-19T16:25:00.526+0000] {subprocess.py:93} INFO -  |-- start_date_local_dt: timestamp (nullable = true)
+[2025-11-19T16:25:00.527+0000] {subprocess.py:93} INFO -  |-- ano: string (nullable = true)
+[2025-11-19T16:25:00.527+0000] {subprocess.py:93} INFO -  |-- mes: string (nullable = true)
+[2025-11-19T16:25:00.528+0000] {subprocess.py:93} INFO -  |-- hub_rank: integer (nullable = true)
+[2025-11-19T16:25:00.529+0000] {subprocess.py:93} INFO -  |-- task_id: long (nullable = true)
+[2025-11-19T16:25:00.529+0000] {subprocess.py:93} INFO -  |-- annotation_id: long (nullable = true)
+[2025-11-19T16:25:00.529+0000] {subprocess.py:93} INFO -  |-- task_created_at: string (nullable = true)
+[2025-11-19T16:25:00.530+0000] {subprocess.py:93} INFO -  |-- task_updated_at: string (nullable = true)
+[2025-11-19T16:25:00.530+0000] {subprocess.py:93} INFO -  |-- annotation_created_at: string (nullable = true)
+[2025-11-19T16:25:00.531+0000] {subprocess.py:93} INFO -  |-- annotation_updated_at: string (nullable = true)
+[2025-11-19T16:25:00.532+0000] {subprocess.py:93} INFO -  |-- completed_by: long (nullable = true)
+[2025-11-19T16:25:00.532+0000] {subprocess.py:93} INFO -  |-- was_cancelled: boolean (nullable = true)
+[2025-11-19T16:25:00.533+0000] {subprocess.py:93} INFO -  |-- ground_truth: boolean (nullable = true)
+[2025-11-19T16:25:00.534+0000] {subprocess.py:93} INFO -  |-- annotation_result: string (nullable = true)
+[2025-11-19T16:25:00.534+0000] {subprocess.py:93} INFO -  |-- activity_date: date (nullable = true)
+[2025-11-19T16:25:00.535+0000] {subprocess.py:93} INFO -  |-- year: integer (nullable = true)
+[2025-11-19T16:25:00.535+0000] {subprocess.py:93} INFO -  |-- month: integer (nullable = true)
+[2025-11-19T16:25:00.536+0000] {subprocess.py:93} INFO - 
+[2025-11-19T16:25:00.537+0000] {subprocess.py:93} INFO - Escrevendo tabela no Postgres BI: public.strava_activities_labels
+[2025-11-19T16:25:00.537+0000] {subprocess.py:93} INFO - ✅ Carga GOLD -> Postgres BI finalizada com sucesso.
+[2025-11-19T16:25:01.309+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2025-11-19T16:25:01.313+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-11-19T16:25:01.500+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=etl_strava_activities, task_id=gold_activitties_to_postgres_bi, run_id=manual__2025-11-19T16:23:23.815681+00:00, execution_date=20251119T162323, start_date=20251119T162433, end_date=20251119T162501
+[2025-11-19T16:25:01.598+0000] {local_task_job_runner.py:243} INFO - Task exited with return code 0
+[2025-11-19T16:25:01.649+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-11-19T16:25:01.651+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

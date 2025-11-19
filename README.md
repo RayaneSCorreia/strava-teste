@@ -24,6 +24,37 @@ Este projeto implementa um **Data Lakehouse completo**, incluindo:
 - **Ambiente totalmente reprodutível via Docker Compose**
 
 ---
+## ✅ Requisitos Mínimos para Execução
+
+### **1. Conta no Strava**
+Necessária para:
+
+- Criar o aplicativo do Strava  
+- Gerar `CLIENT_ID` e `CLIENT_SECRET`  
+- Gerar o *Authorization Code* (usado apenas na primeira execução)  
+- Permitir que o pipeline colete automaticamente suas atividades  
+
+---
+
+### **2. Docker + Docker Compose**
+
+| Ferramenta       | Versão mínima |
+|------------------|---------------|
+| **Docker**       | ≥ 24.x        |
+| **Docker Compose** | ≥ 2.20      |
+
+---
+
+### **3. Portas Disponíveis no Host**
+
+| Serviço            | Porta |
+|-------------------|-------|
+| Airflow Webserver | **8080** |
+| Label Studio      | **8081** |
+| MinIO Console     | **9011** |
+| MinIO API         | **9000** |
+| Metabase          | **3000** |
+
 
 ## 📐 Arquitetura Geral
 
@@ -68,8 +99,9 @@ Este projeto implementa um **Data Lakehouse completo**, incluindo:
 │
 ├── airflow/                            
 │   ├── dags/
-│   │   ├── 🌀 pipeline_strava.py          
-│   │   ├── 🌀 pipeline_label_studio.py    
+│   │   ├── 🌀 pipeline_strava_activities.py          
+│   │   ├── 🌀 pipeline_label_studio.py 
+│   │   ├── 🌀 pipeline_strava_user.py     
 │   │
 │   ├── apps/                           
 │   │   ├── 01-bronze/
@@ -83,11 +115,13 @@ Este projeto implementa um **Data Lakehouse completo**, incluindo:
 │   │   │   ├── 📜 extract-bronze-to-silver-strava-user.py
 │   │   │
 │   │   ├── 03-gold/
-│   │   │   ├── 📜 fact_user_activities_strava.py           
-│   │   │   ├── 📜 dim_user__profile_strava.py                         
+│   │   │   ├── 📜 fact_user_activities_strava.py                                  
 │   │   │
 │   │   ├── 04-LoadBi/
-│   │   │   ├── 📜 gold_activitties_to_postgres_bi.py                   
+│   │   │   ├── 📜 gold_activitties_to_postgres_bi.py   
+│   │   │
+│   │   ├── 05-DataQuality/
+│   │   │   ├── 📜 data_quality_gold.py                   
 │   │
 │   ├── logs/
 │   ├── plugins/
@@ -105,10 +139,11 @@ Este projeto implementa um **Data Lakehouse completo**, incluindo:
 │   │   ├── 🪣 gold-strava-acitivities-labels-delta/                
 │   │   ├── 🪣 gold-strava-user-delta/                      
 │
-├── docs_projeto/                      
-│   ├── IMAGENS DO PROJETO
-│   ├── README-CONSIDERAÇÕES.md
-│             
+├── labelstudio/                      
+├── metabase-data/                       
+├── postgres_bi_data/
+├── postgres_data/                        
+│ 
 ├── 🐳 docker-compose.yml                 
 ├── 🐳 Dockerfile.airflow                 
 ├── requirements.txt           
@@ -158,9 +193,8 @@ silver-strava-user-activities-parquet/
 - Dim Usuários
 - Unificação Strava + Label Studio
 
-Modelos analíticos:
+Modelo analítico:
 
-- `gold-dim-users`
 - `gold-fact-activities`
 
 Usados como fonte do Metabase.
@@ -173,11 +207,11 @@ Funções:
 
 - Coleta das atividades do Strava  
 - Coleta do usuário  
+- Coleta e padronização de anotações do Label Studio  
 - Padronização Bronze → Silver  
 - Silver → Gold  
-- Coleta e padronização de anotações do Label Studio  
 - Monitoramento e logs  
-- Upload de evidências  
+- Input em SGBD
 
 ---
 
@@ -275,6 +309,12 @@ O dashboard de monitoramento já vem pronto dentro da pasta **metabase-data**, q
 
 **http://localhost:3000/public/dashboard/b53236fe-88cc-47ad-aeb5-26aee8ae0fd9**
 
+O dashboard Negocial já vem pronto dentro da pasta **metabase-data**, que contém o banco interno do Metabase.
+
+### 🔗 Link público (funciona em qualquer máquina que subir o projeto)
+
+**http://localhost:3000/public/dashboard/b53236fe-88cc-47ad-aeb5-26aee8ae0fd9**
+
 ### 🧠 Por que funciona?
 O link público e o dashboard são salvos no volume:
 
@@ -297,7 +337,7 @@ Isso garante:
 Arquivo:
 
 ```
-airflow/.env/.env
+airflow/.env
 ```
 
 ---
@@ -370,13 +410,13 @@ Tudo sobe automaticamente:
 
 ---
 
-## ✅ Passos obrigatórios após subir os containers
+## ✅ Passos para iniciar o ambiente:
 
 ### 1️⃣ Inserir as variáveis no arquivo `.env`
 Preencha o arquivo:
 
 ```
-airflow/.env/.env
+airflow/.env
 ```
 
 com suas credenciais:

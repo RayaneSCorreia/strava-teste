@@ -1,6 +1,7 @@
+
 # 📌 Considerações Técnicas do Projeto  
 ### Pipeline Strava → MinIO → Airflow → Bronze/Silver → Anotações (Label Studio)  
-### Visão geral, decisões, dificuldades e próximos passos
+### Visão geral, decisões, dificuldades, aprendizados e próximos passos
 
 Este documento consolida **todos os aprendizados, problemas encontrados, decisões técnicas e melhorias planejadas** durante a construção do pipeline de ingestão e processamento de dados do Strava, incluindo o módulo de anotações via Label Studio.
 
@@ -8,274 +9,243 @@ O objetivo é registrar o histórico técnico e servir de base para evoluções 
 
 ---
 
-# 🧠 1. Motivação e Contexto
+# 🧠 1. Motivação e Contexto  
 
 O projeto começou com a necessidade de:
 
 - Capturar **minhas atividades do Strava** diariamente.  
-- Registrar inconsistências de treino:
-  - atividades em esteira sem velocidade,
-  - registros inconsistentes no app,
-  - erros de GPS,
-  - dados incompletos.
-- Criar um pipeline que permitisse:
-  - ingestão,  
-  - padronização,  
-  - anotações manuais,  
-  - preparação para dashboards.
+- Registrar inconsistências comuns de treino:
+  - esteira sem velocidade,  
+  - corridas sem GPS,  
+  - atividades duplicadas,  
+  - erros do app do Strava.  
+- Criar um pipeline capaz de:
+  - ingestão incremental,
+  - padronização,
+  - enriquecimento com metadados,
+  - anotações manuais via Label Studio,
+  - disponibilização para dashboards (Metabase/Power BI).
 
-Durante a exploração da API do Strava surgiram desafios:
+Durante a exploração da API do Strava, surgiram descobertas importantes:
 
-- Atividades podem ser **alteradas ou deletadas** → necessidade de estratégia incremental.  
-- Strava não fornece *timestamps reais de alteração*.  
-- Estrutura JSON extremamente complexa → muitas normalizações.  
-- Necessidade de registrar metadados próprios (transação, processamento etc.).  
-- Identificação da necessidade futura de **Webhook + Pub/Sub** para garantir frescor dos dados.
+- Atividades podem ser **alteradas ou deletadas**, exigindo estratégia incremental.  
+- Os eventos de alteração **não possuem timestamp confiável**.  
+- A API do Strava é bem documentada, mas a **estrutura JSON é extremamente complexa**.  
+- Idealmente deveria existir um **Webhook + Pub/Sub** para deletions e updates.  
 
 ---
 
 # 🚨 2. Problemas Encontrados
 
-## 🪣 MinIO
-- Ocorrência de **erros de deadlock** durante gravações (`Write Failed (concurrent write)`).
-- Mesmo com erro, o arquivo era inserido → incerteza no estado.
-- Problemas relacionados a paralelismo e escrita simultânea.
-- Diferenças entre Windows e Mac exigiram ajustes.
+## 🪣 2.1 MinIO
+- Erros de **deadlock** que apareciam mesmo com a escrita concluída.  
+- Diferenças de comportamento entre Windows e Mac exigiram ajustes de rede e permissões.  
+- Alguns erros eram randômicos e consumiam bastante tempo de troubleshooting.
 
-## 📦 Bronze – ausência de timestamp real
-- Strava não fornece `updated_at` confiável em atividades.  
-→ Solução temporária: usar **data de criação do arquivo na Bronze** como timestamp técnico para Silver.
+## 📦 2.2 Bronze – Ausência de timestamp real
+- O Strava não disponibiliza `updated_at` confiável para atividades.
+- Solução temporária → usar **data de criação do arquivo Bronze** como timestamp técnico.
 
-## 🟧 Label Studio
-- SDK extremamente instável:
-  - Não extraía token,
+## 🟧 2.3 Label Studio
+- SDK completamente instável:
+  - quebras constantes,
   - incompatibilidade com Airflow,
-  - quebra de numpy/pandas.
-- Solução: **abandonar SDK e usar `requests`**, trocando o PAT via `/api/token/refresh`.
-- Interface confusa, documentação fraca.
-- Necessidade de salvar interface separadamente → virou um micro ETL à parte.
+  - impossibilidade de extrair token via SDK,
+  - dependências conflitando com numpy/pandas.
+- Necessidade de salvar layout YAML fora do Label Studio (interface separada).
+- Se tornou um fluxo ETL independente dentro do projeto.
 
-## 🛠 Desalinhamento entre ambientes (Local vs Container)
-- Variáveis de ambiente espalhadas → divergências.
-- Algumas libs funcionavam somente fora do container.
-- Conflitos de versão:
-  - pandas  
-  - numpy  
-  - label-studio-sdk  
-  - airflow-python
+## 🔧 2.4 Compatibilidade entre containers e ambiente local
+- Variáveis de ambiente não estavam padronizadas entre:
+  - local,
+  - Airflow,
+  - scripts,
+  - Label Studio.
+- Divergência de libs em cada container.
+- Ambiente Python do Airflow extremamente sensível a versões de pandas/numpy.
 
-## 📚 Documentação dispersa
-Trabalhar com muitas ferramentas ao mesmo tempo gerou curva de aprendizado:
+## 🔁 2.5 Full Load diário desnecessário
+- Falta de campo técnico (`hub_transaction_date`) e ausência de incremental.
+- Todo o pipeline roda **full** diariamente, gerando overhead e retrabalho.
 
-- Airflow  
-- MinIO  
-- Strava API  
-- Label Studio  
+## 🌀 2.6 API Strava
+- JSON extremamente profundo e dinâmico.
+- Campos opcionais variando por atividade.
+- Diferenças grandes entre atividades indoor/outdoor → fontes de erros.
 
-Demandou tempo, testes e retrabalho.
+## 🗂 2.7 Power BI
+- Não funciona nativamente no MacBook.  
+→ análises tiveram que ser feitas no Metabase, aumentando curva de aprendizado.
 
----
+## 🧱 2.8 Delta Lake
+- Tentativas de uso do Delta Lake dentro dos containers geraram:
+  - conflitos de versão,
+  - erros de Java,
+  - incompatibilidades com o Spark do Airflow.
+- Decisão final: manter apenas Spark em Parquet; Delta como melhoria futura.
 
-# 🛠️ 3. Decisões e Soluções Implementadas
-
-## ✔ 1. Requests ao invés do SDK do Label Studio
-O SDK tornou o processo inviável.  
-→ Substituído por `requests` + refresh do token.  
-Estável, simples e controlado.
-
-## ✔ 2. Bronze com Pandas
-Volume pequeno por dia → Spark seria overkill.  
-Pandas atendeu:
-- menor overhead,
-- velocidade,
-- simplicidade,
-- menor carga cognitiva.
-
-## ✔ 3. Estratégia D-30
-Para garantir atualização de atividades antigas (likes, comentários, correções):
-
-- processamento sempre com captação dos últimos **30 dias**.
-
-## ✔ 4. Projeção de arquitetura futura: Webhook + Pub/Sub
-Baseado nas aulas de microserviços:
-- Webhook Strava → Pub/Sub → pipeline incremental verdadeiro.
-- Não implementado por conta do escopo e tempo.
-
-## ✔ 5. Airflow como Orquestrador
-- Fácil de usar,
-- Difícil de configurar container + libs + rede + MinIO + Label Studio.
+## 🐘 2.9 Airflow – Banco de Metadados
+- Airflow não aceita replicação de logs entre máquinas.
+- Ao trocar de máquina, foi necessário apagar pasta `/airflow/postgres_data`, zerando dashboards no Metabase.
+- Solução futura: criar **bucket de dumps** para histórico do Airflow.
 
 ---
 
-# 🔎 4. Dificuldades Gerais
+# 🛠️ 3. Decisões Tomadas Durante o Projeto
 
-## 🔧 Compatibilidade entre libs
-- conflitos entre numpy, pandas, label-studio-sdk e airflow,
-- versões específicas quebravam o ambiente,
-- necessidade de pinagens muito precisas.
+## ✔ 3.1 Substituição do SDK do Label Studio por `requests`
+O SDK tornava o ambiente instável e inutilizável.  
+A solução:  
+- Autenticação via `/api/token/refresh`,  
+- Requests diretos → Código mais previsível e seguro.
 
-## 🌀 Strava API
-- JSON com muitos níveis,
-- campos opcionais,
-- dados inconsistentes,
-- normalização trabalhosa.
+## ✔ 3.2 Bronze em Pandas
+Como o volume diário é pequeno:
 
-## 🟧 Label Studio
-- Documentação pobre,
-- Interface confusa,
-- SDK inconsistente,
-- funcionalmente virou um novo fluxo ETL.
+- Pandas é mais leve,
+- Evita overhead do Spark,
+- Facilita debug,
+- Evita conflitos pesados do Delta.
+
+## ✔ 3.3 Estratégia D-30
+Mesmo sem incremental real:
+
+- Cada execução coleta alterações retroativas dos últimos **30 dias**  
+  (likes, comentários, correções, mudanças manuais).
+
+## ✔ 3.4 Spark apenas na camada Gold
+- Menos containers,
+- Menos problemas de dependência,
+- Menos efeito colateral no Airflow.
+
+## ✔ 3.5 Design Modular
+- Separação clara entre ingestão, bronze, silver e anotações.
+- Permitiu depurar cada módulo sem derrubar o ambiente completo.
+
+## ✔ 3.6 Documentação com foco no porquê
+O desenho inicial não cobria todos os casos.  
+A documentação foi evoluindo à medida que novos desafios apareciam.
 
 ---
 
-# ⚠️ 5. Déficits Identificados
+# 🔍 4. Aprendizados Importantes
 
-## ❌ Módulo de User
-- `updated_at` não representa alteração real.
-- Prejudica incremental.
-- Faltam transformações específicas.
+## 🎓 4.1 Containers exigem manutenção ativa
+- Saber “entrar” no container e rodar comandos internos foi essencial.
+- Instalar libs diretamente dentro do Airflow evitou rebuilds desnecessários.
 
-## ❌ Ausência de timestamp técnico
-- Falta de campo como `hub_transaction_date` na Bronze/Silver:
-  - impossível detectar incremental,
-  - obrigatório rodar full load todo dia.
+## 📚 4.2 Pesquisar na documentação oficial > IA em certos casos
+- A API do Strava e o Label Studio tinham especificações importantes que a IA não detalhava corretamente.
 
-## ❌ Particionamento insuficiente
-- Particionamento apenas por ano/mês.
-- O ideal seria por:
-  ```
-  hub_transaction_date = yyyy/mm/dd
-  ```
+## 🧩 4.3 A arquitetura cresce sozinha
+- Iniciar pequeno → tudo parece simples.  
+- Conforme surgem inconsistências, novos módulos e decisões técnicas surgem naturalmente.  
+- A arquitetura se expande baseada nas necessidades reais.
 
-## ❌ Reprocessamento limitado
-- Sem lógica de reprocessar apenas uma pasta/partição.
-- Pipelines ainda dependem de full load manual.
+## 🪙 4.4 Orquestração distribuída exige disciplina
+- Logs separados,
+- Múltiplos containers,
+- Várias redes Docker,
+- Variáveis em múltiplos lugares.  
+O processo de padronização foi essencial.
 
-## ❌ Schema rígido
-- Atividades com estrutura fixa → qualquer novo campo quebra a DAG.
-- Ideal: abordagem **schema-on-read**.
+---
+
+# ⚠️ 5. Déficits Mapeados
+
+## ❌ 5.1 Módulo de Users
+- `updated_at` não reflete alterações reais de perfil.
+- Lógica precisa ser revista.
+
+## ❌ 5.2 Falta de timestamp técnico na Bronze
+Com isso:
+- Não existe incremental verdadeiro,
+- Full diário é obrigatório.
+
+## ❌ 5.3 Falta de particionamento avançado
+Hoje o particionamento é limitado.  
+Ideal:
+```
+bronze/activities/hub_transaction_date=2025/11/19
+```
+
+## ❌ 5.4 Esquema rígido
+Campos opcionais do Strava quebram pipeline.  
+Necessário schema-on-read.
+
+## ❌ 5.5 Notebooks de teste despadronizados
+- Serviram para experimentação,
+- Mas precisam ser reorganizados.
+
+## ❌ 5.6 Airflow sem histórico portátil
+- Logs não sobrevivem à troca de máquinas.
 
 ---
 
 # 🚀 6. Melhorias Planejadas (Próxima Sprint)
 
-## ✔ Centralizar conexões
-- MinIO client
-- funções utilitárias (upload, download)
-- Strava API
+## 🔧 Engenharia de Dados
+- Padronizar nomeclaturas (inglês)
+- Centralizar conexões MinIO/Strava
+- Centralizar carregamento de variáveis .env
+- Criar incremental verdadeiro
+- Módulo de Users revisado
+- Pipeline resiliente a novos campos
+- Particionamento avançado por hub_transaction_date
+- Reprocessamento seletivo por pasta
+- Exclusão automática de partições antes de reprocessar
+- Silver já em Delta
+- Gold com uso de MERGE
+- Delta Lake com compatibilidade garantida
+- Ajustar módulos que geram pastas fora do padrão
 
-## ✔ Centralizar variáveis de ambiente
-- 1 único ponto de carga,
-- mesma referência para containers e local.
+## 🔌 Infraestrutura e Arquitetura
+- Novo bucket para histórico do Airflow (dump)
+- Ambiente de testes isolado e funcional
+- Schedular com datas relativas no Airflow
+- Container de Spark dedicado (modelo similar ao usado no Windows)
 
-## ✔ Incremental REAL
-- criar `hub_transaction_date`,
-- salvar última data processada,
-- processar apenas delta.
-
-## ✔ Ajustar módulo de users
-- Criar lógica própria para identificar mudanças reais.
-
-## ✔ Suporte a schema dinâmico
-- Flatten automático,
-- tratamento para novos campos,
-- maior resiliência.
-
-## ✔ Reprocessamento por pasta/partição
-- gatilho para `ano/mes/dia`.
-
-## ✔ Particionamento avançado na Bronze e Silver
-```
-s3://.../bronze/activities/hub_transaction_date=2025/11/16
-```
-
-## ✔ Revisar módulo de atividades
-- Extrair mais metadados:
-  - gear
-  - device
-  - heart rate
-  - GPS
-  - inconsistências de treino
-
-## ✔ Preparar ambiente para AWS
-- Glue
-- S3
-- Lambda
-- EventBridge
-- Step Functions
-- Athena
+## ☁️ Cloud (AWS)
+- Glue  
+- S3  
+- Lambda  
+- EventBridge  
+- Step Functions  
+- Pub/Sub de verdade  
+- Athena  
 - Redshift (opcional)
-- Observabilidade
+
+## 🛰 Eventos (Webhook)
+- Capturar updates e deletes em tempo real
+- Sistema incremental perfeito
 
 ---
 
-## 🧱 Evolução Futura: Data Quality com Great Expectations
+# 🧪 7. Data Quality – Integração com Great Expectations
 
-O objetivo desta evolução é adicionar validação estruturada e automatizada nas camadas **Bronze**, **Silver** e **Gold**, elevando a confiabilidade do pipeline e garantindo governança e rastreamento de qualidade.
+## 🎯 Objetivos
+- Garantir qualidade entre Bronze → Silver → Gold
+- Detectar anomalias (pace, distância, HR, duplicados)
+- Criar checkpoints integrados ao Airflow
+- Gerar relatórios HTML automáticos
+- Implementar DataOps moderno e governança
 
----
-
-### 🎯 Benefícios Esperados
-
-- ✔ Detectar dados inválidos antes de chegarem na camada Gold  
-- ✔ Garantir rastreabilidade e documentação automática da qualidade dos dados  
-- ✔ Gerar relatórios HTML detalhados via Great Expectations  
-- ✔ Executar checkpoints diretamente nas DAGs do Airflow  
-- ✔ Aderência a práticas modernas de DataOps e Data Quality Engineering  
-
----
-
-### 📌 Onde o GE Entraria no Pipeline
-
-1. **Após a ingestão da Bronze**  
-2. **Antes da escrita na Silver**  
-3. **Antes da publicação para o BI (camada Gold)**  
+## 🔍 Onde validar?
+1. Após Bronze  
+2. Antes da Silver  
+3. Antes da Gold
 
 ---
 
-### 🧪 Testes Planejados
+# 🧩 8. Conclusão
 
-- **Schema Validation**
-  - Colunas obrigatórias do Strava
-  - Colunas opcionais com presença variável
+Apesar dos inúmeros desafios — envolvendo compatibilidade, containers, libs conflitantes, API complexa e múltiplas ferramentas — o projeto entregou:
 
-- **Regras de Negócio**
-  - Pace dentro de limites plausíveis  
-  - Distância > 0 em treinos externos  
-  - HR dentro de faixas realistas  
+- Pipeline funcional  
+- Bronze e Silver estáveis  
+- Integração com anotações  
+- Estrutura robusta para evoluções  
+- Aprendizado REAL de engenharia de dados na prática  
+- Base pronta para incremental, Delta e Cloud  
 
-- **Integridade e Tipagem**
-  - Tipos corretos (int, float, string, datetime)
-  - Datas convertidas corretamente  
-
-- **Consistência**
-  - Registros duplicados (activity_id)
-  - JSON estruturado
-
----
-
-### 🚀 Integração com o Airflow
-
-- Execução de `ge.checkpoint.run` dentro das DAGs  
-- Validação obrigatória antes de avançar camadas  
-- “Stop the line” quando a qualidade for crítica  
-- Logging e rastreabilidade via OpenLineage/Marquez  
-
----
-
-# 🧩 7. Conclusão
-
-Apesar dos desafios — que envolveram compatibilidade, múltiplas ferramentas, documentações fragmentadas e decisões arquiteturais — o projeto entregou:
-
-- Pipeline funcional,
-- Extração contínua de atividades,
-- Anotações integradas,
-- Estrutura Bronze/Silver organizada,
-- Aprendizados reais sobre orquestração distribuída,
-- Base sólida para evoluções como:
-  - incremental real,
-  - delta lake,
-  - webhook + pub/sub,
-  - deploy em cloud.
-
-O projeto está pronto para evoluir para uma próxima sprint com arquitetura mais robusta e moderna.
+A próxima sprint será focada em **robustez, escalabilidade e governança**.
