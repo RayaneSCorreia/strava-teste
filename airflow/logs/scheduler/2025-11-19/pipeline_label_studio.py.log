@@ -1454,3 +1454,10 @@
 [2025-11-19T01:46:32.874+0000] {logging_mixin.py:188} INFO - [2025-11-19T01:46:32.874+0000] {dag.py:3089} INFO - Sync 1 DAGs
 [2025-11-19T01:46:32.884+0000] {logging_mixin.py:188} INFO - [2025-11-19T01:46:32.884+0000] {dag.py:3947} INFO - Setting next_dagrun for etl_label_studio to 2025-11-18 03:00:00+00:00, run_after=2025-11-19 03:00:00+00:00
 [2025-11-19T01:46:32.891+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_label_studio.py took 0.036 seconds
+[2025-11-19T01:47:03.268+0000] {processor.py:161} INFO - Started process (PID=191) to work on /opt/airflow/dags/pipeline_label_studio.py
+[2025-11-19T01:47:03.268+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_label_studio.py for tasks to queue
+[2025-11-19T01:47:03.269+0000] {logging_mixin.py:188} INFO - [2025-11-19T01:47:03.269+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_label_studio.py
+[2025-11-19T01:47:03.273+0000] {processor.py:840} INFO - DAG(s) 'etl_label_studio' retrieved from /opt/airflow/dags/pipeline_label_studio.py
+[2025-11-19T01:47:03.309+0000] {logging_mixin.py:188} INFO - [2025-11-19T01:47:03.309+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2025-11-19T01:47:03.317+0000] {logging_mixin.py:188} INFO - [2025-11-19T01:47:03.317+0000] {dag.py:3947} INFO - Setting next_dagrun for etl_label_studio to 2025-11-18 03:00:00+00:00, run_after=2025-11-19 03:00:00+00:00
+[2025-11-19T01:47:03.323+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_label_studio.py took 0.058 seconds
